@@ -2,7 +2,7 @@ require 'pry'
 require 'spec_helper'
 
 module Spree
-  describe Shipment, :vcr do
+  describe Shipment do
     let!(:shipment) { order.shipments.first }
     let!(:order) do
       create(:order_with_line_items, line_items_count: 1, ship_address: to) do |order|
@@ -34,7 +34,7 @@ module Spree
        )
     end
 
-    it "'buys' a shipping rate after transitioning to ship" do
+    it "'buys' a shipping rate after transitioning to ship", vcr: { cassette_name: 'purchase_easypost_label' } do
       shipment.refresh_rates
       shipment.state = 'ready'
 
