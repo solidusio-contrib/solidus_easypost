@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Spree::Stock::Package, :vcr do
+describe Spree::Stock::Package do
   let(:package) { create(:shipment).to_package }
 
-  describe '#easypost_parcel' do
+  describe '#easypost_parcel', vcr: { cassette_name: 'create_easypost_parcel' } do
     subject { package.easypost_parcel }
 
     it { is_expected.to be_a EasyPost::Parcel }
@@ -16,10 +16,11 @@ describe Spree::Stock::Package, :vcr do
     end
   end
 
-  describe '#easypost_shipment' do
+  describe '#easypost_shipment', vcr: { cassette_name: 'create_easypost_shipment' } do
     subject { package.easypost_shipment }
 
     it { is_expected.to be_a EasyPost::Shipment }
+
     it 'calls the api' do
       expect(EasyPost::Shipment).to receive(:create).with(anything)
       subject
