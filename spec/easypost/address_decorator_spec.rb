@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-RSpec.describe Spree::Address, :vcr do
+RSpec.describe Spree::Address do
   let(:address) { create :address }
 
-  describe '#easypost_address' do
+  describe '#easypost_address', vcr: { cassette_name: 'create_easypost_address' } do
     subject { address.easypost_address }
 
     it { is_expected.to be_a EasyPost::Address }
