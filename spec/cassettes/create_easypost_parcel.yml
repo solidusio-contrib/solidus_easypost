@@ -12,7 +12,7 @@ http_interactions:
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
-      - EasyPost/v2 RubyClient/2.1.9
+      - EasyPost/v2 RubyClient/2.1.11
       Authorization:
       - Bearer CvzYtuda6KRI9JjG7SAHbA
       Content-Type:
@@ -24,12 +24,6 @@ http_interactions:
       code: 201
       message: Created
     headers:
-      Date:
-      - Wed, 02 Dec 2015 21:34:18 GMT
-      Status:
-      - 201 Created
-      Connection:
-      - close
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -37,28 +31,32 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Location:
-      - "/api/v2/parcels/prcl_a8b4591ed0b74482b1db0b9b42b28e52"
+      - "/api/v2/parcels/prcl_420266b655c44b0795400afdd7994832"
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b498a176dd622b0eff627e51b2e725b7"
+      - W/"0a06a8318214407cf576ca8599bdc24b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9ed2d634-a349-4b2b-a4f6-3ec8cd5f9ce3
+      - 96c2c48b-621b-4da0-9212-1d7d69475220
       X-Runtime:
-      - '0.027156'
+      - '0.021814'
       X-Node:
-      - web4sj, e2304ceaff
+      - easypost
+      - fec7f3f5f1
+      - web11sj
       X-Backend:
       - easypost
       X-Proxied:
-      - lb5sj, 6568750064
+      - lb5sj, 8b61f54e6a
       Strict-Transport-Security:
-      - max-age=86400
+      - max-age=15768000; includeSubDomains; preload
+      Connection:
+      - close
     body:
       encoding: UTF-8
-      string: '{"id":"prcl_a8b4591ed0b74482b1db0b9b42b28e52","object":"Parcel","created_at":"2015-12-02T21:34:18Z","updated_at":"2015-12-02T21:34:18Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":10.0,"mode":"test"}'
+      string: '{"id":"prcl_420266b655c44b0795400afdd7994832","object":"Parcel","created_at":"2016-05-09T18:15:16Z","updated_at":"2016-05-09T18:15:16Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":10.0,"mode":"test"}'
     http_version: 
-  recorded_at: Wed, 02 Dec 2015 21:34:20 GMT
-recorded_with: VCR 3.0.0
+  recorded_at: Mon, 09 May 2016 18:15:16 GMT
+recorded_with: VCR 3.0.1

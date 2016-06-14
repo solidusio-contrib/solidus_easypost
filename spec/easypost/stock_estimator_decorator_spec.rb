@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-RSpec.describe Spree::Stock::Estimator, :vcr do
+RSpec.describe Spree::Stock::Estimator do
   let(:estimator) { described_class.new shipment.order }
   let!(:shipment) { create :shipment }
   let(:package) { shipment.to_package }
 
-  describe '#shipping_rates' do
+  describe '#shipping_rates', vcr: { cassette_name: 'create_easypost_shipment' } do
     subject { estimator.shipping_rates package }
 
     context 'rates are found' do
@@ -18,7 +18,7 @@ RSpec.describe Spree::Stock::Estimator, :vcr do
 
         context 'shipping methods are front end visible' do
           let(:rate_names) { ["USPS Express", "USPS First", "USPS ParcelSelect", "USPS Priority"] }
-          let(:rate_costs) { [3.07, 5.54, 6.09, 25.21] }
+          let(:rate_costs) { [3.35, 5.75, 5.95, 20.66] }
 
           it 'has the correct names' do
             names = subject.map(&:name).sort
