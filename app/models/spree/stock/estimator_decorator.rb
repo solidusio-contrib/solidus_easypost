@@ -1,6 +1,16 @@
 module Spree
   module Stock
     module EstimatorDecorator
+      # Added here to provide compatibility moving forward with solidus, which
+      # as of v1.3.0 changed the Estimator initialization signature to no longer
+      # accept arguments.
+      #
+      # This is added here to allow a version of the easypost gem to be
+      # compatible with both pre and post v1.3 versions and initialize
+      # an Estimator in the specs
+      def initialize(order=nil)
+      end
+
       def shipping_rates(package)
         shipment = package.easypost_shipment
         rates = shipment.rates.sort_by { |r| r.rate.to_i }
