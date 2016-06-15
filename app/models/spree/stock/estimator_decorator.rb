@@ -19,7 +19,7 @@ module Spree
         rates = shipment.rates.sort_by { |r| r.rate.to_i }
 
         if rates.any?
-          rates.each do |rate|
+          spree_rates = rates.map do |rate|
             spree_rate = Spree::ShippingRate.new(
               name: "#{ rate.carrier } #{ rate.service }",
               cost: rate.rate,
@@ -28,15 +28,15 @@ module Spree
               shipping_method: find_or_create_shipping_method(rate)
             )
 
-            package.shipping_rates << spree_rate if spree_rate.shipping_method.frontend?
-          end
+            spree_rate if spree_rate.shipping_method.frontend?
+          end.compact
 
           # Sets cheapest rate to be selected by default
-          if package.shipping_rates.any?
-            package.shipping_rates.min_by(&:cost).selected = true
+          if spree_rates.any?
+            spree_rates.min_by(&:cost).selected = true
           end
 
-          package.shipping_rates
+          spree_rates
         else
           []
         end
