@@ -23,7 +23,6 @@ This goes into a new file called `config/initializers/easy_post.rb`:
   EasyPost.api_key = 'YOUR_API_KEY_HERE'
 ```
 
-
 ## Usage
 
 This extension hijacks `Spree::Stock::Estimator#shipping_rates` to calculate shipping rates for your orders. This call happens during the checkout process, once the order's address information has been provided.
@@ -36,6 +35,20 @@ The extension also adds a callback to the "ship" event on the `Shipment` model, 
 
 This gem will create shipping methods for each type of carrier/service for which it receives a rate from the EasyPost API. These are set to  `display_on: back_end` by default and must be set to `front_end`
 or `both` before the rate will be visible on the delivery page of the checkout.
+
+## Getting Started
+
+Some easy mistakes to run into when initially setting up this gem are:
+- EasyPost Requires that Packages have a weight. Ensure that Variants have a non
+  zero weight value.
+- EasyPost performs address validation on addresses. Ensure the ship_address and
+  bill_address are valid addresses.
+- This Gem currently looks for Shipping Methods which have admin names which
+  match the pattern `<Carrier Name> <Service Level>`. If it cant find an
+  existing match, a new shipping method is created with `display_on=:backend`.
+  The first order placed may receive a message of no "shipping rates found".
+  Check if new Shipping Methods were created in the admin `Settings>Shipping`
+  section, and ensure at lease one shipping method is `display_on=<:both or :frond_end>`
 
 ## Issues
 
