@@ -39,16 +39,29 @@ or `both` before the rate will be visible on the delivery page of the checkout.
 ## Getting Started
 
 Some easy mistakes to run into when initially setting up this gem are:
-- EasyPost Requires that Packages have a weight. Ensure that Variants have a non
+- EasyPost requires that packages have a weight. Ensure that variants have a non
   zero weight value.
-- EasyPost performs address validation on addresses. Ensure the ship_address and
-  bill_address are valid addresses.
-- This Gem currently looks for Shipping Methods which have admin names which
+- EasyPost performs address validation on addresses. Ensure the order
+  ship_address and stock location address are valid addresses.
+- This Gem currently looks for shipping methods which have admin names which
   match the pattern `<Carrier Name> <Service Level>`. If it cant find an
   existing match, a new shipping method is created with `display_on=:backend`.
   The first order placed may receive a message of no "shipping rates found".
   Check if new Shipping Methods were created in the admin `Settings>Shipping`
-  section, and ensure at lease one shipping method is `display_on=<:both or :frond_end>`
+  section, and ensure at least one shipping method is `display_on=<:both or :frond_end>`
+
+## Compatibility
+
+Although the goal is for every version of this gem to be compatible with every
+version of Solidus. It is possible for Solidus to introduce breaking changes
+which make older versions of this gem incompatible with newer versions of Solidus.
+We will make sure to patch old versions to remain compatible with supported
+versions of Solidus.
+
+|solidues_easypost version|Compatible up to solidus version|
+|---|---|
+|v1.0.2|< v1.3.0|
+|v1.0.3|master|
 
 ## Issues
 
