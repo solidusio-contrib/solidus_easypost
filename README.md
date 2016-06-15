@@ -19,6 +19,7 @@ This goes in your terminal:
 
 This goes into a new file called `config/initializers/easy_post.rb`:
 ```ruby
+  require 'spree_easypost'
   EasyPost.api_key = 'YOUR_API_KEY_HERE'
 ```
 
