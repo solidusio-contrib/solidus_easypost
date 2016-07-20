@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'solidus_easypost'
-  s.version     = '1.0.2'
+  s.version     = '1.0.3'
   s.summary     = 'Easy post integration for Solidus'
   s.description = 'Easy post integration for Solidus'
   s.required_ruby_version = '>= 2.1.0'
