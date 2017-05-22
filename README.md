@@ -19,9 +19,9 @@ This goes in your terminal:
 
 This goes into a new file called `config/initializers/easy_post.rb`:
 ```ruby
+  require 'spree_easypost'
   EasyPost.api_key = 'YOUR_API_KEY_HERE'
 ```
-
 
 ## Usage
 
@@ -35,6 +35,33 @@ The extension also adds a callback to the "ship" event on the `Shipment` model, 
 
 This gem will create shipping methods for each type of carrier/service for which it receives a rate from the EasyPost API. These are set to  `display_on: back_end` by default and must be set to `front_end`
 or `both` before the rate will be visible on the delivery page of the checkout.
+
+## Getting Started
+
+Some easy mistakes to run into when initially setting up this gem are:
+- EasyPost requires that packages have a weight. Ensure that variants have a non
+  zero weight value.
+- EasyPost performs address validation on addresses. Ensure the order
+  ship_address and stock location address are valid addresses.
+- This Gem currently looks for shipping methods which have admin names which
+  match the pattern `<Carrier Name> <Service Level>`. If it cant find an
+  existing match, a new shipping method is created with `display_on=:backend`.
+  The first order placed may receive a message of no "shipping rates found".
+  Check if new Shipping Methods were created in the admin `Settings>Shipping`
+  section, and ensure at least one shipping method is `display_on=<:both or :frond_end>`
+
+## Compatibility
+
+Although the goal is for every version of this gem to be compatible with every
+version of Solidus. It is possible for Solidus to introduce breaking changes
+which make older versions of this gem incompatible with newer versions of Solidus.
+We will make sure to patch old versions to remain compatible with supported
+versions of Solidus.
+
+|solidues_easypost version|Compatible up to solidus version|
+|---|---|
+|v1.0.2|< v1.3.0|
+|v1.0.3|master|
 
 ## Issues
 
