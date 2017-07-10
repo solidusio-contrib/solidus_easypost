@@ -3,7 +3,7 @@ module Spree
     class Engine < Rails::Engine
       require 'spree/core'
       isolate_namespace Spree
-      engine_name 'spree_easypost'
+      engine_name 'solidus_easypost'
 
       initializer :append_migrations do |app|
         unless app.root.to_s.match root.to_s
