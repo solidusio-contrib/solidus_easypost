@@ -8,4 +8,4 @@ module Spree
 end
 
 require 'easypost'
-require 'spree_easypost/engine'
+require 'solidus_easypost/engine'
