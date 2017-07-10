@@ -34,8 +34,8 @@ require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/authorization_helpers'
 require 'spree/testing_support/url_helpers'
 
-# Requires factories defined in lib/spree_easypost/factories.rb
-require 'spree_easypost/factories'
+# Requires factories defined in lib/solidus_easypost/factories.rb
+require 'solidus_easypost/factories'
 require 'factories/spree_modification'
 
 require 'helpers/shipping_method_helpers'
