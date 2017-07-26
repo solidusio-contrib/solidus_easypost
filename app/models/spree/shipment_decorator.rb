@@ -3,8 +3,8 @@ module Spree
     def self.prepended(mod)
       mod.state_machine.before_transition(
         to: :shipped,
-        do: :buy_easypost_rate,
-        if: -> { Spree::EasyPost::CONFIGS[:purchase_labels?] }
+        do: :buy_easypost_rate #,
+        # if: -> { Spree::EasyPost::CONFIGS[:purchase_labels?] }
       )
     end
 
