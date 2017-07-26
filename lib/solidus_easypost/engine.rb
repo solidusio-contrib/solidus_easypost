@@ -3,7 +3,7 @@ module Spree
     class Engine < Rails::Engine
       require 'spree/core'
       isolate_namespace Spree
-      engine_name 'spree_easypost'
+      engine_name 'solidus_easypost'
 
       # use rspec for tests
       config.generators do |g|

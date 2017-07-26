@@ -3,8 +3,8 @@ module Spree
     def self.prepended(mod)
       mod.state_machine.before_transition(
         to: :shipped,
-        do: :buy_easypost_rate,
-        if: -> { Spree::EasyPost::CONFIGS[:purchase_labels?] }
+        do: :buy_easypost_rate #,
+        # if: -> { Spree::EasyPost::CONFIGS[:purchase_labels?] }
       )
     end
 
@@ -39,7 +39,7 @@ module Spree
         rate.id == selected_easy_post_rate_id
       end
 
-      easypost_shipment.buy(rate)
+      easypost_shipment.buy(rate) unless easypost_shipment.postage_label
       self.tracking = easypost_shipment.tracking_code
     end
   end
