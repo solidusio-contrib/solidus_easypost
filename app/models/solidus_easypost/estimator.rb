@@ -43,11 +43,14 @@ module SolidusEasypost
     # Shipping method based on the admin(internal)_name. This is not user facing
     # and should not be changed in the admin.
     def find_or_create_shipping_method(rate, store)
-      method_name = "#{ rate.carrier } #{ rate.service }"
-      sm = Spree::ShippingMethod.find_or_create_by(admin_name: method_name) do |r|
-        r.name = method_name
+      admin_name = "#{ rate.carrier } - #{ rate.carrier_account_id }"
+      sm = Spree::ShippingMethod.find_or_create_by(admin_name: admin_name) do |r|
+        r.name = admin_name
         r.display_on = 'back_end'
-        r.code = rate.service
+        r.code = admin_name
+        r.carrier = rate.carrier
+        r.available_to_users = false
+        r.available_to_all = false
         r.calculator = Spree::Calculator::Shipping::FlatRate.create
         r.shipping_categories = [Spree::ShippingCategory.first]
       end
