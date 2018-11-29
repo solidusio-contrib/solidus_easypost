@@ -42,6 +42,7 @@ module Spree
       easypost_shipment.buy(rate)
       self.tracking = easypost_shipment.tracking_code
       self.easy_post_public_tracking_url = easypost_shipment.tracker.public_url
+      self.easy_post_postage_label_url = easypost_shipment.postage_label&.label_url
     end
   end
 end
