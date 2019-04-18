@@ -41,7 +41,7 @@ module SolidusEasypost
         r.name = method_name
         r.available_to_users = false
         r.code = rate.service
-        r.calculator = Spree::Calculator::Shipping::FlatRate.create
+        r.calculator = Spree::Calculator::Shipping::FlatRate.new
         r.shipping_categories = [Spree::ShippingCategory.first]
       end
     end
