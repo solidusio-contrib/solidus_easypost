@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'solidus', ['>= 1.1', '< 3.x']
   s.add_dependency 'solidus_support', '>= 0.1.1'
 
-  s.add_development_dependency 'capybara', '~> 2.1'
+  s.add_development_dependency 'capybara', '~> 3.1'
   s.add_development_dependency 'coffee-rails'
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'ffaker'
