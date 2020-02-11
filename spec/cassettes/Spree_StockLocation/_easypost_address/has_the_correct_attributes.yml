@@ -12,7 +12,7 @@ http_interactions:
       User-Agent:
       - EasyPost/v2 RubyClient/3.0.1
       Authorization:
-      - Bearer CvzYtuda6KRI9JjG7SAHbA
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
       Content-Type:
       - application/x-www-form-urlencoded
       Content-Length:
@@ -33,7 +33,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - 43c6543d5dca6f2dee72e8ed00010f9a
+      - fb745e915e42bc49e0bb5d9b0005fc7d
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -41,29 +41,29 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - "/api/v2/addresses/adr_39df7ef94ff04db6848ade2b716c500d"
+      - "/api/v2/addresses/adr_82ae8ef36f24475180fd70948cd66ded"
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.112469'
+      - '0.029137'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb11sj
+      - bigweb10sj
       X-Version-Label:
-      - easypost-201911120131-f5c72b1880-master
+      - easypost-202002110108-5c21c2c4c4-master
       X-Backend:
       - easypost
       X-Proxied:
-      - extlb2wdc 2744487620
-      - intlb2sj ff5a2958df
-      - intlb2wdc ff5a2958df
+      - extlb2wdc f57b0b4827
+      - intlb2sj 0653d0f1e8
+      - intlb2wdc 0653d0f1e8
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"adr_39df7ef94ff04db6848ade2b716c500d","object":"Address","created_at":"2019-11-12T08:37:01Z","updated_at":"2019-11-12T08:37:01Z","name":"NY
+      string: '{"id":"adr_82ae8ef36f24475180fd70948cd66ded","object":"Address","created_at":"2020-02-11T14:38:01Z","updated_at":"2020-02-11T14:38:01Z","name":"NY
         Warehouse","company":"NY Warehouse","street1":"131 S 8th Ave","street2":null,"city":"Manville","state":"NJ","zip":"08835","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}}'
-    http_version: 
-  recorded_at: Tue, 12 Nov 2019 08:37:01 GMT
-recorded_with: VCR 5.0.0
+    http_version: null
+  recorded_at: Tue, 11 Feb 2020 14:38:01 GMT
+recorded_with: VCR 5.1.0

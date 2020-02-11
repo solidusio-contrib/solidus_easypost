@@ -12,7 +12,7 @@ http_interactions:
       User-Agent:
       - EasyPost/v2 RubyClient/3.0.1
       Authorization:
-      - Bearer CvzYtuda6KRI9JjG7SAHbA
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
       Content-Type:
       - application/x-www-form-urlencoded
       Content-Length:
@@ -33,7 +33,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - 43c6543d5dca6f16ee72769000010e06
+      - fb745e935e42bc20e0bb5cf50005f1a5
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -41,31 +41,31 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - "/api/v2/addresses/adr_9c58e500570b4bac916cf15d0b65306f"
+      - "/api/v2/addresses/adr_f9c5c84ba3554145a73fe6b593cf5808"
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.029879'
+      - '0.028073'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb10sj
+      - bigweb11sj
       X-Version-Label:
-      - easypost-201911120131-f5c72b1880-master
+      - easypost-202002110108-5c21c2c4c4-master
       X-Backend:
       - easypost
       X-Proxied:
-      - extlb2wdc 2744487620
-      - intlb1sj ff5a2958df
-      - intlb2wdc ff5a2958df
+      - extlb2wdc f57b0b4827
+      - intlb1sj 0653d0f1e8
+      - intlb1wdc 0653d0f1e8
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"adr_9c58e500570b4bac916cf15d0b65306f","object":"Address","created_at":"2019-11-12T08:36:38Z","updated_at":"2019-11-12T08:36:38Z","name":"John
+      string: '{"id":"adr_f9c5c84ba3554145a73fe6b593cf5808","object":"Address","created_at":"2020-02-11T14:37:20Z","updated_at":"2020-02-11T14:37:20Z","name":"John
         Doe","company":"Company","street1":"A Different Road","street2":"Northwest","city":"Manville","state":"NJ","zip":"08835","country":"US","phone":"5555550199","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}}'
-    http_version: 
-  recorded_at: Tue, 12 Nov 2019 08:36:38 GMT
+    http_version: null
+  recorded_at: Tue, 11 Feb 2020 14:37:20 GMT
 - request:
     method: post
     uri: https://api.easypost.com/v2/addresses
@@ -78,7 +78,7 @@ http_interactions:
       User-Agent:
       - EasyPost/v2 RubyClient/3.0.1
       Authorization:
-      - Bearer CvzYtuda6KRI9JjG7SAHbA
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
       Content-Type:
       - application/x-www-form-urlencoded
       Content-Length:
@@ -99,7 +99,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - 43c6543d5dca6f16ee82f63300010e0f
+      - fb745e925e42bc21e0bb5cf70005f1d0
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -107,31 +107,31 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - "/api/v2/addresses/adr_fb51793815514df0a43917b3cf1c7e96"
+      - "/api/v2/addresses/adr_22691c9b1d214b45b2b69da1fc132946"
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.029274'
+      - '0.026826'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb2sj
+      - bigweb10sj
       X-Version-Label:
-      - easypost-201911120131-f5c72b1880-master
+      - easypost-202002110108-5c21c2c4c4-master
       X-Backend:
       - easypost
       X-Proxied:
-      - extlb2wdc 2744487620
-      - intlb1wdc ff5a2958df
-      - intlb2sj ff5a2958df
+      - extlb2wdc f57b0b4827
+      - intlb1sj 0653d0f1e8
+      - intlb1wdc 0653d0f1e8
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"adr_fb51793815514df0a43917b3cf1c7e96","object":"Address","created_at":"2019-11-12T08:36:38Z","updated_at":"2019-11-12T08:36:38Z","name":"NY
+      string: '{"id":"adr_22691c9b1d214b45b2b69da1fc132946","object":"Address","created_at":"2020-02-11T14:37:21Z","updated_at":"2020-02-11T14:37:21Z","name":"NY
         Warehouse","company":"NY Warehouse","street1":"131 S 8th Ave","street2":null,"city":"Manville","state":"NJ","zip":"08835","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}}'
-    http_version: 
-  recorded_at: Tue, 12 Nov 2019 08:36:39 GMT
+    http_version: null
+  recorded_at: Tue, 11 Feb 2020 14:37:21 GMT
 - request:
     method: post
     uri: https://api.easypost.com/v2/parcels
@@ -144,7 +144,7 @@ http_interactions:
       User-Agent:
       - EasyPost/v2 RubyClient/3.0.1
       Authorization:
-      - Bearer CvzYtuda6KRI9JjG7SAHbA
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
       Content-Type:
       - application/x-www-form-urlencoded
       Content-Length:
@@ -165,7 +165,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - 43c6543d5dca6f17ee824c2900010e16
+      - fb745e925e42bc22e0bb5d140005f212
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -173,28 +173,28 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - "/api/v2/parcels/prcl_87cf02727d354a2a98b112bfc3585735"
+      - "/api/v2/parcels/prcl_ed5ec04edb0d4e2f83d200200f17895d"
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.025857'
+      - '0.027402'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb2sj
+      - bigweb8sj
       X-Version-Label:
-      - easypost-201911120131-f5c72b1880-master
+      - easypost-202002110108-5c21c2c4c4-master
       X-Backend:
       - easypost
       X-Proxied:
-      - extlb2wdc 2744487620
-      - intlb1sj ff5a2958df
-      - intlb2wdc ff5a2958df
+      - extlb2wdc f57b0b4827
+      - intlb1sj 0653d0f1e8
+      - intlb2wdc 0653d0f1e8
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"prcl_87cf02727d354a2a98b112bfc3585735","object":"Parcel","created_at":"2019-11-12T08:36:39Z","updated_at":"2019-11-12T08:36:39Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":10.0,"mode":"test"}'
-    http_version: 
-  recorded_at: Tue, 12 Nov 2019 08:36:39 GMT
-recorded_with: VCR 5.0.0
+      string: '{"id":"prcl_ed5ec04edb0d4e2f83d200200f17895d","object":"Parcel","created_at":"2020-02-11T14:37:22Z","updated_at":"2020-02-11T14:37:22Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":10.0,"mode":"test"}'
+    http_version: null
+  recorded_at: Tue, 11 Feb 2020 14:37:22 GMT
+recorded_with: VCR 5.1.0

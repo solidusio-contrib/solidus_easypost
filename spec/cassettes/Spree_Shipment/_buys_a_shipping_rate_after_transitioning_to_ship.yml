@@ -12,7 +12,7 @@ http_interactions:
       User-Agent:
       - EasyPost/v2 RubyClient/3.0.1
       Authorization:
-      - Bearer CvzYtuda6KRI9JjG7SAHbA
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
       Content-Type:
       - application/x-www-form-urlencoded
       Content-Length:
@@ -33,7 +33,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - 43c6543d5dca6f03ee61721200010c95
+      - fb745e8e5e42bc23e0bb5d150005f25e
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -41,31 +41,31 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - "/api/v2/addresses/adr_c56faf78ce1d4c4f8bcfb6ac436a8409"
+      - "/api/v2/addresses/adr_bfbc1a9728ad4ddba2ebbb7ef97400fc"
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.026591'
+      - '0.032519'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb10sj
+      - bigweb4sj
       X-Version-Label:
-      - easypost-201911120131-f5c72b1880-master
+      - easypost-202002110108-5c21c2c4c4-master
       X-Backend:
       - easypost
       X-Proxied:
-      - extlb2wdc 2744487620
-      - intlb1wdc ff5a2958df
-      - intlb2sj ff5a2958df
+      - extlb2wdc f57b0b4827
+      - intlb1sj 0653d0f1e8
+      - intlb2wdc 0653d0f1e8
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"adr_c56faf78ce1d4c4f8bcfb6ac436a8409","object":"Address","created_at":"2019-11-12T08:36:19Z","updated_at":"2019-11-12T08:36:19Z","name":"Newt
+      string: '{"id":"adr_bfbc1a9728ad4ddba2ebbb7ef97400fc","object":"Address","created_at":"2020-02-11T14:37:23Z","updated_at":"2020-02-11T14:37:23Z","name":"Newt
         Scamander","company":null,"street1":"200 19th St","street2":null,"city":"Birmingham","state":"AL","zip":"35203","country":"US","phone":"123456789","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}}'
-    http_version: 
-  recorded_at: Tue, 12 Nov 2019 08:36:19 GMT
+    http_version: null
+  recorded_at: Tue, 11 Feb 2020 14:37:23 GMT
 - request:
     method: post
     uri: https://api.easypost.com/v2/addresses
@@ -78,7 +78,7 @@ http_interactions:
       User-Agent:
       - EasyPost/v2 RubyClient/3.0.1
       Authorization:
-      - Bearer CvzYtuda6KRI9JjG7SAHbA
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
       Content-Type:
       - application/x-www-form-urlencoded
       Content-Length:
@@ -99,7 +99,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - 43c6543d5dca6f03ee81c88800010ca4
+      - fb745e905e42bc24e0bb5d190005f2b4
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -107,31 +107,31 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - "/api/v2/addresses/adr_742eb9c109a14ed1ae847b342cb7040d"
+      - "/api/v2/addresses/adr_ad82187e617247c1abc0750c48aee0bf"
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.029983'
+      - '0.031666'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb9sj
+      - bigweb4sj
       X-Version-Label:
-      - easypost-201911120131-f5c72b1880-master
+      - easypost-202002110108-5c21c2c4c4-master
       X-Backend:
       - easypost
       X-Proxied:
-      - extlb2wdc 2744487620
-      - intlb1sj ff5a2958df
-      - intlb2wdc ff5a2958df
+      - extlb2wdc f57b0b4827
+      - intlb1sj 0653d0f1e8
+      - intlb2wdc 0653d0f1e8
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"adr_742eb9c109a14ed1ae847b342cb7040d","object":"Address","created_at":"2019-11-12T08:36:19Z","updated_at":"2019-11-12T08:36:19Z","name":"NY
+      string: '{"id":"adr_ad82187e617247c1abc0750c48aee0bf","object":"Address","created_at":"2020-02-11T14:37:24Z","updated_at":"2020-02-11T14:37:24Z","name":"NY
         Warehouse","company":"NY Warehouse","street1":"2630 Cahaba Rd","street2":null,"city":"Birmingham","state":"AL","zip":"35223","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}}'
-    http_version: 
-  recorded_at: Tue, 12 Nov 2019 08:36:20 GMT
+    http_version: null
+  recorded_at: Tue, 11 Feb 2020 14:37:24 GMT
 - request:
     method: post
     uri: https://api.easypost.com/v2/parcels
@@ -144,7 +144,7 @@ http_interactions:
       User-Agent:
       - EasyPost/v2 RubyClient/3.0.1
       Authorization:
-      - Bearer CvzYtuda6KRI9JjG7SAHbA
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
       Content-Type:
       - application/x-www-form-urlencoded
       Content-Length:
@@ -165,7 +165,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - 43c6543d5dca6f04ee80a32500010cb3
+      - fb745e8e5e42bc25e0bb5d320005f2e2
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -173,43 +173,43 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - "/api/v2/parcels/prcl_212ff2d599674940a0216dd1c424dd4d"
+      - "/api/v2/parcels/prcl_6268fbb62bc14c05a7011bd810aad24e"
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.025016'
+      - '0.025017'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb10sj
+      - bigweb3sj
       X-Version-Label:
-      - easypost-201911120131-f5c72b1880-master
+      - easypost-202002110108-5c21c2c4c4-master
       X-Backend:
       - easypost
       X-Proxied:
-      - extlb2wdc 2744487620
-      - intlb1sj ff5a2958df
-      - intlb2wdc ff5a2958df
+      - extlb2wdc f57b0b4827
+      - intlb2sj 0653d0f1e8
+      - intlb2wdc 0653d0f1e8
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"prcl_212ff2d599674940a0216dd1c424dd4d","object":"Parcel","created_at":"2019-11-12T08:36:20Z","updated_at":"2019-11-12T08:36:20Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":20.0,"mode":"test"}'
-    http_version: 
-  recorded_at: Tue, 12 Nov 2019 08:36:20 GMT
+      string: '{"id":"prcl_6268fbb62bc14c05a7011bd810aad24e","object":"Parcel","created_at":"2020-02-11T14:37:25Z","updated_at":"2020-02-11T14:37:25Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":20.0,"mode":"test"}'
+    http_version: null
+  recorded_at: Tue, 11 Feb 2020 14:37:26 GMT
 - request:
     method: post
     uri: https://api.easypost.com/v2/shipments
     body:
       encoding: UTF-8
-      string: shipment[to_address][id]=adr_c56faf78ce1d4c4f8bcfb6ac436a8409&shipment[from_address][id]=adr_742eb9c109a14ed1ae847b342cb7040d&shipment[parcel][id]=prcl_212ff2d599674940a0216dd1c424dd4d
+      string: shipment[to_address][id]=adr_bfbc1a9728ad4ddba2ebbb7ef97400fc&shipment[from_address][id]=adr_ad82187e617247c1abc0750c48aee0bf&shipment[parcel][id]=prcl_6268fbb62bc14c05a7011bd810aad24e
     headers:
       Accept:
       - "*/*"
       User-Agent:
       - EasyPost/v2 RubyClient/3.0.1
       Authorization:
-      - Bearer CvzYtuda6KRI9JjG7SAHbA
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
       Content-Type:
       - application/x-www-form-urlencoded
       Content-Length:
@@ -230,7 +230,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - 43c6543d5dca6f05ee6fb88d00010cc0
+      - fb745e8e5e42bc26e0bb5d330005f336
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -238,39 +238,37 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - "/api/v2/shipments/shp_af9c4da9ce6c4a15899faa7eed51a4db"
+      - "/api/v2/shipments/shp_548b6aaa8a354c02b2b3d3adcbbe064d"
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.219876'
+      - '0.480850'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb7sj
+      - bigweb8sj
       X-Version-Label:
-      - easypost-201911120131-f5c72b1880-master
+      - easypost-202002110108-5c21c2c4c4-master
       X-Backend:
       - easypost
-      X-Canary:
-      - direct
       X-Proxied:
-      - extlb2wdc 2744487620
-      - intlb1sj ff5a2958df
-      - intlb2wdc ff5a2958df
+      - extlb2wdc f57b0b4827
+      - intlb1wdc 0653d0f1e8
+      - intlb2sj 0653d0f1e8
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":"2019-11-12T08:36:21Z","is_return":false,"messages":[],"mode":"test","options":{"currency":"USD","payment":{"type":"SENDER"},"label_date":null,"date_advance":0},"reference":null,"status":"unknown","tracking_code":null,"updated_at":"2019-11-12T08:36:21Z","batch_id":null,"batch_status":null,"batch_message":null,"customs_info":null,"from_address":{"id":"adr_742eb9c109a14ed1ae847b342cb7040d","object":"Address","created_at":"2019-11-12T08:36:19Z","updated_at":"2019-11-12T08:36:19Z","name":"NY
-        Warehouse","company":"NY Warehouse","street1":"2630 Cahaba Rd","street2":null,"city":"Birmingham","state":"AL","zip":"35223","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"insurance":null,"order_id":null,"parcel":{"id":"prcl_212ff2d599674940a0216dd1c424dd4d","object":"Parcel","created_at":"2019-11-12T08:36:20Z","updated_at":"2019-11-12T08:36:20Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":20.0,"mode":"test"},"postage_label":null,"rates":[{"id":"rate_25295b5a7c2a4fea9c91e9e2f8b2128c","object":"Rate","created_at":"2019-11-12T08:36:21Z","updated_at":"2019-11-12T08:36:21Z","mode":"test","service":"Priority","carrier":"USPS","rate":"7.42","currency":"USD","retail_rate":"7.85","retail_currency":"USD","list_rate":"7.42","list_currency":"USD","delivery_days":1,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":1,"shipment_id":"shp_af9c4da9ce6c4a15899faa7eed51a4db","carrier_account_id":"ca_mtb51Ve0"},{"id":"rate_352bf56489604a12afef32120e2dd283","object":"Rate","created_at":"2019-11-12T08:36:21Z","updated_at":"2019-11-12T08:36:21Z","mode":"test","service":"ParcelSelect","carrier":"USPS","rate":"7.32","currency":"USD","retail_rate":"7.32","retail_currency":"USD","list_rate":"7.32","list_currency":"USD","delivery_days":2,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":2,"shipment_id":"shp_af9c4da9ce6c4a15899faa7eed51a4db","carrier_account_id":"ca_mtb51Ve0"},{"id":"rate_8fe38ca910994c08a19e1011b96d32de","object":"Rate","created_at":"2019-11-12T08:36:21Z","updated_at":"2019-11-12T08:36:21Z","mode":"test","service":"Express","carrier":"USPS","rate":"22.78","currency":"USD","retail_rate":"25.70","retail_currency":"USD","list_rate":"22.78","list_currency":"USD","delivery_days":null,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":null,"shipment_id":"shp_af9c4da9ce6c4a15899faa7eed51a4db","carrier_account_id":"ca_mtb51Ve0"}],"refund_status":null,"scan_form":null,"selected_rate":null,"tracker":null,"to_address":{"id":"adr_c56faf78ce1d4c4f8bcfb6ac436a8409","object":"Address","created_at":"2019-11-12T08:36:19Z","updated_at":"2019-11-12T08:36:19Z","name":"Newt
-        Scamander","company":null,"street1":"200 19th St","street2":null,"city":"Birmingham","state":"AL","zip":"35203","country":"US","phone":"123456789","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"usps_zone":1,"return_address":{"id":"adr_742eb9c109a14ed1ae847b342cb7040d","object":"Address","created_at":"2019-11-12T08:36:19Z","updated_at":"2019-11-12T08:36:19Z","name":"NY
-        Warehouse","company":"NY Warehouse","street1":"2630 Cahaba Rd","street2":null,"city":"Birmingham","state":"AL","zip":"35223","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"buyer_address":{"id":"adr_c56faf78ce1d4c4f8bcfb6ac436a8409","object":"Address","created_at":"2019-11-12T08:36:19Z","updated_at":"2019-11-12T08:36:19Z","name":"Newt
-        Scamander","company":null,"street1":"200 19th St","street2":null,"city":"Birmingham","state":"AL","zip":"35203","country":"US","phone":"123456789","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"forms":[],"fees":[],"id":"shp_af9c4da9ce6c4a15899faa7eed51a4db","object":"Shipment"}'
-    http_version: 
-  recorded_at: Tue, 12 Nov 2019 08:36:21 GMT
+      string: '{"created_at":"2020-02-11T14:37:27Z","is_return":false,"messages":[],"mode":"test","options":{"currency":"USD","payment":{"type":"SENDER"},"label_date":null,"date_advance":0},"reference":null,"status":"unknown","tracking_code":null,"updated_at":"2020-02-11T14:37:27Z","batch_id":null,"batch_status":null,"batch_message":null,"customs_info":null,"from_address":{"id":"adr_ad82187e617247c1abc0750c48aee0bf","object":"Address","created_at":"2020-02-11T14:37:24Z","updated_at":"2020-02-11T14:37:24Z","name":"NY
+        Warehouse","company":"NY Warehouse","street1":"2630 Cahaba Rd","street2":null,"city":"Birmingham","state":"AL","zip":"35223","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"insurance":null,"order_id":null,"parcel":{"id":"prcl_6268fbb62bc14c05a7011bd810aad24e","object":"Parcel","created_at":"2020-02-11T14:37:25Z","updated_at":"2020-02-11T14:37:25Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":20.0,"mode":"test"},"postage_label":null,"rates":[{"id":"rate_b037bcada49143319cfc71f979d16039","object":"Rate","created_at":"2020-02-11T14:37:27Z","updated_at":"2020-02-11T14:37:27Z","mode":"test","service":"Express","carrier":"USPS","rate":"23.25","currency":"USD","retail_rate":"27.15","retail_currency":"USD","list_rate":"23.25","list_currency":"USD","delivery_days":null,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":null,"shipment_id":"shp_548b6aaa8a354c02b2b3d3adcbbe064d","carrier_account_id":"ca_47e4a40b9f7c47cebad306ef44a4039f"},{"id":"rate_c286c3dbbe7b48949a43af9802d9cae8","object":"Rate","created_at":"2020-02-11T14:37:27Z","updated_at":"2020-02-11T14:37:27Z","mode":"test","service":"ParcelSelect","carrier":"USPS","rate":"7.54","currency":"USD","retail_rate":"7.54","retail_currency":"USD","list_rate":"7.54","list_currency":"USD","delivery_days":2,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":2,"shipment_id":"shp_548b6aaa8a354c02b2b3d3adcbbe064d","carrier_account_id":"ca_47e4a40b9f7c47cebad306ef44a4039f"},{"id":"rate_760f70de521f4751ac72fd78527a3e99","object":"Rate","created_at":"2020-02-11T14:37:27Z","updated_at":"2020-02-11T14:37:27Z","mode":"test","service":"Priority","carrier":"USPS","rate":"7.64","currency":"USD","retail_rate":"8.25","retail_currency":"USD","list_rate":"7.64","list_currency":"USD","delivery_days":1,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":1,"shipment_id":"shp_548b6aaa8a354c02b2b3d3adcbbe064d","carrier_account_id":"ca_47e4a40b9f7c47cebad306ef44a4039f"}],"refund_status":null,"scan_form":null,"selected_rate":null,"tracker":null,"to_address":{"id":"adr_bfbc1a9728ad4ddba2ebbb7ef97400fc","object":"Address","created_at":"2020-02-11T14:37:23Z","updated_at":"2020-02-11T14:37:23Z","name":"Newt
+        Scamander","company":null,"street1":"200 19th St","street2":null,"city":"Birmingham","state":"AL","zip":"35203","country":"US","phone":"123456789","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"usps_zone":1,"return_address":{"id":"adr_ad82187e617247c1abc0750c48aee0bf","object":"Address","created_at":"2020-02-11T14:37:24Z","updated_at":"2020-02-11T14:37:24Z","name":"NY
+        Warehouse","company":"NY Warehouse","street1":"2630 Cahaba Rd","street2":null,"city":"Birmingham","state":"AL","zip":"35223","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"buyer_address":{"id":"adr_bfbc1a9728ad4ddba2ebbb7ef97400fc","object":"Address","created_at":"2020-02-11T14:37:23Z","updated_at":"2020-02-11T14:37:23Z","name":"Newt
+        Scamander","company":null,"street1":"200 19th St","street2":null,"city":"Birmingham","state":"AL","zip":"35203","country":"US","phone":"123456789","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"forms":[],"fees":[],"id":"shp_548b6aaa8a354c02b2b3d3adcbbe064d","object":"Shipment"}'
+    http_version: null
+  recorded_at: Tue, 11 Feb 2020 14:37:27 GMT
 - request:
     method: get
-    uri: https://api.easypost.com/v2/shipments/shp_af9c4da9ce6c4a15899faa7eed51a4db
+    uri: https://api.easypost.com/v2/shipments/shp_548b6aaa8a354c02b2b3d3adcbbe064d
     body:
       encoding: US-ASCII
       string: ''
@@ -280,7 +278,7 @@ http_interactions:
       User-Agent:
       - EasyPost/v2 RubyClient/3.0.1
       Authorization:
-      - Bearer CvzYtuda6KRI9JjG7SAHbA
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -299,7 +297,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - 43c6543d5dca6f06ee70518c00010cdb
+      - fb745e905e42bc28e0bb5d340005f3a2
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -309,43 +307,43 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.110149'
+      - '0.073931'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb10sj
+      - bigweb6sj
       X-Version-Label:
-      - easypost-201911120131-f5c72b1880-master
+      - easypost-202002110108-5c21c2c4c4-master
       X-Backend:
       - easypost
       X-Proxied:
-      - extlb2wdc 2744487620
-      - intlb1sj ff5a2958df
-      - intlb1wdc ff5a2958df
+      - extlb2wdc f57b0b4827
+      - intlb2sj 0653d0f1e8
+      - intlb2wdc 0653d0f1e8
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":"2019-11-12T08:36:21Z","is_return":false,"messages":[],"mode":"test","options":{"currency":"USD","payment":{"type":"SENDER"},"label_date":null,"date_advance":0},"reference":null,"status":"unknown","tracking_code":null,"updated_at":"2019-11-12T08:36:21Z","batch_id":null,"batch_status":null,"batch_message":null,"customs_info":null,"from_address":{"id":"adr_742eb9c109a14ed1ae847b342cb7040d","object":"Address","created_at":"2019-11-12T08:36:19Z","updated_at":"2019-11-12T08:36:19Z","name":"NY
-        Warehouse","company":"NY Warehouse","street1":"2630 Cahaba Rd","street2":null,"city":"Birmingham","state":"AL","zip":"35223","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"insurance":null,"order_id":null,"parcel":{"id":"prcl_212ff2d599674940a0216dd1c424dd4d","object":"Parcel","created_at":"2019-11-12T08:36:20Z","updated_at":"2019-11-12T08:36:20Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":20.0,"mode":"test"},"postage_label":null,"rates":[{"id":"rate_25295b5a7c2a4fea9c91e9e2f8b2128c","object":"Rate","created_at":"2019-11-12T08:36:21Z","updated_at":"2019-11-12T08:36:21Z","mode":"test","service":"Priority","carrier":"USPS","rate":"7.42","currency":"USD","retail_rate":"7.85","retail_currency":"USD","list_rate":"7.42","list_currency":"USD","delivery_days":1,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":1,"shipment_id":"shp_af9c4da9ce6c4a15899faa7eed51a4db","carrier_account_id":"ca_mtb51Ve0"},{"id":"rate_352bf56489604a12afef32120e2dd283","object":"Rate","created_at":"2019-11-12T08:36:21Z","updated_at":"2019-11-12T08:36:21Z","mode":"test","service":"ParcelSelect","carrier":"USPS","rate":"7.32","currency":"USD","retail_rate":"7.32","retail_currency":"USD","list_rate":"7.32","list_currency":"USD","delivery_days":2,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":2,"shipment_id":"shp_af9c4da9ce6c4a15899faa7eed51a4db","carrier_account_id":"ca_mtb51Ve0"},{"id":"rate_8fe38ca910994c08a19e1011b96d32de","object":"Rate","created_at":"2019-11-12T08:36:21Z","updated_at":"2019-11-12T08:36:21Z","mode":"test","service":"Express","carrier":"USPS","rate":"22.78","currency":"USD","retail_rate":"25.70","retail_currency":"USD","list_rate":"22.78","list_currency":"USD","delivery_days":null,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":null,"shipment_id":"shp_af9c4da9ce6c4a15899faa7eed51a4db","carrier_account_id":"ca_mtb51Ve0"}],"refund_status":null,"scan_form":null,"selected_rate":null,"tracker":null,"to_address":{"id":"adr_c56faf78ce1d4c4f8bcfb6ac436a8409","object":"Address","created_at":"2019-11-12T08:36:19Z","updated_at":"2019-11-12T08:36:19Z","name":"Newt
-        Scamander","company":null,"street1":"200 19th St","street2":null,"city":"Birmingham","state":"AL","zip":"35203","country":"US","phone":"123456789","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"usps_zone":1,"return_address":{"id":"adr_742eb9c109a14ed1ae847b342cb7040d","object":"Address","created_at":"2019-11-12T08:36:19Z","updated_at":"2019-11-12T08:36:19Z","name":"NY
-        Warehouse","company":"NY Warehouse","street1":"2630 Cahaba Rd","street2":null,"city":"Birmingham","state":"AL","zip":"35223","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"buyer_address":{"id":"adr_c56faf78ce1d4c4f8bcfb6ac436a8409","object":"Address","created_at":"2019-11-12T08:36:19Z","updated_at":"2019-11-12T08:36:19Z","name":"Newt
-        Scamander","company":null,"street1":"200 19th St","street2":null,"city":"Birmingham","state":"AL","zip":"35203","country":"US","phone":"123456789","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"forms":[],"fees":[],"id":"shp_af9c4da9ce6c4a15899faa7eed51a4db","object":"Shipment"}'
-    http_version: 
-  recorded_at: Tue, 12 Nov 2019 08:36:22 GMT
+      string: '{"created_at":"2020-02-11T14:37:27Z","is_return":false,"messages":[],"mode":"test","options":{"currency":"USD","payment":{"type":"SENDER"},"label_date":null,"date_advance":0},"reference":null,"status":"unknown","tracking_code":null,"updated_at":"2020-02-11T14:37:27Z","batch_id":null,"batch_status":null,"batch_message":null,"customs_info":null,"from_address":{"id":"adr_ad82187e617247c1abc0750c48aee0bf","object":"Address","created_at":"2020-02-11T14:37:24Z","updated_at":"2020-02-11T14:37:24Z","name":"NY
+        Warehouse","company":"NY Warehouse","street1":"2630 Cahaba Rd","street2":null,"city":"Birmingham","state":"AL","zip":"35223","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"insurance":null,"order_id":null,"parcel":{"id":"prcl_6268fbb62bc14c05a7011bd810aad24e","object":"Parcel","created_at":"2020-02-11T14:37:25Z","updated_at":"2020-02-11T14:37:25Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":20.0,"mode":"test"},"postage_label":null,"rates":[{"id":"rate_b037bcada49143319cfc71f979d16039","object":"Rate","created_at":"2020-02-11T14:37:27Z","updated_at":"2020-02-11T14:37:27Z","mode":"test","service":"Express","carrier":"USPS","rate":"23.25","currency":"USD","retail_rate":"27.15","retail_currency":"USD","list_rate":"23.25","list_currency":"USD","delivery_days":null,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":null,"shipment_id":"shp_548b6aaa8a354c02b2b3d3adcbbe064d","carrier_account_id":"ca_47e4a40b9f7c47cebad306ef44a4039f"},{"id":"rate_c286c3dbbe7b48949a43af9802d9cae8","object":"Rate","created_at":"2020-02-11T14:37:27Z","updated_at":"2020-02-11T14:37:27Z","mode":"test","service":"ParcelSelect","carrier":"USPS","rate":"7.54","currency":"USD","retail_rate":"7.54","retail_currency":"USD","list_rate":"7.54","list_currency":"USD","delivery_days":2,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":2,"shipment_id":"shp_548b6aaa8a354c02b2b3d3adcbbe064d","carrier_account_id":"ca_47e4a40b9f7c47cebad306ef44a4039f"},{"id":"rate_760f70de521f4751ac72fd78527a3e99","object":"Rate","created_at":"2020-02-11T14:37:27Z","updated_at":"2020-02-11T14:37:27Z","mode":"test","service":"Priority","carrier":"USPS","rate":"7.64","currency":"USD","retail_rate":"8.25","retail_currency":"USD","list_rate":"7.64","list_currency":"USD","delivery_days":1,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":1,"shipment_id":"shp_548b6aaa8a354c02b2b3d3adcbbe064d","carrier_account_id":"ca_47e4a40b9f7c47cebad306ef44a4039f"}],"refund_status":null,"scan_form":null,"selected_rate":null,"tracker":null,"to_address":{"id":"adr_bfbc1a9728ad4ddba2ebbb7ef97400fc","object":"Address","created_at":"2020-02-11T14:37:23Z","updated_at":"2020-02-11T14:37:23Z","name":"Newt
+        Scamander","company":null,"street1":"200 19th St","street2":null,"city":"Birmingham","state":"AL","zip":"35203","country":"US","phone":"123456789","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"usps_zone":1,"return_address":{"id":"adr_ad82187e617247c1abc0750c48aee0bf","object":"Address","created_at":"2020-02-11T14:37:24Z","updated_at":"2020-02-11T14:37:24Z","name":"NY
+        Warehouse","company":"NY Warehouse","street1":"2630 Cahaba Rd","street2":null,"city":"Birmingham","state":"AL","zip":"35223","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"buyer_address":{"id":"adr_bfbc1a9728ad4ddba2ebbb7ef97400fc","object":"Address","created_at":"2020-02-11T14:37:23Z","updated_at":"2020-02-11T14:37:23Z","name":"Newt
+        Scamander","company":null,"street1":"200 19th St","street2":null,"city":"Birmingham","state":"AL","zip":"35203","country":"US","phone":"123456789","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"forms":[],"fees":[],"id":"shp_548b6aaa8a354c02b2b3d3adcbbe064d","object":"Shipment"}'
+    http_version: null
+  recorded_at: Tue, 11 Feb 2020 14:37:28 GMT
 - request:
     method: post
-    uri: https://api.easypost.com/v2/shipments/shp_af9c4da9ce6c4a15899faa7eed51a4db/buy
+    uri: https://api.easypost.com/v2/shipments/shp_548b6aaa8a354c02b2b3d3adcbbe064d/buy
     body:
       encoding: UTF-8
-      string: rate[id]=rate_352bf56489604a12afef32120e2dd283
+      string: rate[id]=rate_c286c3dbbe7b48949a43af9802d9cae8
     headers:
       Accept:
       - "*/*"
       User-Agent:
       - EasyPost/v2 RubyClient/3.0.1
       Authorization:
-      - Bearer CvzYtuda6KRI9JjG7SAHbA
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
       Content-Type:
       - application/x-www-form-urlencoded
       Content-Length:
@@ -366,7 +364,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - 43c6543d5dca6f07ee738b3200010cef
+      - fb745e8d5e42bc29e0bb5d350005f3de
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -376,28 +374,30 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '1.360122'
+      - '0.965149'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb8sj
+      - bigweb7sj
       X-Version-Label:
-      - easypost-201911120131-f5c72b1880-master
+      - easypost-202002110108-5c21c2c4c4-master
       X-Backend:
       - easypost
+      X-Canary:
+      - direct
       X-Proxied:
-      - extlb2wdc 2744487620
-      - intlb1wdc ff5a2958df
-      - intlb2sj ff5a2958df
+      - extlb2wdc f57b0b4827
+      - intlb2sj 0653d0f1e8
+      - intlb2wdc 0653d0f1e8
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":"2019-11-12T08:36:21Z","is_return":false,"messages":[],"mode":"test","options":{"currency":"USD","payment":{"type":"SENDER"},"label_date":null,"date_advance":0},"reference":null,"status":"unknown","tracking_code":"9461200897846029289031","updated_at":"2019-11-12T08:36:24Z","batch_id":null,"batch_status":null,"batch_message":null,"customs_info":null,"from_address":{"id":"adr_742eb9c109a14ed1ae847b342cb7040d","object":"Address","created_at":"2019-11-12T08:36:19Z","updated_at":"2019-11-12T08:36:19Z","name":"NY
-        Warehouse","company":"NY Warehouse","street1":"2630 Cahaba Rd","street2":null,"city":"Birmingham","state":"AL","zip":"35223","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"insurance":null,"order_id":null,"parcel":{"id":"prcl_212ff2d599674940a0216dd1c424dd4d","object":"Parcel","created_at":"2019-11-12T08:36:20Z","updated_at":"2019-11-12T08:36:20Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":20.0,"mode":"test"},"postage_label":{"object":"PostageLabel","id":"pl_5e94c9522f2e48a6837552618a9ce5db","created_at":"2019-11-12T08:36:24Z","updated_at":"2019-11-12T08:36:24Z","date_advance":0,"integrated_form":"none","label_date":"2019-11-12T08:36:24Z","label_resolution":300,"label_size":"4x6","label_type":"default","label_file_type":"image/png","label_url":"https://easypost-files.s3-us-west-2.amazonaws.com/files/postage_label/20191112/611c21410d8646dcad83e55b72520797.png","label_pdf_url":null,"label_zpl_url":null,"label_epl2_url":null,"label_file":null},"rates":[{"id":"rate_25295b5a7c2a4fea9c91e9e2f8b2128c","object":"Rate","created_at":"2019-11-12T08:36:21Z","updated_at":"2019-11-12T08:36:21Z","mode":"test","service":"Priority","carrier":"USPS","rate":"7.42","currency":"USD","retail_rate":"7.85","retail_currency":"USD","list_rate":"7.42","list_currency":"USD","delivery_days":1,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":1,"shipment_id":"shp_af9c4da9ce6c4a15899faa7eed51a4db","carrier_account_id":"ca_mtb51Ve0"},{"id":"rate_352bf56489604a12afef32120e2dd283","object":"Rate","created_at":"2019-11-12T08:36:21Z","updated_at":"2019-11-12T08:36:21Z","mode":"test","service":"ParcelSelect","carrier":"USPS","rate":"7.32","currency":"USD","retail_rate":"7.32","retail_currency":"USD","list_rate":"7.32","list_currency":"USD","delivery_days":2,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":2,"shipment_id":"shp_af9c4da9ce6c4a15899faa7eed51a4db","carrier_account_id":"ca_mtb51Ve0"},{"id":"rate_8fe38ca910994c08a19e1011b96d32de","object":"Rate","created_at":"2019-11-12T08:36:21Z","updated_at":"2019-11-12T08:36:21Z","mode":"test","service":"Express","carrier":"USPS","rate":"22.78","currency":"USD","retail_rate":"25.70","retail_currency":"USD","list_rate":"22.78","list_currency":"USD","delivery_days":null,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":null,"shipment_id":"shp_af9c4da9ce6c4a15899faa7eed51a4db","carrier_account_id":"ca_mtb51Ve0"}],"refund_status":null,"scan_form":null,"selected_rate":{"id":"rate_352bf56489604a12afef32120e2dd283","object":"Rate","created_at":"2019-11-12T08:36:24Z","updated_at":"2019-11-12T08:36:24Z","mode":"test","service":"ParcelSelect","carrier":"USPS","rate":"7.32","currency":"USD","retail_rate":"7.32","retail_currency":"USD","list_rate":"7.32","list_currency":"USD","delivery_days":2,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":2,"shipment_id":"shp_af9c4da9ce6c4a15899faa7eed51a4db","carrier_account_id":"ca_mtb51Ve0"},"tracker":{"id":"trk_0d32f90d02784afdb5807a129521aa38","object":"Tracker","mode":"test","tracking_code":"9461200897846029289031","status":"unknown","status_detail":"unknown","created_at":"2019-11-12T08:36:24Z","updated_at":"2019-11-12T08:36:24Z","signed_by":null,"weight":null,"est_delivery_date":null,"shipment_id":"shp_af9c4da9ce6c4a15899faa7eed51a4db","carrier":"USPS","tracking_details":[],"fees":[],"carrier_detail":null,"public_url":"https://track.easypost.com/djE6dHJrXzBkMzJmOTBkMDI3ODRhZmRiNTgwN2ExMjk1MjFhYTM4"},"to_address":{"id":"adr_c56faf78ce1d4c4f8bcfb6ac436a8409","object":"Address","created_at":"2019-11-12T08:36:19Z","updated_at":"2019-11-12T08:36:23Z","name":"Newt
-        Scamander","company":null,"street1":"200 19th St","street2":null,"city":"Birmingham","state":"AL","zip":"35218-1549","country":"US","phone":"123456789","email":null,"mode":"test","carrier_facility":null,"residential":true,"federal_tax_id":null,"state_tax_id":null,"verifications":{"zip4":{"success":true,"errors":[],"details":null}}},"usps_zone":1,"return_address":{"id":"adr_742eb9c109a14ed1ae847b342cb7040d","object":"Address","created_at":"2019-11-12T08:36:19Z","updated_at":"2019-11-12T08:36:19Z","name":"NY
-        Warehouse","company":"NY Warehouse","street1":"2630 Cahaba Rd","street2":null,"city":"Birmingham","state":"AL","zip":"35223","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"buyer_address":{"id":"adr_c56faf78ce1d4c4f8bcfb6ac436a8409","object":"Address","created_at":"2019-11-12T08:36:19Z","updated_at":"2019-11-12T08:36:23Z","name":"Newt
-        Scamander","company":null,"street1":"200 19th St","street2":null,"city":"Birmingham","state":"AL","zip":"35218-1549","country":"US","phone":"123456789","email":null,"mode":"test","carrier_facility":null,"residential":true,"federal_tax_id":null,"state_tax_id":null,"verifications":{"zip4":{"success":true,"errors":[],"details":null}}},"forms":[],"fees":[{"object":"Fee","type":"LabelFee","amount":"0.01000","charged":true,"refunded":false},{"object":"Fee","type":"PostageFee","amount":"7.32000","charged":true,"refunded":false}],"id":"shp_af9c4da9ce6c4a15899faa7eed51a4db","object":"Shipment"}'
-    http_version: 
-  recorded_at: Tue, 12 Nov 2019 08:36:24 GMT
-recorded_with: VCR 5.0.0
+      string: '{"created_at":"2020-02-11T14:37:27Z","is_return":false,"messages":[],"mode":"test","options":{"currency":"USD","payment":{"type":"SENDER"},"label_date":null,"date_advance":0},"reference":null,"status":"unknown","tracking_code":"9461200897846033275747","updated_at":"2020-02-11T14:37:30Z","batch_id":null,"batch_status":null,"batch_message":null,"customs_info":null,"from_address":{"id":"adr_ad82187e617247c1abc0750c48aee0bf","object":"Address","created_at":"2020-02-11T14:37:24Z","updated_at":"2020-02-11T14:37:24Z","name":"NY
+        Warehouse","company":"NY Warehouse","street1":"2630 Cahaba Rd","street2":null,"city":"Birmingham","state":"AL","zip":"35223","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"insurance":null,"order_id":null,"parcel":{"id":"prcl_6268fbb62bc14c05a7011bd810aad24e","object":"Parcel","created_at":"2020-02-11T14:37:25Z","updated_at":"2020-02-11T14:37:25Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":20.0,"mode":"test"},"postage_label":{"object":"PostageLabel","id":"pl_af619ca173184aca9cb864fe7648686c","created_at":"2020-02-11T14:37:30Z","updated_at":"2020-02-11T14:37:30Z","date_advance":0,"integrated_form":"none","label_date":"2020-02-11T14:37:30Z","label_resolution":300,"label_size":"4x6","label_type":"default","label_file_type":"image/png","label_url":"https://easypost-files.s3-us-west-2.amazonaws.com/files/postage_label/20200211/a0a1220e5adf4ac3a322a9ee86fd4ffb.png","label_pdf_url":null,"label_zpl_url":null,"label_epl2_url":null,"label_file":null},"rates":[{"id":"rate_b037bcada49143319cfc71f979d16039","object":"Rate","created_at":"2020-02-11T14:37:27Z","updated_at":"2020-02-11T14:37:27Z","mode":"test","service":"Express","carrier":"USPS","rate":"23.25","currency":"USD","retail_rate":"27.15","retail_currency":"USD","list_rate":"23.25","list_currency":"USD","delivery_days":null,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":null,"shipment_id":"shp_548b6aaa8a354c02b2b3d3adcbbe064d","carrier_account_id":"ca_47e4a40b9f7c47cebad306ef44a4039f"},{"id":"rate_c286c3dbbe7b48949a43af9802d9cae8","object":"Rate","created_at":"2020-02-11T14:37:27Z","updated_at":"2020-02-11T14:37:27Z","mode":"test","service":"ParcelSelect","carrier":"USPS","rate":"7.54","currency":"USD","retail_rate":"7.54","retail_currency":"USD","list_rate":"7.54","list_currency":"USD","delivery_days":2,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":2,"shipment_id":"shp_548b6aaa8a354c02b2b3d3adcbbe064d","carrier_account_id":"ca_47e4a40b9f7c47cebad306ef44a4039f"},{"id":"rate_760f70de521f4751ac72fd78527a3e99","object":"Rate","created_at":"2020-02-11T14:37:27Z","updated_at":"2020-02-11T14:37:27Z","mode":"test","service":"Priority","carrier":"USPS","rate":"7.64","currency":"USD","retail_rate":"8.25","retail_currency":"USD","list_rate":"7.64","list_currency":"USD","delivery_days":1,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":1,"shipment_id":"shp_548b6aaa8a354c02b2b3d3adcbbe064d","carrier_account_id":"ca_47e4a40b9f7c47cebad306ef44a4039f"}],"refund_status":null,"scan_form":null,"selected_rate":{"id":"rate_c286c3dbbe7b48949a43af9802d9cae8","object":"Rate","created_at":"2020-02-11T14:37:30Z","updated_at":"2020-02-11T14:37:30Z","mode":"test","service":"ParcelSelect","carrier":"USPS","rate":"7.54","currency":"USD","retail_rate":"7.54","retail_currency":"USD","list_rate":"7.54","list_currency":"USD","delivery_days":2,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":2,"shipment_id":"shp_548b6aaa8a354c02b2b3d3adcbbe064d","carrier_account_id":"ca_47e4a40b9f7c47cebad306ef44a4039f"},"tracker":{"id":"trk_4ea9c314619d4d85b72438938cd8bc40","object":"Tracker","mode":"test","tracking_code":"9461200897846033275747","status":"unknown","status_detail":"unknown","created_at":"2020-02-11T14:37:30Z","updated_at":"2020-02-11T14:37:30Z","signed_by":null,"weight":null,"est_delivery_date":null,"shipment_id":"shp_548b6aaa8a354c02b2b3d3adcbbe064d","carrier":"USPS","tracking_details":[],"fees":[],"carrier_detail":null,"public_url":"https://track.easypost.com/djE6dHJrXzRlYTljMzE0NjE5ZDRkODViNzI0Mzg5MzhjZDhiYzQw"},"to_address":{"id":"adr_bfbc1a9728ad4ddba2ebbb7ef97400fc","object":"Address","created_at":"2020-02-11T14:37:23Z","updated_at":"2020-02-11T14:37:29Z","name":"Newt
+        Scamander","company":null,"street1":"200 19th St","street2":null,"city":"Birmingham","state":"AL","zip":"35218-1549","country":"US","phone":"123456789","email":null,"mode":"test","carrier_facility":null,"residential":true,"federal_tax_id":null,"state_tax_id":null,"verifications":{"zip4":{"success":true,"errors":[],"details":null}}},"usps_zone":1,"return_address":{"id":"adr_ad82187e617247c1abc0750c48aee0bf","object":"Address","created_at":"2020-02-11T14:37:24Z","updated_at":"2020-02-11T14:37:24Z","name":"NY
+        Warehouse","company":"NY Warehouse","street1":"2630 Cahaba Rd","street2":null,"city":"Birmingham","state":"AL","zip":"35223","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"buyer_address":{"id":"adr_bfbc1a9728ad4ddba2ebbb7ef97400fc","object":"Address","created_at":"2020-02-11T14:37:23Z","updated_at":"2020-02-11T14:37:29Z","name":"Newt
+        Scamander","company":null,"street1":"200 19th St","street2":null,"city":"Birmingham","state":"AL","zip":"35218-1549","country":"US","phone":"123456789","email":null,"mode":"test","carrier_facility":null,"residential":true,"federal_tax_id":null,"state_tax_id":null,"verifications":{"zip4":{"success":true,"errors":[],"details":null}}},"forms":[],"fees":[{"object":"Fee","type":"LabelFee","amount":"0.01000","charged":true,"refunded":false},{"object":"Fee","type":"PostageFee","amount":"7.54000","charged":true,"refunded":false}],"id":"shp_548b6aaa8a354c02b2b3d3adcbbe064d","object":"Shipment"}'
+    http_version: null
+  recorded_at: Tue, 11 Feb 2020 14:37:30 GMT
+recorded_with: VCR 5.1.0

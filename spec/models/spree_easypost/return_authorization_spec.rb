@@ -32,17 +32,17 @@ RSpec.describe Spree::EasyPost::ReturnAuthorization, :vcr do
 
     it 'has the correct fields' do
       expect(subject).to have_attributes(
-        id: "pl_37f765f275dd46c2866d0515694a306c",
+        id: "pl_1a6a46b4c49d45f097665e46aed20bab",
         object: "PostageLabel",
-        created_at: "2019-11-12T08:36:50Z",
-        updated_at: "2019-11-12T08:36:51Z",
+        created_at: "2020-02-11T14:37:51Z",
+        updated_at: "2020-02-11T14:37:51Z",
         date_advance: 0,
         integrated_form: "none",
-        label_date: "2019-11-12T08:36:50Z",
+        label_date: "2020-02-11T14:37:51Z",
         label_resolution: 300,
         label_size: "4x6",
         label_type: "default",
-        label_url: "https://easypost-files.s3-us-west-2.amazonaws.com/files/postage_label/20191112/ebe045d367a742dd8bf718e63a58c390.png",
+        label_url: "https://easypost-files.s3-us-west-2.amazonaws.com/files/postage_label/20200211/3b6726e5085b4f2fb66ef389033543b1.png",
         label_file_type: "image/png"
       )
     end

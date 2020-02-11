@@ -12,7 +12,7 @@ http_interactions:
       User-Agent:
       - EasyPost/v2 RubyClient/3.0.1
       Authorization:
-      - Bearer CvzYtuda6KRI9JjG7SAHbA
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
       Content-Type:
       - application/x-www-form-urlencoded
       Content-Length:
@@ -33,7 +33,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - 43c6543d5dca6f1cee6f11e400010e6b
+      - fb745e925e42bc1ae0bb5cd70005f051
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -41,28 +41,28 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - "/api/v2/parcels/prcl_c3e6ea88b23f41668fa53fa70d4a99e0"
+      - "/api/v2/parcels/prcl_827f2caa4bb7476b9305c87eec491130"
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.026856'
+      - '0.026776'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb6sj
+      - bigweb9sj
       X-Version-Label:
-      - easypost-201911120131-f5c72b1880-master
+      - easypost-202002110108-5c21c2c4c4-master
       X-Backend:
       - easypost
       X-Proxied:
-      - extlb2wdc 2744487620
-      - intlb1wdc ff5a2958df
-      - intlb2sj ff5a2958df
+      - extlb2wdc f57b0b4827
+      - intlb1sj 0653d0f1e8
+      - intlb2wdc 0653d0f1e8
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"prcl_c3e6ea88b23f41668fa53fa70d4a99e0","object":"Parcel","created_at":"2019-11-12T08:36:44Z","updated_at":"2019-11-12T08:36:44Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":10.0,"mode":"test"}'
-    http_version: 
-  recorded_at: Tue, 12 Nov 2019 08:36:44 GMT
-recorded_with: VCR 5.0.0
+      string: '{"id":"prcl_827f2caa4bb7476b9305c87eec491130","object":"Parcel","created_at":"2020-02-11T14:37:14Z","updated_at":"2020-02-11T14:37:14Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":10.0,"mode":"test"}'
+    http_version: null
+  recorded_at: Tue, 11 Feb 2020 14:37:14 GMT
+recorded_with: VCR 5.1.0
