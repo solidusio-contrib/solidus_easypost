@@ -25,7 +25,7 @@ RSpec.describe Spree::Stock::Estimator, :vcr do
 
         context 'shipping methods are front end visible' do
           let(:rate_names) { ["USPS Express", "USPS First", "USPS ParcelSelect", "USPS Priority"] }
-          let(:rate_costs) { [3.82, 6.85, 6.95, 22.74] }
+          let(:rate_costs) { [3.93, 6.92, 7.02, 23.0] }
 
           it 'has the correct names' do
             names = subject.map(&:name).sort
