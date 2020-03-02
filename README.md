@@ -24,6 +24,11 @@ This goes into a new file called `config/initializers/easy_post.rb`:
   EasyPost.api_key = 'YOUR_API_KEY_HERE'
 ```
 
+To enable DDP, place this in the file `config/initializers/easy_post.rb`:
+```ruby
+  Spree::Easypost::Config.ddp_enabled = true
+```
+
 
 ## Usage
 

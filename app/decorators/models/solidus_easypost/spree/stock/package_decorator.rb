@@ -16,7 +16,8 @@ module SolidusEasypost
           ::EasyPost::Shipment.create(
             to_address: order.ship_address.easypost_address,
             from_address: stock_location.easypost_address,
-            parcel: easypost_parcel
+            parcel: easypost_parcel,
+            options: ::Spree::Easypost::Config.ddp_enabled ? { incoterm: 'DDP' } : {}
           )
         end
 
