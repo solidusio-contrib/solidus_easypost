@@ -1,0 +1,133 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/customs_items
+    body:
+      encoding: UTF-8
+      string: customs_item[id]=cstitem_1&customs_item[object]=CustomsItem&customs_item[description]=Product%20%2316%20-%20950&customs_item[quantity]=1&customs_item[amount]=10.0&customs_item[weight]=0.0&customs_item[code]=SKU-21&customs_item[origin_country]=US&customs_item[currency]=USD
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/3.0.1
+      Authorization:
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '272'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.easypost.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ep-Request-Uuid:
+      - 12effdaf5e67c613f9f8c51b00000907
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, private
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/customs_items/cstitem_2e24c5d82b914dab80c8cc8ab8cfba85"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.029752'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb2sj
+      X-Version-Label:
+      - easypost-202003092309-e891dbcc33-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb1sj 4515783a4a
+      - intlb1sj 4515783a4a
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"cstitem_2e24c5d82b914dab80c8cc8ab8cfba85","object":"CustomsItem","created_at":"2020-03-10T16:53:39Z","updated_at":"2020-03-10T16:53:39Z","description":"Product
+        #16 - 950","hs_tariff_number":null,"origin_country":"US","quantity":1,"value":null,"weight":0.0,"code":"SKU-21","mode":"test","manufacturer":null,"currency":"USD"}'
+    http_version: null
+  recorded_at: Tue, 10 Mar 2020 16:53:39 GMT
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/customs_items
+    body:
+      encoding: UTF-8
+      string: customs_item[id]=cstitem_2&customs_item[object]=CustomsItem&customs_item[description]=Product%20%2317%20-%20826&customs_item[quantity]=1&customs_item[amount]=10.0&customs_item[weight]=0.0&customs_item[code]=SKU-22&customs_item[origin_country]=US&customs_item[currency]=USD
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/3.0.1
+      Authorization:
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '272'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.easypost.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ep-Request-Uuid:
+      - 12effdaa5e67c615f9f68f95000009a3
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, private
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/customs_items/cstitem_a79cf94060454e58ad1ecc352aaadf6a"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.038095'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb3sj
+      X-Version-Label:
+      - easypost-202003092309-e891dbcc33-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb1sj 4515783a4a
+      - intlb1sj 4515783a4a
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"cstitem_a79cf94060454e58ad1ecc352aaadf6a","object":"CustomsItem","created_at":"2020-03-10T16:53:41Z","updated_at":"2020-03-10T16:53:41Z","description":"Product
+        #17 - 826","hs_tariff_number":null,"origin_country":"US","quantity":1,"value":null,"weight":0.0,"code":"SKU-22","mode":"test","manufacturer":null,"currency":"USD"}'
+    http_version: null
+  recorded_at: Tue, 10 Mar 2020 16:53:41 GMT
+recorded_with: VCR 5.1.0

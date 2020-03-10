@@ -1,0 +1,399 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/addresses
+    body:
+      encoding: UTF-8
+      string: address[street1]=Bar%C3%A3o%20da%20Torre%2C%20192&address[street2]=APT%20406&address[city]=Rio%20de%20Janeiro&address[zip]=22411-000&address[phone]=555-555-0199&address[company]=Company&address[name]=Allison%20Reilly&address[country]=BR
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/3.0.1
+      Authorization:
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '236'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.easypost.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ep-Request-Uuid:
+      - 85e691055e67c9e8fa0933d8000525af
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, private
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/addresses/adr_aa01baa0da2c4cb2aa8c77dfd2f7aeeb"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.028158'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb9sj
+      X-Version-Label:
+      - easypost-202003092309-e891dbcc33-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb2wdc 4515783a4a
+      - intlb1sj 4515783a4a
+      - intlb1wdc 4515783a4a
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImFkcl9hYTAxYmFhMGRhMmM0Y2IyYWE4Yzc3ZGZkMmY3YWVlYiIsIm9iamVjdCI6IkFkZHJlc3MiLCJjcmVhdGVkX2F0IjoiMjAyMC0wMy0xMFQxNzoxMDowMFoiLCJ1cGRhdGVkX2F0IjoiMjAyMC0wMy0xMFQxNzoxMDowMFoiLCJuYW1lIjoiQWxsaXNvbiBSZWlsbHkiLCJjb21wYW55IjoiQ29tcGFueSIsInN0cmVldDEiOiJCYXLDo28gZGEgVG9ycmUsIDE5MiIsInN0cmVldDIiOiJBUFQgNDA2IiwiY2l0eSI6IlJpbyBkZSBKYW5laXJvIiwic3RhdGUiOm51bGwsInppcCI6IjIyNDExLTAwMCIsImNvdW50cnkiOiJCUiIsInBob25lIjoiNTU1NTU1MDE5OSIsImVtYWlsIjpudWxsLCJtb2RlIjoidGVzdCIsImNhcnJpZXJfZmFjaWxpdHkiOm51bGwsInJlc2lkZW50aWFsIjpudWxsLCJmZWRlcmFsX3RheF9pZCI6bnVsbCwic3RhdGVfdGF4X2lkIjpudWxsLCJ2ZXJpZmljYXRpb25zIjp7fX0=
+    http_version: null
+  recorded_at: Tue, 10 Mar 2020 17:10:00 GMT
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/addresses
+    body:
+      encoding: UTF-8
+      string: address[street1]=131%20S%208th%20Ave&address[city]=Manville&address[zip]=08835&address[phone]=(202)%20456-1111&address[name]=NY%20Warehouse&address[company]=NY%20Warehouse&address[state]=NJ&address[country]=US
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/3.0.1
+      Authorization:
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '209'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.easypost.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ep-Request-Uuid:
+      - 85e691065e67c9e9f9f9d1b900052664
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, private
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/addresses/adr_1f62d8cf1a3e4ad5957032f6e6d95f9e"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.027361'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb9sj
+      X-Version-Label:
+      - easypost-202003092309-e891dbcc33-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb2wdc 4515783a4a
+      - intlb1sj 4515783a4a
+      - intlb2wdc 4515783a4a
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"adr_1f62d8cf1a3e4ad5957032f6e6d95f9e","object":"Address","created_at":"2020-03-10T17:10:01Z","updated_at":"2020-03-10T17:10:01Z","name":"NY
+        Warehouse","company":"NY Warehouse","street1":"131 S 8th Ave","street2":null,"city":"Manville","state":"NJ","zip":"08835","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}}'
+    http_version: null
+  recorded_at: Tue, 10 Mar 2020 17:10:01 GMT
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/parcels
+    body:
+      encoding: UTF-8
+      string: parcel[weight]=20.0
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/3.0.1
+      Authorization:
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '19'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.easypost.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ep-Request-Uuid:
+      - 85e691055e67c9ebfa0bd49a00052739
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, private
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/parcels/prcl_b77bfedb0e7a412e87851eeda5a210a3"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.026505'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb10sj
+      X-Version-Label:
+      - easypost-202003092309-e891dbcc33-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb2wdc 4515783a4a
+      - intlb1wdc 4515783a4a
+      - intlb2sj 4515783a4a
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"prcl_b77bfedb0e7a412e87851eeda5a210a3","object":"Parcel","created_at":"2020-03-10T17:10:03Z","updated_at":"2020-03-10T17:10:03Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":20.0,"mode":"test"}'
+    http_version: null
+  recorded_at: Tue, 10 Mar 2020 17:10:03 GMT
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/customs_items
+    body:
+      encoding: UTF-8
+      string: customs_item[id]=cstitem_1&customs_item[object]=CustomsItem&customs_item[description]=Product%20%237%20-%208029&customs_item[quantity]=1&customs_item[amount]=10.0&customs_item[weight]=10.0&customs_item[code]=SKU-10&customs_item[origin_country]=US&customs_item[currency]=USD
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/3.0.1
+      Authorization:
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '273'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.easypost.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ep-Request-Uuid:
+      - 85e691055e67c9ecf9f8b037000527f4
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, private
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/customs_items/cstitem_5073b13f49a840f0857d76e2af78dafc"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.032914'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb6sj
+      X-Version-Label:
+      - easypost-202003092309-e891dbcc33-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb2wdc 4515783a4a
+      - intlb1sj 4515783a4a
+      - intlb2wdc 4515783a4a
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"cstitem_5073b13f49a840f0857d76e2af78dafc","object":"CustomsItem","created_at":"2020-03-10T17:10:04Z","updated_at":"2020-03-10T17:10:04Z","description":"Product
+        #7 - 8029","hs_tariff_number":null,"origin_country":"US","quantity":1,"value":null,"weight":10.0,"code":"SKU-10","mode":"test","manufacturer":null,"currency":"USD"}'
+    http_version: null
+  recorded_at: Tue, 10 Mar 2020 17:10:04 GMT
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/customs_infos
+    body:
+      encoding: UTF-8
+      string: customs_info[object]=CustomsInfo&customs_info[eel_pfc]=NOEEI%2030.37(a)&customs_info[contents_type]=merchandise&customs_info[contents_explanation]=merchandise&customs_info[customs_certify]=true&customs_info[customs_signer]=Allison%20Reilly&customs_info[customs_items][0][id]=cstitem_5073b13f49a840f0857d76e2af78dafc&customs_info[non_delivery_option]=abandon&customs_info[restriction_type]=none&customs_info[restriction_comments]=
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/3.0.1
+      Authorization:
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '429'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.easypost.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ep-Request-Uuid:
+      - 85e691025e67c9eefa0abbd1000528b6
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, private
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/customs_infos/cstinfo_f67b46556e5d43cd8d5482a72e2f5303"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.082908'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb3sj
+      X-Version-Label:
+      - easypost-202003092309-e891dbcc33-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb2wdc 4515783a4a
+      - intlb2sj 4515783a4a
+      - intlb2wdc 4515783a4a
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"cstinfo_f67b46556e5d43cd8d5482a72e2f5303","object":"CustomsInfo","created_at":"2020-03-10T17:10:06Z","updated_at":"2020-03-10T17:10:06Z","contents_explanation":"merchandise","contents_type":"merchandise","customs_certify":true,"customs_signer":"Allison
+        Reilly","eel_pfc":"NOEEI 30.37(a)","non_delivery_option":"abandon","restriction_comments":"","restriction_type":"none","mode":"test","declaration":null,"customs_items":[{"id":"cstitem_5073b13f49a840f0857d76e2af78dafc","object":"CustomsItem","created_at":"2020-03-10T17:10:04Z","updated_at":"2020-03-10T17:10:04Z","description":"Product
+        #7 - 8029","hs_tariff_number":null,"origin_country":"US","quantity":1,"value":null,"weight":10.0,"code":"SKU-10","mode":"test","manufacturer":null,"currency":"USD"}]}'
+    http_version: null
+  recorded_at: Tue, 10 Mar 2020 17:10:06 GMT
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/shipments
+    body:
+      encoding: UTF-8
+      string: shipment[to_address][id]=adr_aa01baa0da2c4cb2aa8c77dfd2f7aeeb&shipment[from_address][id]=adr_1f62d8cf1a3e4ad5957032f6e6d95f9e&shipment[parcel][id]=prcl_b77bfedb0e7a412e87851eeda5a210a3&shipment[customs_info][id]=cstinfo_f67b46556e5d43cd8d5482a72e2f5303
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/3.0.1
+      Authorization:
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '252'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.easypost.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ep-Request-Uuid:
+      - 85e691065e67c9f0fa0bd4370005298f
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, private
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/shipments/shp_a7f4809196ca441ba5d450adf9f2ee6d"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.281249'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb9sj
+      X-Version-Label:
+      - easypost-202003092309-e891dbcc33-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb2wdc 4515783a4a
+      - intlb1sj 4515783a4a
+      - intlb1wdc 4515783a4a
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjcmVhdGVkX2F0IjoiMjAyMC0wMy0xMFQxNzoxMDowOFoiLCJpc19yZXR1cm4iOmZhbHNlLCJtZXNzYWdlcyI6W10sIm1vZGUiOiJ0ZXN0Iiwib3B0aW9ucyI6eyJjdXJyZW5jeSI6IlVTRCIsInBheW1lbnQiOnsidHlwZSI6IlNFTkRFUiJ9LCJsYWJlbF9kYXRlIjpudWxsLCJkYXRlX2FkdmFuY2UiOjB9LCJyZWZlcmVuY2UiOm51bGwsInN0YXR1cyI6InVua25vd24iLCJ0cmFja2luZ19jb2RlIjpudWxsLCJ1cGRhdGVkX2F0IjoiMjAyMC0wMy0xMFQxNzoxMDowOFoiLCJiYXRjaF9pZCI6bnVsbCwiYmF0Y2hfc3RhdHVzIjpudWxsLCJiYXRjaF9tZXNzYWdlIjpudWxsLCJjdXN0b21zX2luZm8iOnsiaWQiOiJjc3RpbmZvX2Y2N2I0NjU1NmU1ZDQzY2Q4ZDU0ODJhNzJlMmY1MzAzIiwib2JqZWN0IjoiQ3VzdG9tc0luZm8iLCJjcmVhdGVkX2F0IjoiMjAyMC0wMy0xMFQxNzoxMDowNloiLCJ1cGRhdGVkX2F0IjoiMjAyMC0wMy0xMFQxNzoxMDowNloiLCJjb250ZW50c19leHBsYW5hdGlvbiI6Im1lcmNoYW5kaXNlIiwiY29udGVudHNfdHlwZSI6Im1lcmNoYW5kaXNlIiwiY3VzdG9tc19jZXJ0aWZ5Ijp0cnVlLCJjdXN0b21zX3NpZ25lciI6IkFsbGlzb24gUmVpbGx5IiwiZWVsX3BmYyI6Ik5PRUVJIDMwLjM3KGEpIiwibm9uX2RlbGl2ZXJ5X29wdGlvbiI6ImFiYW5kb24iLCJyZXN0cmljdGlvbl9jb21tZW50cyI6IiIsInJlc3RyaWN0aW9uX3R5cGUiOiJub25lIiwibW9kZSI6InRlc3QiLCJkZWNsYXJhdGlvbiI6bnVsbCwiY3VzdG9tc19pdGVtcyI6W3siaWQiOiJjc3RpdGVtXzUwNzNiMTNmNDlhODQwZjA4NTdkNzZlMmFmNzhkYWZjIiwib2JqZWN0IjoiQ3VzdG9tc0l0ZW0iLCJjcmVhdGVkX2F0IjoiMjAyMC0wMy0xMFQxNzoxMDowNFoiLCJ1cGRhdGVkX2F0IjoiMjAyMC0wMy0xMFQxNzoxMDowNFoiLCJkZXNjcmlwdGlvbiI6IlByb2R1Y3QgIzcgLSA4MDI5IiwiaHNfdGFyaWZmX251bWJlciI6bnVsbCwib3JpZ2luX2NvdW50cnkiOiJVUyIsInF1YW50aXR5IjoxLCJ2YWx1ZSI6bnVsbCwid2VpZ2h0IjoxMC4wLCJjb2RlIjoiU0tVLTEwIiwibW9kZSI6InRlc3QiLCJtYW51ZmFjdHVyZXIiOm51bGwsImN1cnJlbmN5IjoiVVNEIn1dfSwiZnJvbV9hZGRyZXNzIjp7ImlkIjoiYWRyXzFmNjJkOGNmMWEzZTRhZDU5NTcwMzJmNmU2ZDk1ZjllIiwib2JqZWN0IjoiQWRkcmVzcyIsImNyZWF0ZWRfYXQiOiIyMDIwLTAzLTEwVDE3OjEwOjAxWiIsInVwZGF0ZWRfYXQiOiIyMDIwLTAzLTEwVDE3OjEwOjAxWiIsIm5hbWUiOiJOWSBXYXJlaG91c2UiLCJjb21wYW55IjoiTlkgV2FyZWhvdXNlIiwic3RyZWV0MSI6IjEzMSBTIDh0aCBBdmUiLCJzdHJlZXQyIjpudWxsLCJjaXR5IjoiTWFudmlsbGUiLCJzdGF0ZSI6Ik5KIiwiemlwIjoiMDg4MzUiLCJjb3VudHJ5IjoiVVMiLCJwaG9uZSI6IjIwMjQ1NjExMTEiLCJlbWFpbCI6bnVsbCwibW9kZSI6InRlc3QiLCJjYXJyaWVyX2ZhY2lsaXR5IjpudWxsLCJyZXNpZGVudGlhbCI6bnVsbCwiZmVkZXJhbF90YXhfaWQiOm51bGwsInN0YXRlX3RheF9pZCI6bnVsbCwidmVyaWZpY2F0aW9ucyI6e319LCJpbnN1cmFuY2UiOm51bGwsIm9yZGVyX2lkIjpudWxsLCJwYXJjZWwiOnsiaWQiOiJwcmNsX2I3N2JmZWRiMGU3YTQxMmU4Nzg1MWVlZGE1YTIxMGEzIiwib2JqZWN0IjoiUGFyY2VsIiwiY3JlYXRlZF9hdCI6IjIwMjAtMDMtMTBUMTc6MTA6MDNaIiwidXBkYXRlZF9hdCI6IjIwMjAtMDMtMTBUMTc6MTA6MDNaIiwibGVuZ3RoIjpudWxsLCJ3aWR0aCI6bnVsbCwiaGVpZ2h0IjpudWxsLCJwcmVkZWZpbmVkX3BhY2thZ2UiOm51bGwsIndlaWdodCI6MjAuMCwibW9kZSI6InRlc3QifSwicG9zdGFnZV9sYWJlbCI6bnVsbCwicmF0ZXMiOlt7ImlkIjoicmF0ZV9kMTc3MDAyNWM5MDE0YjQ3YWVkNjFkMzBhNjhjZjU0MiIsIm9iamVjdCI6IlJhdGUiLCJjcmVhdGVkX2F0IjoiMjAyMC0wMy0xMFQxNzoxMDowOFoiLCJ1cGRhdGVkX2F0IjoiMjAyMC0wMy0xMFQxNzoxMDowOFoiLCJtb2RlIjoidGVzdCIsInNlcnZpY2UiOiJQcmlvcml0eU1haWxJbnRlcm5hdGlvbmFsIiwiY2FycmllciI6IlVTUFMiLCJyYXRlIjoiNTAuNjQiLCJjdXJyZW5jeSI6IlVTRCIsInJldGFpbF9yYXRlIjoiNTMuMzAiLCJyZXRhaWxfY3VycmVuY3kiOiJVU0QiLCJsaXN0X3JhdGUiOiI1MC42NCIsImxpc3RfY3VycmVuY3kiOiJVU0QiLCJkZWxpdmVyeV9kYXlzIjpudWxsLCJkZWxpdmVyeV9kYXRlIjpudWxsLCJkZWxpdmVyeV9kYXRlX2d1YXJhbnRlZWQiOmZhbHNlLCJlc3RfZGVsaXZlcnlfZGF5cyI6bnVsbCwic2hpcG1lbnRfaWQiOiJzaHBfYTdmNDgwOTE5NmNhNDQxYmE1ZDQ1MGFkZjlmMmVlNmQiLCJjYXJyaWVyX2FjY291bnRfaWQiOiJjYV80N2U0YTQwYjlmN2M0N2NlYmFkMzA2ZWY0NGE0MDM5ZiJ9LHsiaWQiOiJyYXRlX2EzMjdjYTk4YjBlZTQyMWI4NTZjNDljYThlNzUyMDJhIiwib2JqZWN0IjoiUmF0ZSIsImNyZWF0ZWRfYXQiOiIyMDIwLTAzLTEwVDE3OjEwOjA4WiIsInVwZGF0ZWRfYXQiOiIyMDIwLTAzLTEwVDE3OjEwOjA4WiIsIm1vZGUiOiJ0ZXN0Iiwic2VydmljZSI6IkZpcnN0Q2xhc3NQYWNrYWdlSW50ZXJuYXRpb25hbFNlcnZpY2UiLCJjYXJyaWVyIjoiVVNQUyIsInJhdGUiOiIyNC4yMyIsImN1cnJlbmN5IjoiVVNEIiwicmV0YWlsX3JhdGUiOiIyNS41MCIsInJldGFpbF9jdXJyZW5jeSI6IlVTRCIsImxpc3RfcmF0ZSI6IjI0LjIzIiwibGlzdF9jdXJyZW5jeSI6IlVTRCIsImRlbGl2ZXJ5X2RheXMiOm51bGwsImRlbGl2ZXJ5X2RhdGUiOm51bGwsImRlbGl2ZXJ5X2RhdGVfZ3VhcmFudGVlZCI6ZmFsc2UsImVzdF9kZWxpdmVyeV9kYXlzIjpudWxsLCJzaGlwbWVudF9pZCI6InNocF9hN2Y0ODA5MTk2Y2E0NDFiYTVkNDUwYWRmOWYyZWU2ZCIsImNhcnJpZXJfYWNjb3VudF9pZCI6ImNhXzQ3ZTRhNDBiOWY3YzQ3Y2ViYWQzMDZlZjQ0YTQwMzlmIn0seyJpZCI6InJhdGVfNjIxN2IzYThkZDdmNDU4NzlmZmEzNWYyOGZhNDgwYzUiLCJvYmplY3QiOiJSYXRlIiwiY3JlYXRlZF9hdCI6IjIwMjAtMDMtMTBUMTc6MTA6MDhaIiwidXBkYXRlZF9hdCI6IjIwMjAtMDMtMTBUMTc6MTA6MDhaIiwibW9kZSI6InRlc3QiLCJzZXJ2aWNlIjoiRXhwcmVzc01haWxJbnRlcm5hdGlvbmFsIiwiY2FycmllciI6IlVTUFMiLCJyYXRlIjoiNzIuMjQiLCJjdXJyZW5jeSI6IlVTRCIsInJldGFpbF9yYXRlIjoiNzUuOTAiLCJyZXRhaWxfY3VycmVuY3kiOiJVU0QiLCJsaXN0X3JhdGUiOiI3Mi4yNCIsImxpc3RfY3VycmVuY3kiOiJVU0QiLCJkZWxpdmVyeV9kYXlzIjpudWxsLCJkZWxpdmVyeV9kYXRlIjpudWxsLCJkZWxpdmVyeV9kYXRlX2d1YXJhbnRlZWQiOmZhbHNlLCJlc3RfZGVsaXZlcnlfZGF5cyI6bnVsbCwic2hpcG1lbnRfaWQiOiJzaHBfYTdmNDgwOTE5NmNhNDQxYmE1ZDQ1MGFkZjlmMmVlNmQiLCJjYXJyaWVyX2FjY291bnRfaWQiOiJjYV80N2U0YTQwYjlmN2M0N2NlYmFkMzA2ZWY0NGE0MDM5ZiJ9XSwicmVmdW5kX3N0YXR1cyI6bnVsbCwic2Nhbl9mb3JtIjpudWxsLCJzZWxlY3RlZF9yYXRlIjpudWxsLCJ0cmFja2VyIjpudWxsLCJ0b19hZGRyZXNzIjp7ImlkIjoiYWRyX2FhMDFiYWEwZGEyYzRjYjJhYThjNzdkZmQyZjdhZWViIiwib2JqZWN0IjoiQWRkcmVzcyIsImNyZWF0ZWRfYXQiOiIyMDIwLTAzLTEwVDE3OjEwOjAwWiIsInVwZGF0ZWRfYXQiOiIyMDIwLTAzLTEwVDE3OjEwOjAwWiIsIm5hbWUiOiJBbGxpc29uIFJlaWxseSIsImNvbXBhbnkiOiJDb21wYW55Iiwic3RyZWV0MSI6IkJhcsOjbyBkYSBUb3JyZSwgMTkyIiwic3RyZWV0MiI6IkFQVCA0MDYiLCJjaXR5IjoiUmlvIGRlIEphbmVpcm8iLCJzdGF0ZSI6bnVsbCwiemlwIjoiMjI0MTEtMDAwIiwiY291bnRyeSI6IkJSIiwicGhvbmUiOiI1NTU1NTUwMTk5IiwiZW1haWwiOm51bGwsIm1vZGUiOiJ0ZXN0IiwiY2Fycmllcl9mYWNpbGl0eSI6bnVsbCwicmVzaWRlbnRpYWwiOm51bGwsImZlZGVyYWxfdGF4X2lkIjpudWxsLCJzdGF0ZV90YXhfaWQiOm51bGwsInZlcmlmaWNhdGlvbnMiOnt9fSwidXNwc196b25lIjpudWxsLCJyZXR1cm5fYWRkcmVzcyI6eyJpZCI6ImFkcl8xZjYyZDhjZjFhM2U0YWQ1OTU3MDMyZjZlNmQ5NWY5ZSIsIm9iamVjdCI6IkFkZHJlc3MiLCJjcmVhdGVkX2F0IjoiMjAyMC0wMy0xMFQxNzoxMDowMVoiLCJ1cGRhdGVkX2F0IjoiMjAyMC0wMy0xMFQxNzoxMDowMVoiLCJuYW1lIjoiTlkgV2FyZWhvdXNlIiwiY29tcGFueSI6Ik5ZIFdhcmVob3VzZSIsInN0cmVldDEiOiIxMzEgUyA4dGggQXZlIiwic3RyZWV0MiI6bnVsbCwiY2l0eSI6Ik1hbnZpbGxlIiwic3RhdGUiOiJOSiIsInppcCI6IjA4ODM1IiwiY291bnRyeSI6IlVTIiwicGhvbmUiOiIyMDI0NTYxMTExIiwiZW1haWwiOm51bGwsIm1vZGUiOiJ0ZXN0IiwiY2Fycmllcl9mYWNpbGl0eSI6bnVsbCwicmVzaWRlbnRpYWwiOm51bGwsImZlZGVyYWxfdGF4X2lkIjpudWxsLCJzdGF0ZV90YXhfaWQiOm51bGwsInZlcmlmaWNhdGlvbnMiOnt9fSwiYnV5ZXJfYWRkcmVzcyI6eyJpZCI6ImFkcl9hYTAxYmFhMGRhMmM0Y2IyYWE4Yzc3ZGZkMmY3YWVlYiIsIm9iamVjdCI6IkFkZHJlc3MiLCJjcmVhdGVkX2F0IjoiMjAyMC0wMy0xMFQxNzoxMDowMFoiLCJ1cGRhdGVkX2F0IjoiMjAyMC0wMy0xMFQxNzoxMDowMFoiLCJuYW1lIjoiQWxsaXNvbiBSZWlsbHkiLCJjb21wYW55IjoiQ29tcGFueSIsInN0cmVldDEiOiJCYXLDo28gZGEgVG9ycmUsIDE5MiIsInN0cmVldDIiOiJBUFQgNDA2IiwiY2l0eSI6IlJpbyBkZSBKYW5laXJvIiwic3RhdGUiOm51bGwsInppcCI6IjIyNDExLTAwMCIsImNvdW50cnkiOiJCUiIsInBob25lIjoiNTU1NTU1MDE5OSIsImVtYWlsIjpudWxsLCJtb2RlIjoidGVzdCIsImNhcnJpZXJfZmFjaWxpdHkiOm51bGwsInJlc2lkZW50aWFsIjpudWxsLCJmZWRlcmFsX3RheF9pZCI6bnVsbCwic3RhdGVfdGF4X2lkIjpudWxsLCJ2ZXJpZmljYXRpb25zIjp7fX0sImZvcm1zIjpbXSwiZmVlcyI6W10sImlkIjoic2hwX2E3ZjQ4MDkxOTZjYTQ0MWJhNWQ0NTBhZGY5ZjJlZTZkIiwib2JqZWN0IjoiU2hpcG1lbnQifQ==
+    http_version: null
+  recorded_at: Tue, 10 Mar 2020 17:10:08 GMT
+recorded_with: VCR 5.1.0

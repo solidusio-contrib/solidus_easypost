@@ -1,0 +1,203 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/customs_items
+    body:
+      encoding: UTF-8
+      string: customs_item[id]=cstitem_1&customs_item[object]=CustomsItem&customs_item[description]=Product%20%2316%20-%207469&customs_item[quantity]=1&customs_item[amount]=10.0&customs_item[weight]=0.0&customs_item[code]=SKU-21&customs_item[origin_country]=US&customs_item[currency]=USD
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/3.0.1
+      Authorization:
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '273'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.easypost.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ep-Request-Uuid:
+      - 85e691015e67c892fa09b45a00047de8
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, private
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/customs_items/cstitem_ed578a2c32904cbcb4dd572f31511349"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.039513'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb8sj
+      X-Version-Label:
+      - easypost-202003092309-e891dbcc33-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb2wdc 4515783a4a
+      - intlb1sj 4515783a4a
+      - intlb2wdc 4515783a4a
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"cstitem_ed578a2c32904cbcb4dd572f31511349","object":"CustomsItem","created_at":"2020-03-10T17:04:18Z","updated_at":"2020-03-10T17:04:18Z","description":"Product
+        #16 - 7469","hs_tariff_number":null,"origin_country":"US","quantity":1,"value":null,"weight":0.0,"code":"SKU-21","mode":"test","manufacturer":null,"currency":"USD"}'
+    http_version: null
+  recorded_at: Tue, 10 Mar 2020 17:04:19 GMT
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/customs_items
+    body:
+      encoding: UTF-8
+      string: customs_item[id]=cstitem_2&customs_item[object]=CustomsItem&customs_item[description]=Product%20%2317%20-%206602&customs_item[quantity]=1&customs_item[amount]=10.0&customs_item[weight]=0.0&customs_item[code]=SKU-22&customs_item[origin_country]=US&customs_item[currency]=USD
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/3.0.1
+      Authorization:
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '273'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.easypost.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ep-Request-Uuid:
+      - 85e691035e67c894fa0be15500047f08
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, private
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/customs_items/cstitem_9034728226cf481fb2caffb03a97efdd"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.027146'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb10sj
+      X-Version-Label:
+      - easypost-202003092309-e891dbcc33-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb2wdc 4515783a4a
+      - intlb1sj 4515783a4a
+      - intlb1wdc 4515783a4a
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"cstitem_9034728226cf481fb2caffb03a97efdd","object":"CustomsItem","created_at":"2020-03-10T17:04:20Z","updated_at":"2020-03-10T17:04:20Z","description":"Product
+        #17 - 6602","hs_tariff_number":null,"origin_country":"US","quantity":1,"value":null,"weight":0.0,"code":"SKU-22","mode":"test","manufacturer":null,"currency":"USD"}'
+    http_version: null
+  recorded_at: Tue, 10 Mar 2020 17:04:21 GMT
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/customs_infos
+    body:
+      encoding: UTF-8
+      string: customs_info[object]=CustomsInfo&customs_info[eel_pfc]=NOEEI%2030.37(a)&customs_info[contents_type]=merchandise&customs_info[contents_explanation]=merchandise&customs_info[customs_certify]=true&customs_info[customs_signer]=John%20Doe&customs_info[customs_items][0][id]=cstitem_ed578a2c32904cbcb4dd572f31511349&customs_info[customs_items][1][id]=cstitem_9034728226cf481fb2caffb03a97efdd&customs_info[non_delivery_option]=abandon&customs_info[restriction_type]=none&customs_info[restriction_comments]=
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/3.0.1
+      Authorization:
+      - Bearer EZTKa6a3653e4e3f4b2883013f4c20e1f28b6camRFWNI0aRqQQqDnQKkg
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '499'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.easypost.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ep-Request-Uuid:
+      - 85e691015e67c895f9f8b90000047fd6
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, private
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/customs_infos/cstinfo_384145d08c45450fb70c10e6d0318230"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.052385'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb2sj
+      X-Version-Label:
+      - easypost-202003092309-e891dbcc33-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb2wdc 4515783a4a
+      - intlb1sj 4515783a4a
+      - intlb1wdc 4515783a4a
+      Strict-Transport-Security:
+      - max-age=15768000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"cstinfo_384145d08c45450fb70c10e6d0318230","object":"CustomsInfo","created_at":"2020-03-10T17:04:21Z","updated_at":"2020-03-10T17:04:21Z","contents_explanation":"merchandise","contents_type":"merchandise","customs_certify":true,"customs_signer":"John
+        Doe","eel_pfc":"NOEEI 30.37(a)","non_delivery_option":"abandon","restriction_comments":"","restriction_type":"none","mode":"test","declaration":null,"customs_items":[{"id":"cstitem_ed578a2c32904cbcb4dd572f31511349","object":"CustomsItem","created_at":"2020-03-10T17:04:18Z","updated_at":"2020-03-10T17:04:18Z","description":"Product
+        #16 - 7469","hs_tariff_number":null,"origin_country":"US","quantity":1,"value":null,"weight":0.0,"code":"SKU-21","mode":"test","manufacturer":null,"currency":"USD"},{"id":"cstitem_9034728226cf481fb2caffb03a97efdd","object":"CustomsItem","created_at":"2020-03-10T17:04:20Z","updated_at":"2020-03-10T17:04:20Z","description":"Product
+        #17 - 6602","hs_tariff_number":null,"origin_country":"US","quantity":1,"value":null,"weight":0.0,"code":"SKU-22","mode":"test","manufacturer":null,"currency":"USD"}]}'
+    http_version: null
+  recorded_at: Tue, 10 Mar 2020 17:04:22 GMT
+recorded_with: VCR 5.1.0
