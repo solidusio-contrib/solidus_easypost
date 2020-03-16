@@ -41,4 +41,15 @@ RSpec.describe Spree::Shipment, :vcr do
     shipment.ship!
     expect(shipment.tracking).to be_present
   end
+
+  describe '#international_shipment?' do
+    it 'returns false when shipping nationally' do
+      expect(shipment.international_shipment?).to eq false
+    end
+
+    it 'returns true when the country doesnt match' do
+      shipment.stock_location.country = create(:country)
+      expect(shipment.international_shipment?).to eq true
+    end
+  end
 end

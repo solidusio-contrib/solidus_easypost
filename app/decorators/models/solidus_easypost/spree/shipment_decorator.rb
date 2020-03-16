@@ -19,6 +19,10 @@ module SolidusEasypost
         end
       end
 
+      def international_shipment?
+        address.country != stock_location.country
+      end
+
       private
 
       def selected_easy_post_rate_id
@@ -30,12 +34,18 @@ module SolidusEasypost
       end
 
       def build_easypost_shipment
-        ::EasyPost::Shipment.create(
+        shipment_hash = {
           to_address: order.ship_address.easypost_address,
           from_address: stock_location.easypost_address,
           parcel: to_package.easypost_parcel,
           options: ::Spree::Easypost::Config.ddp_enabled ? { incoterm: 'DDP' } : {}
-        )
+        }
+
+        if international_shipment?
+          shipment_hash[:customs_info] = SolidusEasypost::CustomsInfo.new(order).info
+        end
+
+        ::EasyPost::Shipment.create(shipment_hash)
       end
 
       def buy_easypost_rate
