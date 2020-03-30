@@ -7,7 +7,7 @@ module SolidusEasypost
         mod.state_machine.before_transition(
           to: :shipped,
           do: :buy_easypost_rate,
-          if: -> { Solidus::EasyPost::CONFIGS[:purchase_labels?] }
+          if: -> { Solidus::EasyPost::CONFIGS[:purchase_labels?] && ::Spree::Easypost::Config.api_enabled }
         )
       end
 
