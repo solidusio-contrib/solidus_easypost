@@ -27,5 +27,26 @@ RSpec.describe Spree::Address, :vcr do
         phone: '5555550199'
       )
     end
+
+    it 'doesnt verify the address inputted' do
+      Spree::Easypost::Config.address_verification_enabled = false
+
+      expect(subject['verifications']['delivery']).to be_nil
+    end
+
+    it 'verifies the address inputted' do
+      Spree::Easypost::Config.address_verification_enabled = true
+
+      expect(subject['verifications']['delivery']['success']).to be_truthy
+    end
+
+    it 'strictly verifies the address inputted' do
+      Spree::Easypost::Config.address_verification_enabled = true
+      Spree::Easypost::Config.verify_strict_enabled = true
+
+      address1 = create(:address, zipcode: "324324234324", address1: "34 fdgdfgfd")
+
+      expect { address1.easypost_address }.to raise_error
+    end
   end
 end

@@ -18,6 +18,16 @@ module SolidusEasypost
           attributes[:state] = state ? state.abbr : state_name
           attributes[:country] = country&.iso
 
+          if ::Spree::Easypost::Config.address_verification_enabled
+
+            # The failure of any of these verifications will cause the whole request to fail
+            if ::Spree::Easypost::Config.verify_strict_enabled
+              attributes[:verify_strict] = ['delivery']
+            else
+              attributes[:verify] = ['delivery']
+            end
+          end
+
           ::EasyPost::Address.create attributes
         end
 
