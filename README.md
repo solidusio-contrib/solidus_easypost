@@ -1,6 +1,6 @@
 # Solidus + EasyPost
 
-[![CircleCI](https://circleci.com/gh/solidusio-contrib/solidus_easypost.svg?style=svg)](https://circleci.com/gh/solidusio-contrib/solidus_easypost)
+[![CircleCI](https://circleci.com/gh/boomerdigital/solidus_easypost.svg?style=svg)](https://circleci.com/gh/boomerdigital/solidus_easypost)
 
 This is an extension to integrate Easy Post into Spree. Due to how it works, you will not be able to use any other extension than this for shipping methods. Your own shipping methods will not work, either. But the good thing is that you won't have to worry about that, because Easy Post handles it all for you.
 
@@ -29,6 +29,12 @@ To enable DDP, place this in the file `config/initializers/easy_post.rb`:
   Spree::Easypost::Config.ddp_enabled = true
 ```
 
+We also have the below configurations available.
+```ruby
+Spree::Easypost::Config.api_enabled = true # default
+Spree::Easypost::Config.address_verification_enabled = false # default
+Spree::Easypost::Config.verify_strict_enabled = false # default
+```
 
 ## Usage
 
