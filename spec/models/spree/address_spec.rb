@@ -36,6 +36,7 @@ RSpec.describe Spree::Address, :vcr do
 
     it 'verifies the address inputted' do
       Spree::Easypost::Config.address_verification_enabled = true
+      Spree::Easypost::Config.verify_strict_enabled = false
 
       expect(subject['verifications']['delivery']['success']).to be_truthy
     end
