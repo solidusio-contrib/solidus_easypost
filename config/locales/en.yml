@@ -1,0 +1,5 @@
+en:
+  spree:
+    hints:
+      spree/stock_location:
+        is_digital: For digital or non shippable products

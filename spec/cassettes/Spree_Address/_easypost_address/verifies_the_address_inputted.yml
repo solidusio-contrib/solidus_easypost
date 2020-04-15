@@ -33,7 +33,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - 7a43cb4a5e8a2ebdfebde29d00071de3
+      - a9ab08c65e961892e5e04c1f0012c889
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -41,28 +41,31 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - "/api/v2/addresses/adr_28ca59f180b444a883339a90e7801501"
+      - "/api/v2/addresses/adr_0d826fb10d524283b627cb6d4711746b"
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.077062'
+      - '0.131514'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb8sj
+      - bigweb7sj
       X-Version-Label:
-      - easypost-202004040128-16fe9181c9-master
+      - easypost-202004141838-9f18a0b30e-master
       X-Backend:
       - easypost
+      X-Canary:
+      - direct
       X-Proxied:
-      - extlb1sj 4515783a4a
-      - intlb2sj 1cda4c0014
+      - extlb1wdc 5834894b53
+      - intlb1sj 5834894b53
+      - intlb2wdc 5834894b53
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"adr_28ca59f180b444a883339a90e7801501","object":"Address","created_at":"2020-04-05T19:17:17Z","updated_at":"2020-04-05T19:17:17Z","name":"JOHN
+      string: '{"id":"adr_0d826fb10d524283b627cb6d4711746b","object":"Address","created_at":"2020-04-14T20:09:54Z","updated_at":"2020-04-14T20:09:54Z","name":"JOHN
         DOE","company":"COMPANY","street1":"215 N 7TH AVE","street2":"","city":"MANVILLE","state":"NJ","zip":"08835-1215","country":"US","phone":"5555550199","email":null,"mode":"test","carrier_facility":null,"residential":true,"federal_tax_id":null,"state_tax_id":null,"verifications":{"delivery":{"success":true,"errors":[],"details":{"latitude":40.54849,"longitude":-74.59299,"time_zone":"America/New_York"}}}}'
     http_version: null
-  recorded_at: Sun, 05 Apr 2020 19:17:17 GMT
+  recorded_at: Tue, 14 Apr 2020 20:09:55 GMT
 recorded_with: VCR 5.1.0

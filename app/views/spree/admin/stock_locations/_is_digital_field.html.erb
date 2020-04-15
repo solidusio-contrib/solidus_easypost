@@ -1,0 +1,7 @@
+<%= f.field_container :is_digital do %>
+  <label>
+    <%= f.check_box :is_digital %>
+    <%= Spree::StockLocation.human_attribute_name :is_digital %>
+    <%= f.field_hint :is_digital %>
+  </label>
+<% end %>

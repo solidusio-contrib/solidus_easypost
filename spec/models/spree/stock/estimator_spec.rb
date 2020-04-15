@@ -61,7 +61,7 @@ RSpec.describe Spree::Stock::Estimator, :vcr do
 
     context 'no rates are found' do
       let(:package) do
-        instance_double(Spree::Stock::Package, easypost_shipment: fake_shipment)
+        instance_double(Spree::Stock::Package, easypost_shipment: fake_shipment, stock_location: Spree::StockLocation.new)
       end
 
       let(:fake_shipment) do

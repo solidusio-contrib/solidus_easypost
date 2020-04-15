@@ -6,7 +6,7 @@ module SolidusEasypost
       module EstimatorDecorator
 
         def shipping_rates(package, frontend_only = true)
-          if ::Spree::Easypost::Config.api_enabled
+          if ::Spree::Easypost::Config.api_enabled && !package.stock_location.is_digital?
             shipment = package.easypost_shipment
             rates = shipment.rates.sort_by { |r| r.rate.to_i }
 
