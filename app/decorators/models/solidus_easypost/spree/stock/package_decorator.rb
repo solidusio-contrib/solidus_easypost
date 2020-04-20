@@ -12,9 +12,23 @@ module SolidusEasypost
           ::EasyPost::Parcel.create weight: total_weight
         end
 
+        def easypost_address
+          address = order.ship_address.easypost_address
+
+          delivery_verifications = address.verifications.delivery
+
+          if delivery_verifications.success === false
+            delivery_verifications.errors.map(&:message).each do |message|
+              order.errors.add(:address, message)
+            end
+          end
+
+          address
+        end
+
         def easypost_shipment
           ::EasyPost::Shipment.create(
-            to_address: order.ship_address.easypost_address,
+            to_address: easypost_address,
             from_address: stock_location.easypost_address,
             parcel: easypost_parcel,
             options: ::Spree::Easypost::Config.ddp_enabled ? { incoterm: 'DDP' } : {}
