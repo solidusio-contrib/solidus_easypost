@@ -15,7 +15,9 @@ module SolidusEasypost
         def easypost_address
           address = order.ship_address.easypost_address
 
-          delivery_verifications = address.verifications.delivery
+          delivery_verifications = address.verifications.try(:delivery)
+
+          return address if delivery_verifications.nil?
 
           if delivery_verifications.success === false
             delivery_verifications.errors.map(&:message).each do |message|
