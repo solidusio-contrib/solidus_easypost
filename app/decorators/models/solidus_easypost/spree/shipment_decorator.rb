@@ -7,7 +7,7 @@ module SolidusEasypost
         mod.state_machine.before_transition(
           to: :shipped,
           do: :buy_easypost_rate,
-          if: -> { Solidus::EasyPost::CONFIGS[:purchase_labels?] && ::Spree::Easypost::Config.api_enabled }
+          if: :easypost_available?
         )
       end
 
@@ -20,7 +20,7 @@ module SolidusEasypost
       end
 
       def international_shipment?
-        address.country != stock_location.country
+        order.ship_address.country != stock_location.country
       end
 
       private
@@ -55,6 +55,10 @@ module SolidusEasypost
 
         easypost_shipment.buy(rate)
         self.tracking = easypost_shipment.tracking_code
+      end
+
+      def easypost_available?
+        selected_easy_post_rate_id.present? && Solidus::EasyPost::CONFIGS[:purchase_labels?] && ::Spree::Easypost::Config.api_enabled
       end
 
       ::Spree::Shipment.prepend self

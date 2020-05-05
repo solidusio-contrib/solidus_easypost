@@ -52,4 +52,14 @@ RSpec.describe Spree::Shipment, :vcr do
       expect(shipment.international_shipment?).to eq true
     end
   end
+
+  describe 'non easypost shipment' do
+    let(:order) { create(:order_ready_to_ship) }
+
+    subject { order.shipments.first.ship! }
+
+    it 'ships successfully' do
+      expect(subject).to eq(true)
+    end
+  end
 end
