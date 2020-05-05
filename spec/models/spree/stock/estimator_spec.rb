@@ -10,7 +10,11 @@ RSpec.describe Spree::Stock::Estimator, :vcr do
   end
 
   let!(:shipment) { create :shipment }
-  let(:package) { shipment.to_package }
+  let!(:package) { shipment.to_package }
+
+  before do
+    Spree::ShippingMethod.destroy_all
+  end
 
   describe '#shipping_rates' do
     subject { estimator.shipping_rates package }
@@ -60,13 +64,8 @@ RSpec.describe Spree::Stock::Estimator, :vcr do
     end
 
     context 'no rates are found' do
-      let(:package) do
-        instance_double(Spree::Stock::Package, easypost_shipment: fake_shipment, stock_location: Spree::StockLocation.new)
-      end
-
-      let(:fake_shipment) do
-        double(EasyPost::Shipment, rates: [])
-      end
+      # Setting stock location with no address so no rates can be found
+      let!(:shipment) { create :shipment, stock_location: Spree::StockLocation.create(name: "No address") }
 
       it 'is empty' do
         expect(subject).to be_empty

@@ -8,12 +8,13 @@ module SolidusEasypost
         def shipping_rates(package, frontend_only = true)
           if ::Spree::Easypost::Config.api_enabled && !package.stock_location.is_digital?
             shipment = package.easypost_shipment
-            rates = shipment.rates.sort_by { |r| r.rate.to_i }
+            easypost_rates = shipment.rates.sort_by { |r| r.rate.to_i }
 
-            shipping_rates = []
+            shipping_rates = calculate_shipping_rates(package)
+            shipping_rates.select! { |rate| rate.shipping_method.available_to_users? } if frontend_only
 
-            if rates.any?
-              rates.each do |rate|
+            if easypost_rates.any?
+              easypost_rates.each do |rate|
                 spree_rate = ::Spree::ShippingRate.new(
                   name: "#{rate.carrier} #{rate.service}",
                   cost: rate.rate,
