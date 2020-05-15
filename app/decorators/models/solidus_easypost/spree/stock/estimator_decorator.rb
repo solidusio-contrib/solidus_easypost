@@ -11,7 +11,7 @@ module SolidusEasypost
             easypost_rates = shipment.rates.sort_by { |r| r.rate.to_i }
 
             shipping_rates = calculate_shipping_rates(package)
-            shipping_rates.select! { |rate| rate.shipping_method.available_to_users? } if frontend_only
+            shipping_rates.select! { |rate| rate.shipping_method.available_to_users? && rate.shipping_method.is_easypost === false } if frontend_only
 
             if easypost_rates.any?
               easypost_rates.each do |rate|
@@ -50,6 +50,7 @@ module SolidusEasypost
           ::Spree::ShippingMethod.find_or_create_by(admin_name: method_name) do |r|
             r.name = method_name
             r.available_to_users = false
+            r.is_easypost = true
             r.code = rate.service
             r.calculator = ::Spree::Calculator::Shipping::FlatRate.create
             r.shipping_categories = [::Spree::ShippingCategory.first]
