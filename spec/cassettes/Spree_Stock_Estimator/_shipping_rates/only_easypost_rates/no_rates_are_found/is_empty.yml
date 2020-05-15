@@ -33,7 +33,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - c15285555eb1cf3cf06e6e9e00023561
+      - d9085f155ebec874e3bc94420002b320
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -41,31 +41,31 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - "/api/v2/addresses/adr_5db72c7950a5453fa2e06c50924c74b6"
+      - "/api/v2/addresses/adr_bdbe8f25b2aa4398883bf58754d4e21d"
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.037495'
+      - '0.107924'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb9sj
+      - bigweb6sj
       X-Version-Label:
-      - easypost-202005051643-87004530ea-master
+      - easypost-202005142231-731311c147-master
       X-Backend:
       - easypost
       X-Proxied:
       - extlb1wdc 5834894b53
-      - intlb1wdc 5834894b53
       - intlb2sj 5834894b53
+      - intlb2wdc 5834894b53
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"adr_5db72c7950a5453fa2e06c50924c74b6","object":"Address","created_at":"2020-05-05T20:40:28Z","updated_at":"2020-05-05T20:40:28Z","name":"John
+      string: '{"id":"adr_bdbe8f25b2aa4398883bf58754d4e21d","object":"Address","created_at":"2020-05-15T16:51:00Z","updated_at":"2020-05-15T16:51:00Z","name":"John
         Doe","company":"Company","street1":"A Different Road","street2":"Northwest","city":"Manville","state":"NJ","zip":"08835","country":"US","phone":"5555550199","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}}'
     http_version: null
-  recorded_at: Tue, 05 May 2020 20:40:28 GMT
+  recorded_at: Fri, 15 May 2020 16:51:00 GMT
 - request:
     method: post
     uri: https://api.easypost.com/v2/addresses
@@ -99,7 +99,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - c15285575eb1cf3df06e6e9f000235a8
+      - d9085f175ebec875e3bc94470002b397
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -107,31 +107,31 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - "/api/v2/addresses/adr_edc5173babc14c238a1e1fbd9472c68a"
+      - "/api/v2/addresses/adr_349e3e46ed964c1aa67a917e7a281ad1"
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.033759'
+      - '0.036787'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb6sj
+      - bigweb2sj
       X-Version-Label:
-      - easypost-202005051643-87004530ea-master
+      - easypost-202005142231-731311c147-master
       X-Backend:
       - easypost
       X-Proxied:
       - extlb1wdc 5834894b53
       - intlb1sj 5834894b53
-      - intlb1wdc 5834894b53
+      - intlb2wdc 5834894b53
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"adr_edc5173babc14c238a1e1fbd9472c68a","object":"Address","created_at":"2020-05-05T20:40:29Z","updated_at":"2020-05-05T20:40:29Z","name":"No
+      string: '{"id":"adr_349e3e46ed964c1aa67a917e7a281ad1","object":"Address","created_at":"2020-05-15T16:51:01Z","updated_at":"2020-05-15T16:51:01Z","name":"No
         address","company":"No address","street1":null,"street2":null,"city":null,"state":null,"zip":null,"country":"US","phone":null,"email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}}'
     http_version: null
-  recorded_at: Tue, 05 May 2020 20:40:29 GMT
+  recorded_at: Fri, 15 May 2020 16:51:01 GMT
 - request:
     method: post
     uri: https://api.easypost.com/v2/parcels
@@ -165,7 +165,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - b6c3dd5e5eb1cf3ef390d20b0016f071
+      - d9085f175ebec875e3bc94480002b3fe
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -173,35 +173,36 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - "/api/v2/parcels/prcl_5662d0d1090f404889e394c6812a2e43"
+      - "/api/v2/parcels/prcl_38636048a4354a20a827d9e29c38dc4d"
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.034862'
+      - '0.040843'
       Transfer-Encoding:
       - chunked
       X-Node:
       - bigweb10sj
       X-Version-Label:
-      - easypost-202005051643-87004530ea-master
+      - easypost-202005142231-731311c147-master
       X-Backend:
       - easypost
       X-Proxied:
-      - extlb2sj 5834894b53
+      - extlb1wdc 5834894b53
       - intlb1sj 5834894b53
+      - intlb1wdc 5834894b53
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"prcl_5662d0d1090f404889e394c6812a2e43","object":"Parcel","created_at":"2020-05-05T20:40:30Z","updated_at":"2020-05-05T20:40:30Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":10.0,"mode":"test"}'
+      string: '{"id":"prcl_38636048a4354a20a827d9e29c38dc4d","object":"Parcel","created_at":"2020-05-15T16:51:02Z","updated_at":"2020-05-15T16:51:02Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":10.0,"mode":"test"}'
     http_version: null
-  recorded_at: Tue, 05 May 2020 20:40:30 GMT
+  recorded_at: Fri, 15 May 2020 16:51:02 GMT
 - request:
     method: post
     uri: https://api.easypost.com/v2/shipments
     body:
       encoding: UTF-8
-      string: shipment[to_address][id]=adr_5db72c7950a5453fa2e06c50924c74b6&shipment[from_address][id]=adr_edc5173babc14c238a1e1fbd9472c68a&shipment[parcel][id]=prcl_5662d0d1090f404889e394c6812a2e43
+      string: shipment[to_address][id]=adr_bdbe8f25b2aa4398883bf58754d4e21d&shipment[from_address][id]=adr_349e3e46ed964c1aa67a917e7a281ad1&shipment[parcel][id]=prcl_38636048a4354a20a827d9e29c38dc4d
     headers:
       Accept:
       - "*/*"
@@ -229,7 +230,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Ep-Request-Uuid:
-      - 3bc6fbde5eb1cf3ff390d20c000255e4
+      - d9085f125ebec876e3bc94640002b44a
       Cache-Control:
       - no-cache, no-store, must-revalidate, private
       Pragma:
@@ -237,33 +238,35 @@ http_interactions:
       Expires:
       - '0'
       Location:
-      - "/api/v2/shipments/shp_58c6e47553ce464980bfd6ac77ed27d4"
+      - "/api/v2/shipments/shp_2fa869cc707f469d9fe41bef6053d55a"
       Content-Type:
       - application/json; charset=utf-8
       X-Runtime:
-      - '0.125249'
+      - '0.107989'
       Transfer-Encoding:
       - chunked
       X-Node:
-      - bigweb10sj
+      - bigweb7sj
       X-Version-Label:
-      - easypost-202005051643-87004530ea-master
+      - easypost-202005142231-731311c147-master
       X-Backend:
       - easypost
+      X-Canary:
+      - direct
       X-Proxied:
-      - extlb2wdc 5834894b53
-      - intlb1wdc 5834894b53
+      - extlb1wdc 5834894b53
       - intlb2sj 5834894b53
+      - intlb2wdc 5834894b53
       Strict-Transport-Security:
       - max-age=15768000; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"created_at":"2020-05-05T20:40:31Z","is_return":false,"messages":[{"type":"rate_error","carrier":"USPS","message":"Unable
-        to retrieve USPS rates without a valid origin zip code."}],"mode":"test","options":{"currency":"USD","payment":{"type":"SENDER"},"date_advance":0},"reference":null,"status":"unknown","tracking_code":null,"updated_at":"2020-05-05T20:40:31Z","batch_id":null,"batch_status":null,"batch_message":null,"customs_info":null,"from_address":{"id":"adr_edc5173babc14c238a1e1fbd9472c68a","object":"Address","created_at":"2020-05-05T20:40:29Z","updated_at":"2020-05-05T20:40:29Z","name":"No
-        address","company":"No address","street1":null,"street2":null,"city":null,"state":null,"zip":null,"country":"US","phone":null,"email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"insurance":null,"order_id":null,"parcel":{"id":"prcl_5662d0d1090f404889e394c6812a2e43","object":"Parcel","created_at":"2020-05-05T20:40:30Z","updated_at":"2020-05-05T20:40:30Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":10.0,"mode":"test"},"postage_label":null,"rates":[],"refund_status":null,"scan_form":null,"selected_rate":null,"tracker":null,"to_address":{"id":"adr_5db72c7950a5453fa2e06c50924c74b6","object":"Address","created_at":"2020-05-05T20:40:28Z","updated_at":"2020-05-05T20:40:28Z","name":"John
-        Doe","company":"Company","street1":"A Different Road","street2":"Northwest","city":"Manville","state":"NJ","zip":"08835","country":"US","phone":"5555550199","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"usps_zone":null,"return_address":{"id":"adr_edc5173babc14c238a1e1fbd9472c68a","object":"Address","created_at":"2020-05-05T20:40:29Z","updated_at":"2020-05-05T20:40:29Z","name":"No
-        address","company":"No address","street1":null,"street2":null,"city":null,"state":null,"zip":null,"country":"US","phone":null,"email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"buyer_address":{"id":"adr_5db72c7950a5453fa2e06c50924c74b6","object":"Address","created_at":"2020-05-05T20:40:28Z","updated_at":"2020-05-05T20:40:28Z","name":"John
-        Doe","company":"Company","street1":"A Different Road","street2":"Northwest","city":"Manville","state":"NJ","zip":"08835","country":"US","phone":"5555550199","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"forms":[],"fees":[],"id":"shp_58c6e47553ce464980bfd6ac77ed27d4","object":"Shipment"}'
+      string: '{"created_at":"2020-05-15T16:51:02Z","is_return":false,"messages":[{"type":"rate_error","carrier":"USPS","message":"Unable
+        to retrieve USPS rates without a valid origin zip code."}],"mode":"test","options":{"currency":"USD","payment":{"type":"SENDER"},"date_advance":0},"reference":null,"status":"unknown","tracking_code":null,"updated_at":"2020-05-15T16:51:02Z","batch_id":null,"batch_status":null,"batch_message":null,"customs_info":null,"from_address":{"id":"adr_349e3e46ed964c1aa67a917e7a281ad1","object":"Address","created_at":"2020-05-15T16:51:01Z","updated_at":"2020-05-15T16:51:01Z","name":"No
+        address","company":"No address","street1":null,"street2":null,"city":null,"state":null,"zip":null,"country":"US","phone":null,"email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"insurance":null,"order_id":null,"parcel":{"id":"prcl_38636048a4354a20a827d9e29c38dc4d","object":"Parcel","created_at":"2020-05-15T16:51:02Z","updated_at":"2020-05-15T16:51:02Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":10.0,"mode":"test"},"postage_label":null,"rates":[],"refund_status":null,"scan_form":null,"selected_rate":null,"tracker":null,"to_address":{"id":"adr_bdbe8f25b2aa4398883bf58754d4e21d","object":"Address","created_at":"2020-05-15T16:51:00Z","updated_at":"2020-05-15T16:51:00Z","name":"John
+        Doe","company":"Company","street1":"A Different Road","street2":"Northwest","city":"Manville","state":"NJ","zip":"08835","country":"US","phone":"5555550199","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"usps_zone":null,"return_address":{"id":"adr_349e3e46ed964c1aa67a917e7a281ad1","object":"Address","created_at":"2020-05-15T16:51:01Z","updated_at":"2020-05-15T16:51:01Z","name":"No
+        address","company":"No address","street1":null,"street2":null,"city":null,"state":null,"zip":null,"country":"US","phone":null,"email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"buyer_address":{"id":"adr_bdbe8f25b2aa4398883bf58754d4e21d","object":"Address","created_at":"2020-05-15T16:51:00Z","updated_at":"2020-05-15T16:51:00Z","name":"John
+        Doe","company":"Company","street1":"A Different Road","street2":"Northwest","city":"Manville","state":"NJ","zip":"08835","country":"US","phone":"5555550199","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"forms":[],"fees":[],"id":"shp_2fa869cc707f469d9fe41bef6053d55a","object":"Shipment"}'
     http_version: null
-  recorded_at: Tue, 05 May 2020 20:40:31 GMT
+  recorded_at: Fri, 15 May 2020 16:51:03 GMT
 recorded_with: VCR 5.1.0
