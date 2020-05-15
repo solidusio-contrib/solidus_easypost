@@ -6,25 +6,29 @@ module ShippingMethodHelpers
       name: "USPS First",
       available_to_users: true,
       admin_name: "USPS First",
-      code: "First"
+      code: "First",
+      is_easypost: true
     },
     {
       name: "USPS Priority",
       available_to_users: true,
       admin_name: "USPS Priority",
-      code: "Priority"
+      code: "Priority",
+      is_easypost: true
     },
     {
       name: "USPS ParcelSelect",
       available_to_users: true,
       admin_name: "USPS ParcelSelect",
-      code: "ParcelSelect"
+      code: "ParcelSelect",
+      is_easypost: true
     },
     {
       name: "USPS Express",
       available_to_users: true,
       admin_name: "USPS Express",
-      code: "Express"
+      code: "Express",
+      is_easypost: true
     }
   ].freeze
 
