@@ -4,26 +4,33 @@ module SolidusEasypost
   module Spree
     module Stock
       module EstimatorDecorator
-
         def shipping_rates(package, frontend_only = true)
           if ::Spree::Easypost::Config.api_enabled && !package.stock_location.is_digital?
             shipment = package.easypost_shipment
             easypost_rates = shipment.rates.sort_by { |r| r.rate.to_i }
 
             shipping_rates = calculate_shipping_rates(package)
-            shipping_rates.select! { |rate| rate.shipping_method.available_to_users? && rate.shipping_method.is_easypost === false } if frontend_only
+            if frontend_only
+              shipping_rates.select! { |rate| rate.shipping_method.available_to_users? && rate.shipping_method.is_easypost === false }
+            end
 
             if easypost_rates.any?
+              eligible_methods = eligible_shipping_methods(package)
+
               easypost_rates.each do |rate|
+                sm = find_or_create_shipping_method(rate)
+                next unless sm.available_to_users?
+                next unless eligible_methods.include?(sm)
+
                 spree_rate = ::Spree::ShippingRate.new(
                   name: "#{rate.carrier} #{rate.service}",
                   cost: rate.rate,
                   easy_post_shipment_id: rate.shipment_id,
                   easy_post_rate_id: rate.id,
-                  shipping_method: find_or_create_shipping_method(rate)
+                  shipping_method: sm
                 )
 
-                shipping_rates << spree_rate if spree_rate.shipping_method.available_to_users?
+                shipping_rates << spree_rate
               end
 
               # Sets cheapest rate to be selected by default
@@ -41,6 +48,12 @@ module SolidusEasypost
         end
 
         private
+
+        def eligible_shipping_methods(package)
+          variants = package.contents.map(&:variant).compact.uniq
+          categories = variants.map(&:shipping_category).compact.uniq
+          categories.map(&:shipping_methods).flatten.compact.uniq
+        end
 
         # Cartons require shipping methods to be present, This will lookup a
         # Shipping method based on the admin(internal)_name. This is not user facing
