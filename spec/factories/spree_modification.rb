@@ -22,4 +22,19 @@ FactoryBot.modify do
     association(:state, name: 'New Jersey', abbr: 'NJ')
     zipcode { '08835' }
   end
+
+  factory :stock_location do
+    trait :invalid do
+      address1 { '10000 Flamingo Rd.' }
+      city { 'Gulf Breeze' }
+      association(:state, name: 'Florida', abbr: 'FL')
+      zipcode { rand(10_000..99_999).to_s }
+    end
+  end
+
+  factory :shipment do
+    trait :invalid_address do
+      association(:stock_location, :invalid)
+    end
+  end
 end

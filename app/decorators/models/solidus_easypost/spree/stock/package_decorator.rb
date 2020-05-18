@@ -21,7 +21,7 @@ module SolidusEasypost
 
           if delivery_verifications.success === false
             delivery_verifications.errors.map(&:message).each do |message|
-              order.errors.add(:address, message)
+              order.errors.add(:address, "#{error_label}: #{message}")
             end
           end
 
@@ -35,6 +35,10 @@ module SolidusEasypost
             parcel: easypost_parcel,
             options: ::Spree::Easypost::Config.ddp_enabled ? { incoterm: 'DDP' } : {}
           )
+        end
+
+        def error_label
+          'EasyPost address verification'
         end
 
         ::Spree::Stock::Package.prepend self
