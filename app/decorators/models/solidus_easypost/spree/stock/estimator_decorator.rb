@@ -15,15 +15,20 @@ module SolidusEasypost
 
             if easypost_rates.any?
               easypost_rates.each do |rate|
-                spree_rate = ::Spree::ShippingRate.new(
-                  name: "#{rate.carrier} #{rate.service}",
-                  cost: rate.rate,
-                  easy_post_shipment_id: rate.shipment_id,
-                  easy_post_rate_id: rate.id,
-                  shipping_method: find_or_create_shipping_method(rate)
-                )
+                shipping_method = find_or_create_shipping_method(rate)
 
-                shipping_rates << spree_rate if spree_rate.shipping_method.available_to_users?
+                if package.shipping_methods.include?(shipping_method)
+
+                  spree_rate = ::Spree::ShippingRate.new(
+                    name: "#{rate.carrier} #{rate.service}",
+                    cost: rate.rate,
+                    easy_post_shipment_id: rate.shipment_id,
+                    easy_post_rate_id: rate.id,
+                    shipping_method: find_or_create_shipping_method(rate)
+                  )
+
+                  shipping_rates << spree_rate if spree_rate.shipping_method.available_to_users?
+                end
               end
 
               # Sets cheapest rate to be selected by default
