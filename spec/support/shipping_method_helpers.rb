@@ -33,7 +33,7 @@ module ShippingMethodHelpers
   ].freeze
 
   def create_shipping_methods
-    shipping_category = create :shipping_category
+    shipping_category = Spree::ShippingCategory.first || create(:shipping_category)
     FIXTURE_PARAMS.each do |params|
       params[:calculator] = Spree::Calculator::Shipping::FlatRate.new
       params[:shipping_categories] = [shipping_category]
