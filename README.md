@@ -4,9 +4,9 @@
 
 This is an extension to integrate EasyPost with Solidus.
 
-Due to how it works, you will not be able to use any other extension for shipping methods. Your own
-shipping methods will not work, either. But the good thing is that you won't have to worry about
-that, because EasyPost handles it all for you.
+Due to how it works, you will not be able to use any other extension for shipping methods. But the good thing is that you won't have to worry about that, because EasyPost handles it all for you.
+
+However, it is possible to use your own shipping methods alongside EasyPost by defining Solidus ShippingCategories that operate independently of EasyPost. By default, EasyPost will handle shipping for all ShippingCategories, but if you don't want that, you can simply set `ShippingCategory#use_easypost?` to `false`.
 
 You will need to [sign up for an account](https://www.easypost.com/) to use this extension.
 

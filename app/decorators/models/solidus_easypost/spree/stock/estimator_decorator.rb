@@ -5,7 +5,11 @@ module SolidusEasypost
     module Stock
       module EstimatorDecorator
         def shipping_rates(package, frontend_only = true)
-          SolidusEasypost::Estimator.new.shipping_rates(package, frontend_only)
+          if package.shipping_categories.pluck(:use_easypost).any?
+            SolidusEasypost::Estimator.new.shipping_rates(package, frontend_only)
+          else
+            super
+          end
         end
 
         ::Spree::Stock::Estimator.prepend self
