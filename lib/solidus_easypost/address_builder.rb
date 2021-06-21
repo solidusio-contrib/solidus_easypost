@@ -15,8 +15,10 @@ module SolidusEasypost
         attributes[:company] = address.company if address.respond_to?(:company)
         attributes[:name] = if address.respond_to?(:name)
                               address.name
-                            elsif respond_to?(:full_name)
+                            elsif address.respond_to?(:full_name)
                               address.full_name
+                            else
+                              [address.firstname, address.lastname].join(' ')
                             end
         attributes[:state] = address.state ? address.state.abbr : address.state_name
         attributes[:country] = address.country&.iso
