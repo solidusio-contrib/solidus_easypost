@@ -32,11 +32,7 @@ module SolidusEasypost
       private
 
       def buy_easypost_rate
-        rate = easypost_shipment.rates.find do |easypost_rate|
-          easypost_rate.id == selected_easy_post_rate_id
-        end
-
-        easypost_shipment.buy(rate)
+        SolidusEasypost.client.shipment.buy(selected_easy_post_shipment_id, rate: { id: selected_easy_post_rate_id })
 
         self.tracking = easypost_shipment.tracking_code
       end
