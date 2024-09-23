@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-FactoryBot.modify do
+FactoryBot.define do
   factory :shipment do
     transient do
       inventory_units { 1 }

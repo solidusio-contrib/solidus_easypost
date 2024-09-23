@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-FactoryBot.modify do
+FactoryBot.define do
   factory :stock_location do
     address1 { '131 S 8th Ave' }
     city { 'Manville' }

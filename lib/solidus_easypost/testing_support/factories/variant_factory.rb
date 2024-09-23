@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-FactoryBot.modify do
+FactoryBot.define do
   factory :variant do
     weight { 10.0 }
   end
