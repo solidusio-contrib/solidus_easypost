@@ -22,7 +22,7 @@ module SolidusEasypost
       def easypost_shipment
         return unless selected_easy_post_shipment_id
 
-        @easypost_shipment ||= ::EasyPost::Shipment.retrieve(selected_easy_post_shipment_id)
+        @easypost_shipment ||= SolidusEasypost.client.shipment.retrieve(selected_easy_post_shipment_id)
       end
 
       def easypost_postage_label_url
