@@ -2,7 +2,7 @@
 
 SolidusEasypost.configure do |config|
   # API Key
-  # config.api_key = 'YOUR_API_KEY_HERE'
+  config.api_key = 'YOUR_API_KEY_HERE'
 
   # Purchase labels from EasyPost when shipping shipments in Solidus?
   # config.purchase_labels = true
