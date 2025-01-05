@@ -32,7 +32,9 @@ module SolidusEasypost
       private
 
       def buy_easypost_rate
-        SolidusEasypost.client.shipment.buy(selected_easy_post_shipment_id, rate: { id: selected_easy_post_rate_id })
+        unless easypost_shipment.tracking_code
+          SolidusEasypost.client.shipment.buy(selected_easy_post_shipment_id, rate: { id: selected_easy_post_rate_id })
+        end
 
         self.tracking = easypost_shipment.tracking_code
       end
