@@ -9,13 +9,13 @@ module SolidusEasypost
         end
 
         easypost_shipment = instance_spy(
-          EasyPost::Shipment,
+          SolidusEasypost.client.shipment,
           id: SecureRandom.hex,
           tracking_code: SecureRandom.hex,
           rates: Array.new(3) { stub_easypost_rate },
         )
 
-        allow(EasyPost::Shipment).to receive(:retrieve)
+        allow(SolidusEasypost.client.shipment).to receive(:retrieve)
           .with(easypost_shipment.id)
           .and_return(easypost_shipment)
 
@@ -25,7 +25,7 @@ module SolidusEasypost
       def stub_easypost_rate
         easypost_rate = instance_spy(EasyPost::Rate, id: SecureRandom.hex)
 
-        allow(EasyPost::Shipment).to receive(:retrieve)
+        allow(SolidusEasypost.client.shipment).to receive(:retrieve)
           .with(easypost_rate.id)
           .and_return(easypost_rate)
 

@@ -1,7 +1,7 @@
 RSpec.describe SolidusEasypost::ShippingRateCalculator do
   describe '#compute' do
     it 'returns the amount on the EasyPost rate' do
-      easypost_rate = EasyPost::Rate.construct_from('rate' => 25.0)
+      easypost_rate = SolidusEasypost.client.rate.construct_from('rate' => 25.0)
 
       calculator = described_class.new
       computed_rate = calculator.compute(easypost_rate)

@@ -3,7 +3,7 @@ RSpec.describe SolidusEasypost::ShippingMethodSelector do
     context 'when a shipping method for the given carrier and service exists' do
       it 'returns the existing shipping method' do
         shipping_method = create(:shipping_method, carrier: 'USPS', service_level: 'Express')
-        easypost_rate = EasyPost::Rate.construct_from('carrier' => 'USPS', 'service' => 'Express')
+        easypost_rate = SolidusEasypost.client.rate.construct_from('carrier' => 'USPS', 'service' => 'Express')
 
         selector = described_class.new
         selected_shipping_method = selector.shipping_method_for(easypost_rate)
@@ -15,7 +15,7 @@ RSpec.describe SolidusEasypost::ShippingMethodSelector do
     context 'when a shipping method for the given carrier and service does not exist' do
       it 'creates a new shipping method' do
         shipping_category = create(:shipping_category)
-        easypost_rate = EasyPost::Rate.construct_from('carrier' => 'USPS', 'service' => 'Express')
+        easypost_rate = SolidusEasypost.client.rate.construct_from('carrier' => 'USPS', 'service' => 'Express')
 
         selector = described_class.new
         selected_shipping_method = selector.shipping_method_for(easypost_rate)
