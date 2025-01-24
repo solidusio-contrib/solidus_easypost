@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :shipment do
+  factory :shipment, class: 'Spree::Shipment' do
     transient do
       inventory_units { 1 }
     end

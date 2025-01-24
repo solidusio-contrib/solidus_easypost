@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :address do
+  factory :address, class: 'Spree::Address' do
     address1 { '215 N 7th Ave' }
     city { 'Manville' }
     association(:state, name: 'New Jersey', abbr: 'NJ')
