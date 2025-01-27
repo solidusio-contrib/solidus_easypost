@@ -6,6 +6,7 @@ FactoryBot.define do
     stock_location
     shipping_method
     shipped_at { Time.current }
+    tracking {'EZ2000000002'}
 
     inventory_units do
       [
