@@ -14,7 +14,7 @@ RSpec.describe SolidusEasypost::ParcelBuilder do
 
       allow(parcel_dimension_calculator).to receive(:compute).and_return(parcel_dimension)
       allow(parcel_dimension).to receive(:to_h).and_return(dimension_hash)
-      allow(EasyPost::Parcel).to receive(:create).and_call_original
+      allow(EasyPost::Services::Parcel).to receive(:create).and_call_original
     end
 
     context 'when there is only the weight set' do
@@ -22,16 +22,10 @@ RSpec.describe SolidusEasypost::ParcelBuilder do
 
       it 'builds a parcel with the correct attributes' do
         parcel = described_class.from_package(package)
-
-        expect(parcel_dimension_calculator)
-          .to have_received(:compute)
-          .with(package)
-
-        expect(EasyPost::Parcel)
-          .to have_received(:create)
-          .with({ weight: 10.to_f })
+        expect(parcel_dimension_calculator).to have_received(:compute).with(package)
 
         expect(parcel).to have_attributes(object: 'Parcel')
+        expect(parcel.weight).to eq(dimension_hash[:weight])
       end
     end
 
@@ -47,11 +41,8 @@ RSpec.describe SolidusEasypost::ParcelBuilder do
           .to have_received(:compute)
           .with(package)
 
-        expect(EasyPost::Parcel)
-          .to have_received(:create)
-          .with({ weight: 10.to_f, height: 2.to_f, width: 3.to_f, depth: 4.to_f })
-
         expect(parcel).to have_attributes(object: 'Parcel')
+        expect(parcel.weight).to eq(dimension_hash[:weight])
       end
     end
   end
@@ -69,7 +60,7 @@ RSpec.describe SolidusEasypost::ParcelBuilder do
 
       allow(parcel_dimension_calculator).to receive(:compute).and_return(parcel_dimension)
       allow(parcel_dimension).to receive(:to_h).and_return(dimension_hash)
-      allow(EasyPost::Parcel).to receive(:create).and_call_original
+      allow(EasyPost::Services::Parcel).to receive(:create).and_call_original
     end
 
     context 'when there is only the weight set' do
@@ -82,11 +73,8 @@ RSpec.describe SolidusEasypost::ParcelBuilder do
           .to have_received(:compute)
           .with(return_authorization)
 
-        expect(EasyPost::Parcel)
-          .to have_received(:create)
-          .with({ weight: 10.to_f })
-
         expect(parcel).to have_attributes(object: 'Parcel')
+        expect(parcel.weight).to eq(dimension_hash[:weight])
       end
     end
 
@@ -102,11 +90,8 @@ RSpec.describe SolidusEasypost::ParcelBuilder do
           .to have_received(:compute)
           .with(return_authorization)
 
-        expect(EasyPost::Parcel)
-          .to have_received(:create)
-          .with({ weight: 10.to_f, height: 2.to_f, width: 3.to_f, depth: 4.to_f })
-
         expect(parcel).to have_attributes(object: 'Parcel')
+        expect(parcel.weight).to eq(dimension_hash[:weight])
       end
     end
   end

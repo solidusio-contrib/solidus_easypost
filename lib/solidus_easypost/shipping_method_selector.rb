@@ -10,7 +10,7 @@ module SolidusEasypost
         shipping_method.name = "#{rate.carrier} #{rate.service}"
         shipping_method.calculator = ::Spree::Calculator::Shipping::FlatRate.create
         shipping_method.shipping_categories = [::Spree::ShippingCategory.first]
-        shipping_method.available_to_users = false
+        shipping_method.available_to_users = SolidusEasypost.configuration.shipment_method_user_availability
       end
     end
   end

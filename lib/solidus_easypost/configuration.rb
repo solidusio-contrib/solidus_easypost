@@ -2,13 +2,14 @@
 
 module SolidusEasypost
   class Configuration
-    attr_accessor :purchase_labels, :track_all_cartons
+    attr_accessor :purchase_labels, :track_all_cartons, :shipment_method_user_availability
     attr_writer :shipping_rate_calculator_class, :shipping_method_selector_class, :parcel_dimension_calculator_class,
       :webhook_handler_class
 
     def initialize
       self.purchase_labels = true
       self.track_all_cartons = false
+      @shipment_method_user_availability = shipment_method_user_availability
     end
 
     def shipping_rate_calculator_class

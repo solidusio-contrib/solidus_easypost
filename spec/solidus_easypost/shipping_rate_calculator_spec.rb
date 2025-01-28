@@ -1,12 +1,24 @@
 RSpec.describe SolidusEasypost::ShippingRateCalculator do
   describe '#compute' do
     it 'returns the amount on the EasyPost rate' do
-      easypost_rate = EasyPost::Rate.construct_from('rate' => 25.0)
+      VCR.use_cassette('shipping_rate_calculator/returns_amount') do
+        stub_easypost_config(purchase_labels: true)
+        stub_spree_preferences(require_payment_to_ship: false, track_inventory_levels: false)
 
-      calculator = described_class.new
-      computed_rate = calculator.compute(easypost_rate)
+        use_easypost_estimator
+        create_easypost_shipping_methods
 
-      expect(computed_rate).to eq(25.0)
+        order = Spree::TestingSupport::OrderWalkthrough.up_to(:complete)
+        shipment = order.shipments.first
+
+        shipment.shipping_rates.where(selected: true).last
+        easypost_rates = shipment.easypost_shipment.rates
+        calculator = described_class.new
+        easypost_rates.each do |rate|
+          computed_rate = calculator.compute(rate)
+          expect(computed_rate).to eq(rate.rate)
+        end
+      end
     end
   end
 end

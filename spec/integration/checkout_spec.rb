@@ -10,36 +10,32 @@ RSpec.describe 'Checkout' do
     shipment.ship!
 
     expect(order.state).to eq('complete')
-    expect(shipment.shipping_rates).to match_array([
-      have_attributes(
-        selected: true,
-        cost: 0.393e1,
-        name: 'USPS First',
-        easy_post_shipment_id: /shp_/,
-        easy_post_rate_id: /rate_/,
-      ),
-      have_attributes(
-        selected: false,
-        cost: 0.692e1,
-        name: 'USPS ParcelSelect',
-        easy_post_shipment_id: /shp_/,
-        easy_post_rate_id: /rate_/,
-      ),
-      have_attributes(
-        selected: false,
-        cost: 0.702e1,
-        name: 'USPS Priority',
-        easy_post_shipment_id: /shp_/,
-        easy_post_rate_id: /rate_/,
-      ),
-      have_attributes(
-        selected: false,
-        cost: 0.23e2,
-        name: 'USPS Express',
-        easy_post_shipment_id: /shp_/,
-        easy_post_rate_id: /rate_/,
-      ),
-    ])
+
+    expect(shipment.shipping_rates).to contain_exactly(have_attributes(
+      selected: true,
+      cost: 0.393e1,
+      name: 'USPS First',
+      easy_post_shipment_id: /shp_/,
+      easy_post_rate_id: /rate_/,
+    ), have_attributes(
+      selected: false,
+      cost: 0.692e1,
+      name: 'USPS ParcelSelect',
+      easy_post_shipment_id: /shp_/,
+      easy_post_rate_id: /rate_/,
+    ), have_attributes(
+      selected: false,
+      cost: 0.702e1,
+      name: 'USPS Priority',
+      easy_post_shipment_id: /shp_/,
+      easy_post_rate_id: /rate_/,
+    ), have_attributes(
+      selected: false,
+      cost: 0.23e2,
+      name: 'USPS Express',
+      easy_post_shipment_id: /shp_/,
+      easy_post_rate_id: /rate_/,
+    ))
     expect(shipment.tracking).to be_present
   end
 end
