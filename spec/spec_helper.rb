@@ -18,6 +18,8 @@ require 'solidus_dev_support/rspec/feature_helper'
 # in spec/support/ and its subdirectories.
 Dir["#{__dir__}/support/**/*.rb"].sort.each { |f| require f }
 
+SolidusDevSupport::TestingSupport::Factories.load_for(SolidusEasypost::Engine)
+
 # Requires factories defined in lib/solidus_easypost/testing_support/factories.rb
 require 'solidus_easypost/testing_support/factories'
 

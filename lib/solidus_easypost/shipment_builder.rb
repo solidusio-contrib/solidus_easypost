@@ -5,7 +5,7 @@ module SolidusEasypost
     class << self
       def from_package(package, options = {})
         from_address, to_address = address_options(options)
-        ::EasyPost::Shipment.create(
+        SolidusEasypost.client.shipment.create(
           to_address: AddressBuilder.from_address(package.order.ship_address, to_address || {}),
           from_address: AddressBuilder.from_stock_location(package.stock_location, from_address || {}),
           parcel: ParcelBuilder.from_package(package),
@@ -15,7 +15,7 @@ module SolidusEasypost
 
       def from_shipment(shipment, options = {})
         from_address, to_address = address_options(options)
-        ::EasyPost::Shipment.create(
+        SolidusEasypost.client.shipment.create(
           to_address: AddressBuilder.from_address(shipment.order.ship_address, to_address || {}),
           from_address: AddressBuilder.from_stock_location(shipment.stock_location, from_address || {}),
           parcel: ParcelBuilder.from_package(shipment.to_package),
@@ -25,7 +25,7 @@ module SolidusEasypost
 
       def from_return_authorization(return_authorization, options = {})
         from_address, to_address = address_options(options)
-        ::EasyPost::Shipment.create(
+        SolidusEasypost.client.shipment.create(
           from_address: AddressBuilder.from_stock_location(return_authorization.stock_location, from_address || {}),
           to_address: AddressBuilder.from_address(return_authorization.order.ship_address, to_address || {}),
           parcel: ParcelBuilder.from_return_authorization(return_authorization),

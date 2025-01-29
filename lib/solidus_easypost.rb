@@ -21,12 +21,15 @@ require 'solidus_easypost/errors/unknown_partial_resource_error'
 
 module SolidusEasypost
   class << self
+    attr_reader :client
+
     def configuration
       @configuration ||= Configuration.new
     end
 
     def configure
       yield configuration
+      @client = ::EasyPost::Client.new(api_key: @configuration.api_key)
     end
   end
 end

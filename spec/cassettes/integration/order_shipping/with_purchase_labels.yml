@@ -370,4 +370,72 @@ http_interactions:
         Warehouse","company":"NY Warehouse","street1":"131 S 8th Ave","street2":null,"city":"Manville","state":"NJ","zip":"08835","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"buyer_address":{"id":"adr_2d6a11e586a74dadb28f82899ad2404c","object":"Address","created_at":"2020-09-23T13:52:31Z","updated_at":"2020-09-23T13:52:31Z","name":"John
         Doe","company":"Company","street1":"215 N 7th Ave","street2":"Northwest","city":"Manville","state":"AL","zip":"08835","country":"US","phone":"5555550199","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{"zip4":{"success":true,"errors":[],"details":null},"delivery":{"success":true,"errors":[],"details":{"latitude":40.54849,"longitude":-74.59299,"time_zone":"America/New_York"}}}},"forms":[],"fees":[{"object":"Fee","type":"LabelFee","amount":"0.01000","charged":true,"refunded":false},{"object":"Fee","type":"PostageFee","amount":"3.93000","charged":true,"refunded":false}],"id":"shp_e1e2793b59314da98ad6cc19da13ae98","object":"Shipment"}'
   recorded_at: Wed, 23 Sep 2020 13:52:36 GMT
-recorded_with: VCR 6.0.0
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/shipments/shp_e1e2793b59314da98ad6cc19da13ae98/buy
+    body:
+      encoding: UTF-8
+      string: '{"rate":{"id":"rate_39a139afb5044dbfbc8e6fdffaf6e5f2"}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/6.4.1 Ruby/3.2.0-p0 OS/Linux OSVersion/ OSArch/x86_64
+      Host:
+      - api.easypost.com
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer CvzYtuda6KRI9JjG7SAHbA
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ep-Request-Uuid:
+      - c8be750c679523eee956d2e00044d7a5
+      Cache-Control:
+      - private, no-cache, no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.033019'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb40nuq
+      X-Version-Label:
+      - easypost-202501241935-af91cd2335-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb1nuq 99aac35317
+      - intlb4nuq 51d74985a2
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":{"code":"SHIPMENT.INVALID_PARAMS","message":"Unable to create
+        shipment, one or more parameters were invalid.","errors":[{"field":"shipment","message":"A
+        valid rate must be supplied in order to purchase a shipment. Please verify
+        the rate exists and that the rate is associated with the shipment being purchased."}]}}'
+  recorded_at: Sat, 25 Jan 2025 17:48:30 GMT
+recorded_with: VCR 6.3.1
