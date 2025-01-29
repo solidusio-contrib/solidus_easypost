@@ -7,4 +7,3 @@ end
 def easypost_client
   EasyPost::Client.new(api_key: 'CvzYtuda6KRI9JjG7SAHbA')
 end
-

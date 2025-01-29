@@ -29,6 +29,5 @@ SolidusEasypost.configure do |config|
 end
 
 def easypost_client
-  EasyPost::Client.new(api_key: ENV['EASYPOST_API_KEY'])
+  EasyPost::Client.new(api_key: ENV.fetch('EASYPOST_API_KEY', nil))
 end
-
