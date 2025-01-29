@@ -30,12 +30,11 @@ module SolidusEasypost
       end
 
       def select_shipping_method(shipping_method)
-        selected_rate = shipping_rates.find_by(shipping_method_id: shipping_method.id)
-        raise ActiveRecord::RecordNotFound, "Shipping method not found" unless selected_rate
-
-        deselect_other_shipping_rates(selected_rate.id)
-
-        selected_rate.update!(selected: true)
+        estimator = ::Spree::Config.stock.estimator_class.new
+        rates = estimator.shipping_rates(to_package, false)
+        rate = rates.detect { |detected| detected.shipping_method_id == shipping_method.id }
+        deselect_other_shipping_rates(rate.id)
+        rate.update(selected: true)
       end
 
       private
@@ -45,7 +44,7 @@ module SolidusEasypost
       end
 
       def buy_easypost_rate
-        return if tracking || easypost_shipment.postage_label
+        return if tracking
 
         easypost_shipment_id = easypost_shipment.id
 

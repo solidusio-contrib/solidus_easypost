@@ -29,7 +29,14 @@ when 'mysql'
 when 'postgresql'
   gem 'pg'
 else
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.4'
+end
+
+if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('3')
+  # Fix for Rails 7+ / Ruby 3+, see https://stackoverflow.com/a/72474475
+  gem 'net-imap', require: false
+  gem 'net-pop', require: false
+  gem 'net-smtp', require: false
 end
 
 gemspec
