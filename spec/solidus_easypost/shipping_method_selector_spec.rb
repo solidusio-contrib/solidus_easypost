@@ -2,31 +2,55 @@ RSpec.describe SolidusEasypost::ShippingMethodSelector do
   describe '#shipping_method_for' do
     context 'when a shipping method for the given carrier and service exists' do
       it 'returns the existing shipping method' do
-        shipping_method = create(:shipping_method, carrier: 'USPS', service_level: 'Express')
-        easypost_rate = SolidusEasypost.client.rate.construct_from('carrier' => 'USPS', 'service' => 'Express')
+        VCR.use_cassette('shipping_method_selector/returns_shipping_method') do
+          stub_easypost_config(purchase_labels: true)
+          stub_spree_preferences(require_payment_to_ship: false, track_inventory_levels: false)
 
-        selector = described_class.new
-        selected_shipping_method = selector.shipping_method_for(easypost_rate)
+          use_easypost_estimator
+          create_easypost_shipping_methods
 
-        expect(selected_shipping_method).to eq(shipping_method)
+          order = Spree::TestingSupport::OrderWalkthrough.up_to(:complete)
+          shipment = order.shipments.first
+          selected_shipping_rate = shipment.shipping_rates.where(selected: true).last
+          easypost_rates = shipment.easypost_shipment.rates
+
+          easypost_rate = easypost_rates.select{ |id| id['id'] == selected_shipping_rate.easy_post_rate_id }
+
+          selector = described_class.new
+          selected_shipping_method = selector.shipping_method_for(easypost_rate.first)
+
+          expect(selected_shipping_method).to eq(shipment.shipping_method)
+        end
       end
     end
 
     context 'when a shipping method for the given carrier and service does not exist' do
       it 'creates a new shipping method' do
-        shipping_category = create(:shipping_category)
-        easypost_rate = SolidusEasypost.client.rate.construct_from('carrier' => 'USPS', 'service' => 'Express')
+        VCR.use_cassette('shipping_method_selector/new_shipping_method') do
+          stub_easypost_config(purchase_labels: true)
+          stub_spree_preferences(require_payment_to_ship: false, track_inventory_levels: false)
 
-        selector = described_class.new
-        selected_shipping_method = selector.shipping_method_for(easypost_rate)
+          use_easypost_estimator
+          create_easypost_shipping_methods
 
-        expect(selected_shipping_method).to have_attributes(
-          name: 'USPS Express',
-          carrier: 'USPS',
-          service_level: 'Express',
-          shipping_categories: [shipping_category],
-          available_to_users: false,
-        )
+          order = Spree::TestingSupport::OrderWalkthrough.up_to(:complete)
+          shipment = order.shipments.first
+          selected_shipping_rate = shipment.shipping_rates.where(selected: true).last
+          easypost_rates = shipment.easypost_shipment.rates
+
+          easypost_rate = easypost_rates.find{ |id| id['id'] == selected_shipping_rate.easy_post_rate_id }
+
+          selector = described_class.new
+          selected_shipping_method = selector.shipping_method_for(easypost_rate)
+
+          expect(selected_shipping_method).to eq(shipment.shipping_method)
+
+          expect(selected_shipping_method).to have_attributes(
+            carrier: easypost_rate.carrier,
+            service_level: easypost_rate.service
+          )
+          expect(selected_shipping_method.shipping_categories).to be_present
+        end
       end
     end
   end

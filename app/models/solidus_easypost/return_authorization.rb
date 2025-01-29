@@ -19,6 +19,8 @@ module SolidusEasypost
     end
 
     def return_label(rate)
+      return if easypost_shipment.postage_label
+
       return_shipment = SolidusEasypost.client.shipment.buy(easypost_shipment.id, rate: rate) unless easypost_shipment.postage_label
 
       return_shipment.postage_label

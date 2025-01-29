@@ -374,4 +374,203 @@ http_interactions:
         Warehouse","company":"NY Warehouse","street1":"131 S 8th Ave","street2":null,"city":"Manville","state":"NJ","zip":"08835","country":"US","phone":"2024561111","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"buyer_address":{"id":"adr_7dca893daf4b41fdabea858f6c2f53ca","object":"Address","created_at":"2020-09-23T13:52:20Z","updated_at":"2020-09-23T13:52:20Z","name":"John
         Doe","company":"Company","street1":"215 N 7th Ave","street2":"Northwest","city":"Manville","state":"AL","zip":"08835","country":"US","phone":"5555550199","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{"zip4":{"success":true,"errors":[],"details":null},"delivery":{"success":true,"errors":[],"details":{"latitude":40.54849,"longitude":-74.59299,"time_zone":"America/New_York"}}}},"forms":[],"fees":[{"object":"Fee","type":"LabelFee","amount":"0.01000","charged":true,"refunded":false},{"object":"Fee","type":"PostageFee","amount":"3.93000","charged":true,"refunded":false}],"id":"shp_031353505bc84d37aed8fba58174d4a5","object":"Shipment"}'
   recorded_at: Wed, 23 Sep 2020 13:52:26 GMT
-recorded_with: VCR 6.0.0
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/shipments/shp_031353505bc84d37aed8fba58174d4a5/buy
+    body:
+      encoding: UTF-8
+      string: '{"rate":{"id":"rate_be8793b0b3164e44a44eb06e5f1de61d"}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/6.4.1 Ruby/3.3.6-p108 OS/Linux OSVersion/ OSArch/x86_64
+      Host:
+      - api.easypost.com
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer EZTK7a6ff68ea56b4a2e8d0479b413a1614fQJjv6mxzZqzX53ZUa0FpAA
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ep-Request-Uuid:
+      - ed2e6fd66799dd1bfb085545000edd19
+      Cache-Control:
+      - private, no-cache, no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.023485'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb39nuq
+      X-Version-Label:
+      - easypost-202501290019-bdd2d6e460-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb1nuq 99aac35317
+      - intlb3nuq 51d74985a2
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":{"code":"NOT_FOUND","message":"The requested resource could
+        not be found.","errors":[]}}'
+  recorded_at: Wed, 29 Jan 2025 07:47:39 GMT
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/parcels
+    body:
+      encoding: UTF-8
+      string: '{"parcel":{"weight":"10.0"}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/6.4.1 Ruby/3.3.6-p108 OS/Linux OSVersion/ OSArch/x86_64
+      Host:
+      - api.easypost.com
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer EZTK7a6ff68ea56b4a2e8d0479b413a1614fQJjv6mxzZqzX53ZUa0FpAA
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ep-Request-Uuid:
+      - ed2e6fd36799fd3ffb0979c000235105
+      Cache-Control:
+      - private, no-cache, no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/parcels/prcl_510c05ab96ac407984ad5de6b1c5493f"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.031198'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb53nuq
+      X-Version-Label:
+      - easypost-202501290019-bdd2d6e460-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb1nuq 99aac35317
+      - intlb3nuq 51d74985a2
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"prcl_510c05ab96ac407984ad5de6b1c5493f","object":"Parcel","created_at":"2025-01-29T10:04:47Z","updated_at":"2025-01-29T10:04:47Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":10.0,"mode":"test"}'
+  recorded_at: Wed, 29 Jan 2025 10:04:47 GMT
+- request:
+    method: get
+    uri: https://api.easypost.com/v2/shipments/shp_031353505bc84d37aed8fba58174d4a5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/6.4.1 Ruby/3.3.6-p108 OS/Linux OSVersion/ OSArch/x86_64
+      Host:
+      - api.easypost.com
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer EZTK7a6ff68ea56b4a2e8d0479b413a1614fQJjv6mxzZqzX53ZUa0FpAA
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ep-Request-Uuid:
+      - 73bc0ee2679a06f8fb0ca329002a0e2d
+      Cache-Control:
+      - private, no-cache, no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.026958'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb55nuq
+      X-Version-Label:
+      - easypost-202501290019-bdd2d6e460-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb2nuq 99aac35317
+      - intlb3nuq 51d74985a2
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":{"code":"NOT_FOUND","message":"The requested resource could
+        not be found.","errors":[]}}'
+  recorded_at: Wed, 29 Jan 2025 10:46:16 GMT
+recorded_with: VCR 6.3.1

@@ -1,0 +1,358 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/addresses
+    body:
+      encoding: UTF-8
+      string: '{"street1":"10 Lovely Street","street2":"Northwest","city":"Herndon","zip":"10002","phone":"555-555-0199","company":"Company","name":"John
+        Von Doe","state":"AL","country":"US"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/6.4.1 Ruby/3.3.6-p108 OS/Linux OSVersion/ OSArch/x86_64
+      Host:
+      - api.easypost.com
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer EZTK7a6ff68ea56b4a2e8d0479b413a1614fQJjv6mxzZqzX53ZUa0FpAA
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ep-Request-Uuid:
+      - ed2e6fd3679a05a5fb0a8ea400289547
+      Cache-Control:
+      - private, no-cache, no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/addresses/adr_79d8350dde2d11efaf3cac1f6bc539aa"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.037430'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb34nuq
+      X-Version-Label:
+      - easypost-202501290019-bdd2d6e460-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb1nuq 99aac35317
+      - intlb3nuq 51d74985a2
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"adr_79d8350dde2d11efaf3cac1f6bc539aa","object":"Address","created_at":"2025-01-29T10:40:37+00:00","updated_at":"2025-01-29T10:40:37+00:00","name":"John
+        Von Doe","company":"Company","street1":"10 Lovely Street","street2":"Northwest","city":"Herndon","state":"AL","zip":"10002","country":"US","phone":"5555550199","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}}'
+  recorded_at: Wed, 29 Jan 2025 10:40:37 GMT
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/addresses
+    body:
+      encoding: UTF-8
+      string: '{"street1":"131 S 8th Ave","city":"Manville","zip":"08835","name":"NY
+        Warehouse","company":"NY Warehouse","state":"NJ"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/6.4.1 Ruby/3.3.6-p108 OS/Linux OSVersion/ OSArch/x86_64
+      Host:
+      - api.easypost.com
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer EZTK7a6ff68ea56b4a2e8d0479b413a1614fQJjv6mxzZqzX53ZUa0FpAA
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ep-Request-Uuid:
+      - ed2e6fd5679a05a6fb0a8eaa002895fb
+      Cache-Control:
+      - private, no-cache, no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/addresses/adr_7a694af6de2d11ef86d1ac1f6bc53342"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.039943'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb38nuq
+      X-Version-Label:
+      - easypost-202501290019-bdd2d6e460-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb1nuq 99aac35317
+      - intlb4nuq 51d74985a2
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"adr_7a694af6de2d11ef86d1ac1f6bc53342","object":"Address","created_at":"2025-01-29T10:40:38+00:00","updated_at":"2025-01-29T10:40:38+00:00","name":"NY
+        Warehouse","company":"NY Warehouse","street1":"131 S 8th Ave","street2":null,"city":"Manville","state":"NJ","zip":"08835","country":"US","phone":null,"email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}}'
+  recorded_at: Wed, 29 Jan 2025 10:40:38 GMT
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/parcels
+    body:
+      encoding: UTF-8
+      string: '{"parcel":{"weight":"10.0"}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/6.4.1 Ruby/3.3.6-p108 OS/Linux OSVersion/ OSArch/x86_64
+      Host:
+      - api.easypost.com
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer EZTK7a6ff68ea56b4a2e8d0479b413a1614fQJjv6mxzZqzX53ZUa0FpAA
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ep-Request-Uuid:
+      - ed2e6fd8679a05a6fb0a8ec7002896a2
+      Cache-Control:
+      - private, no-cache, no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/parcels/prcl_734689cd0d514885bcf33f4d2f2ecfc6"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.029448'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb32nuq
+      X-Version-Label:
+      - easypost-202501290019-bdd2d6e460-master
+      X-Backend:
+      - easypost
+      X-Canary:
+      - direct
+      X-Proxied:
+      - extlb1nuq 99aac35317
+      - intlb3nuq 51d74985a2
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"prcl_734689cd0d514885bcf33f4d2f2ecfc6","object":"Parcel","created_at":"2025-01-29T10:40:39Z","updated_at":"2025-01-29T10:40:39Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":10.0,"mode":"test"}'
+  recorded_at: Wed, 29 Jan 2025 10:40:39 GMT
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/shipments
+    body:
+      encoding: UTF-8
+      string: '{"shipment":{"to_address":{"id":"adr_79d8350dde2d11efaf3cac1f6bc539aa"},"from_address":{"id":"adr_7a694af6de2d11ef86d1ac1f6bc53342"},"parcel":{"id":"prcl_734689cd0d514885bcf33f4d2f2ecfc6"},"options":{}}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/6.4.1 Ruby/3.3.6-p108 OS/Linux OSVersion/ OSArch/x86_64
+      Host:
+      - api.easypost.com
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer EZTK7a6ff68ea56b4a2e8d0479b413a1614fQJjv6mxzZqzX53ZUa0FpAA
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ep-Request-Uuid:
+      - ed2e6fd6679a05a7fb0a8eec0028974b
+      Cache-Control:
+      - private, no-cache, no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/shipments/shp_3fcc16ed04ea41909582fe4602c6a225"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.492919'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb59nuq
+      X-Version-Label:
+      - easypost-202501290019-bdd2d6e460-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb1nuq 99aac35317
+      - intlb4nuq 51d74985a2
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"shp_3fcc16ed04ea41909582fe4602c6a225","created_at":"2025-01-29T10:40:39Z","is_return":false,"messages":[{"carrier":"UPSDAP","carrier_account_id":"ca_d171cf0915a044c8afb72148dbfa06e1","type":"rate_error","message":"There
+        was a problem setting up your UPS DAP account. Please visit https://www.easypost.com/account/settings?tab=carriers
+        to finish setup."},{"carrier":"FedEx","carrier_account_id":"ca_eed93d8ae57847ffae858f3322b3cfd5","type":"rate_error","message":"Destination
+        Postal-State Mismatch."}],"mode":"test","options":{"currency":"USD","payment":{"type":"SENDER"},"date_advance":0},"reference":null,"status":"unknown","tracking_code":null,"updated_at":"2025-01-29T10:40:40Z","batch_id":null,"batch_status":null,"batch_message":null,"customs_info":null,"from_address":{"id":"adr_7a694af6de2d11ef86d1ac1f6bc53342","object":"Address","created_at":"2025-01-29T10:40:38+00:00","updated_at":"2025-01-29T10:40:38+00:00","name":"NY
+        Warehouse","company":"NY Warehouse","street1":"131 S 8th Ave","street2":null,"city":"Manville","state":"NJ","zip":"08835","country":"US","phone":null,"email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"insurance":null,"order_id":null,"parcel":{"id":"prcl_734689cd0d514885bcf33f4d2f2ecfc6","object":"Parcel","created_at":"2025-01-29T10:40:39Z","updated_at":"2025-01-29T10:40:39Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":10.0,"mode":"test"},"postage_label":null,"rates":[{"id":"rate_8a247579a8264338966119473145bb8d","object":"Rate","created_at":"2025-01-29T10:40:40Z","updated_at":"2025-01-29T10:40:40Z","mode":"test","service":"Priority","carrier":"USPS","rate":"6.54","currency":"USD","retail_rate":"9.35","retail_currency":"USD","list_rate":"7.99","list_currency":"USD","billing_type":"easypost","delivery_days":1,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":1,"shipment_id":"shp_3fcc16ed04ea41909582fe4602c6a225","carrier_account_id":"ca_8904ac884ad34d249c293f556e04c61c"},{"id":"rate_15dd2feafd7b40709676a6411f88131d","object":"Rate","created_at":"2025-01-29T10:40:40Z","updated_at":"2025-01-29T10:40:40Z","mode":"test","service":"GroundAdvantage","carrier":"USPS","rate":"5.00","currency":"USD","retail_rate":"6.75","retail_currency":"USD","list_rate":"5.00","list_currency":"USD","billing_type":"easypost","delivery_days":2,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":2,"shipment_id":"shp_3fcc16ed04ea41909582fe4602c6a225","carrier_account_id":"ca_8904ac884ad34d249c293f556e04c61c"},{"id":"rate_43d7852a5db0438f9ce03c51db90c29b","object":"Rate","created_at":"2025-01-29T10:40:40Z","updated_at":"2025-01-29T10:40:40Z","mode":"test","service":"Express","carrier":"USPS","rate":"27.60","currency":"USD","retail_rate":"31.95","retail_currency":"USD","list_rate":"27.60","list_currency":"USD","billing_type":"easypost","delivery_days":1,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":1,"shipment_id":"shp_3fcc16ed04ea41909582fe4602c6a225","carrier_account_id":"ca_8904ac884ad34d249c293f556e04c61c"}],"refund_status":null,"scan_form":null,"selected_rate":null,"tracker":null,"to_address":{"id":"adr_79d8350dde2d11efaf3cac1f6bc539aa","object":"Address","created_at":"2025-01-29T10:40:37+00:00","updated_at":"2025-01-29T10:40:37+00:00","name":"John
+        Von Doe","company":"Company","street1":"10 Lovely Street","street2":"Northwest","city":"Herndon","state":"AL","zip":"10002","country":"US","phone":"5555550199","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"usps_zone":1,"return_address":{"id":"adr_7a694af6de2d11ef86d1ac1f6bc53342","object":"Address","created_at":"2025-01-29T10:40:38+00:00","updated_at":"2025-01-29T10:40:38+00:00","name":"NY
+        Warehouse","company":"NY Warehouse","street1":"131 S 8th Ave","street2":null,"city":"Manville","state":"NJ","zip":"08835","country":"US","phone":null,"email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"buyer_address":{"id":"adr_79d8350dde2d11efaf3cac1f6bc539aa","object":"Address","created_at":"2025-01-29T10:40:37+00:00","updated_at":"2025-01-29T10:40:37+00:00","name":"John
+        Von Doe","company":"Company","street1":"10 Lovely Street","street2":"Northwest","city":"Herndon","state":"AL","zip":"10002","country":"US","phone":"5555550199","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"forms":[],"fees":[],"object":"Shipment"}'
+  recorded_at: Wed, 29 Jan 2025 10:40:40 GMT
+- request:
+    method: get
+    uri: https://api.easypost.com/v2/shipments/shp_3fcc16ed04ea41909582fe4602c6a225
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/6.4.1 Ruby/3.3.6-p108 OS/Linux OSVersion/ OSArch/x86_64
+      Host:
+      - api.easypost.com
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer EZTK7a6ff68ea56b4a2e8d0479b413a1614fQJjv6mxzZqzX53ZUa0FpAA
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ep-Request-Uuid:
+      - ed2e6fd4679a05a9faf6d5e8002898a1
+      Cache-Control:
+      - private, no-cache, no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.069368'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb43nuq
+      X-Version-Label:
+      - easypost-202501290019-bdd2d6e460-master
+      X-Backend:
+      - easypost
+      X-Canary:
+      - direct
+      X-Proxied:
+      - extlb1nuq 99aac35317
+      - intlb4nuq 51d74985a2
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"shp_3fcc16ed04ea41909582fe4602c6a225","created_at":"2025-01-29T10:40:39Z","is_return":false,"messages":[{"carrier":"UPSDAP","carrier_account_id":"ca_d171cf0915a044c8afb72148dbfa06e1","type":"rate_error","message":"There
+        was a problem setting up your UPS DAP account. Please visit https://www.easypost.com/account/settings?tab=carriers
+        to finish setup."},{"carrier":"FedEx","carrier_account_id":"ca_eed93d8ae57847ffae858f3322b3cfd5","type":"rate_error","message":"Destination
+        Postal-State Mismatch."}],"mode":"test","options":{"currency":"USD","payment":{"type":"SENDER"},"date_advance":0},"reference":null,"status":"unknown","tracking_code":null,"updated_at":"2025-01-29T10:40:40Z","batch_id":null,"batch_status":null,"batch_message":null,"customs_info":null,"from_address":{"id":"adr_7a694af6de2d11ef86d1ac1f6bc53342","object":"Address","created_at":"2025-01-29T10:40:38+00:00","updated_at":"2025-01-29T10:40:38+00:00","name":"NY
+        Warehouse","company":"NY Warehouse","street1":"131 S 8th Ave","street2":null,"city":"Manville","state":"NJ","zip":"08835","country":"US","phone":null,"email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"insurance":null,"order_id":null,"parcel":{"id":"prcl_734689cd0d514885bcf33f4d2f2ecfc6","object":"Parcel","created_at":"2025-01-29T10:40:39Z","updated_at":"2025-01-29T10:40:39Z","length":null,"width":null,"height":null,"predefined_package":null,"weight":10.0,"mode":"test"},"postage_label":null,"rates":[{"id":"rate_8a247579a8264338966119473145bb8d","object":"Rate","created_at":"2025-01-29T10:40:40Z","updated_at":"2025-01-29T10:40:40Z","mode":"test","service":"Priority","carrier":"USPS","rate":"6.54","currency":"USD","retail_rate":"9.35","retail_currency":"USD","list_rate":"7.99","list_currency":"USD","billing_type":"easypost","delivery_days":1,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":1,"shipment_id":"shp_3fcc16ed04ea41909582fe4602c6a225","carrier_account_id":"ca_8904ac884ad34d249c293f556e04c61c"},{"id":"rate_15dd2feafd7b40709676a6411f88131d","object":"Rate","created_at":"2025-01-29T10:40:40Z","updated_at":"2025-01-29T10:40:40Z","mode":"test","service":"GroundAdvantage","carrier":"USPS","rate":"5.00","currency":"USD","retail_rate":"6.75","retail_currency":"USD","list_rate":"5.00","list_currency":"USD","billing_type":"easypost","delivery_days":2,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":2,"shipment_id":"shp_3fcc16ed04ea41909582fe4602c6a225","carrier_account_id":"ca_8904ac884ad34d249c293f556e04c61c"},{"id":"rate_43d7852a5db0438f9ce03c51db90c29b","object":"Rate","created_at":"2025-01-29T10:40:40Z","updated_at":"2025-01-29T10:40:40Z","mode":"test","service":"Express","carrier":"USPS","rate":"27.60","currency":"USD","retail_rate":"31.95","retail_currency":"USD","list_rate":"27.60","list_currency":"USD","billing_type":"easypost","delivery_days":1,"delivery_date":null,"delivery_date_guaranteed":false,"est_delivery_days":1,"shipment_id":"shp_3fcc16ed04ea41909582fe4602c6a225","carrier_account_id":"ca_8904ac884ad34d249c293f556e04c61c"}],"refund_status":null,"scan_form":null,"selected_rate":null,"tracker":null,"to_address":{"id":"adr_79d8350dde2d11efaf3cac1f6bc539aa","object":"Address","created_at":"2025-01-29T10:40:37+00:00","updated_at":"2025-01-29T10:40:37+00:00","name":"John
+        Von Doe","company":"Company","street1":"10 Lovely Street","street2":"Northwest","city":"Herndon","state":"AL","zip":"10002","country":"US","phone":"5555550199","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"usps_zone":1,"return_address":{"id":"adr_7a694af6de2d11ef86d1ac1f6bc53342","object":"Address","created_at":"2025-01-29T10:40:38+00:00","updated_at":"2025-01-29T10:40:38+00:00","name":"NY
+        Warehouse","company":"NY Warehouse","street1":"131 S 8th Ave","street2":null,"city":"Manville","state":"NJ","zip":"08835","country":"US","phone":null,"email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"buyer_address":{"id":"adr_79d8350dde2d11efaf3cac1f6bc539aa","object":"Address","created_at":"2025-01-29T10:40:37+00:00","updated_at":"2025-01-29T10:40:37+00:00","name":"John
+        Von Doe","company":"Company","street1":"10 Lovely Street","street2":"Northwest","city":"Herndon","state":"AL","zip":"10002","country":"US","phone":"5555550199","email":null,"mode":"test","carrier_facility":null,"residential":null,"federal_tax_id":null,"state_tax_id":null,"verifications":{}},"forms":[],"fees":[],"object":"Shipment"}'
+  recorded_at: Wed, 29 Jan 2025 10:40:41 GMT
+recorded_with: VCR 6.3.1

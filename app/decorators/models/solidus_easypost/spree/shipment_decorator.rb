@@ -29,13 +29,31 @@ module SolidusEasypost
         easypost_shipment&.postage_label&.label_url
       end
 
+      def select_shipping_method(shipping_method)
+        selected_rate = shipping_rates.find_by(shipping_method_id: shipping_method.id)
+        raise ActiveRecord::RecordNotFound, "Shipping method not found" unless selected_rate
+
+        deselect_other_shipping_rates(selected_rate.id)
+
+        selected_rate.update!(selected: true)
+      end
+
       private
 
+      def deselect_other_shipping_rates(selected_rate_id)
+        shipping_rates.where.not(id: selected_rate_id).update_all(selected: false)
+      end
+
       def buy_easypost_rate
-        unless easypost_shipment.tracking_code
-          SolidusEasypost.client.shipment.buy(selected_easy_post_shipment_id, rate: { id: selected_easy_post_rate_id })
+        return if tracking || easypost_shipment.postage_label
+
+        easypost_shipment_id = easypost_shipment.id
+
+        rate = easypost_shipment.rates.find do |easypost_rate|
+          easypost_rate.id == selected_easy_post_rate_id
         end
 
+        SolidusEasypost.client.shipment.buy(easypost_shipment_id, rate: { id: rate.id })
         self.tracking = easypost_shipment.tracking_code
       end
 
