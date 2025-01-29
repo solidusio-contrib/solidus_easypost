@@ -29,7 +29,19 @@ module SolidusEasypost
         easypost_shipment&.postage_label&.label_url
       end
 
+      def select_shipping_method(shipping_method)
+        estimator = ::Spree::Config.stock.estimator_class.new
+        rates = estimator.shipping_rates(to_package, false)
+        rate = rates.detect { |detected| detected.shipping_method_id == shipping_method.id }
+        deselect_other_shipping_rates(rate.id)
+        rate.update(selected: true)
+      end
+
       private
+
+      def deselect_other_shipping_rates(selected_rate_id)
+        shipping_rates.where.not(id: selected_rate_id).update_all(selected: false)
+      end
 
       def buy_easypost_rate
         return if tracking
