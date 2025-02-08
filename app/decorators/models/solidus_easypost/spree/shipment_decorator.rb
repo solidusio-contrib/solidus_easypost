@@ -4,11 +4,14 @@ module SolidusEasypost
   module Spree
     module ShipmentDecorator
       def self.prepended(base)
-        base.state_machine.before_transition(
-          to: :shipped,
-          do: :buy_easypost_rate,
-          if: -> { SolidusEasypost.configuration.purchase_labels }
-        )
+        unless base.state_machine.callbacks[:before].include? SolidusEasypost.configuration.__current_shipment_callback
+          SolidusEasypost.configuration.__current_shipment_callback =
+            base.state_machine.before_transition(
+              to: :shipped,
+              do: :buy_easypost_rate,
+              if: :should_purchase_easypost_label?,
+            )
+        end
 
         base.delegate(
           :easy_post_rate_id,
@@ -17,6 +20,10 @@ module SolidusEasypost
           prefix: :selected,
           allow_nil: true,
         )
+      end
+
+      def should_purchase_easypost_label?
+        SolidusEasypost.configuration.purchase_labels
       end
 
       def easypost_shipment

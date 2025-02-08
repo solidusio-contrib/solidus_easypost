@@ -27,11 +27,15 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency 'deface'
-  spec.add_dependency 'easypost'
-  spec.add_dependency 'solidus_core', '>= 2.0.0'
+  spec.add_dependency 'easypost', "< 5"
+  spec.add_dependency 'solidus_core', ['>= 2.0.0', '< 4.0']
   spec.add_dependency 'solidus_support', '~> 0.9'
 
+  # https://stackoverflow.com/questions/79360526/uninitialized-constant-activesupportloggerthreadsafelevellogger-nameerror
+  spec.add_dependency 'concurrent-ruby', '< 1.3.5'
+
   spec.add_development_dependency 'solidus_dev_support', '~> 2.1'
+  spec.add_development_dependency 'sqlite3', '~> 1.4'
   spec.add_development_dependency 'vcr'
   spec.add_development_dependency 'webmock'
   spec.metadata = {
