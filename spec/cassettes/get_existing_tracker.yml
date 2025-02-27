@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.easypost.com/v2/trackers
+    body:
+      encoding: UTF-8
+      string: '{"tracker":{"tracking_code":"EZ1000000001","carrier":"UPS"}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - EasyPost/v2 RubyClient/6.4.1 Ruby/3.1.2-p20 OS/Linux OSVersion/ OSArch/x86_64
+      Host:
+      - api.easypost.com
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer CvzYtuda6KRI9JjG7SAHbA
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Ep-Request-Uuid:
+      - c735ca5867c02148edff041e00161009
+      Cache-Control:
+      - private, no-cache, no-store
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Location:
+      - "/api/v2/trackers/trk_1519b227d9184700988a30a88435201c"
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Runtime:
+      - '0.083605'
+      Transfer-Encoding:
+      - chunked
+      X-Node:
+      - bigweb54nuq
+      X-Version-Label:
+      - easypost-202502252235-2ae08e8562-master
+      X-Backend:
+      - easypost
+      X-Proxied:
+      - extlb2nuq 99aac35317
+      - intlb4nuq 51d74985a2
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"trk_1519b227d9184700988a30a88435201c","object":"Tracker","mode":"test","tracking_code":"EZ1000000001","status":"pre_transit","status_detail":"status_update","created_at":"2025-01-28T12:31:45Z","updated_at":"2025-01-28T12:31:45Z","signed_by":null,"weight":17.6,"est_delivery_date":"2025-01-28T12:31:45Z","shipment_id":null,"carrier":"UPS","tracking_details":[{"object":"TrackingDetail","message":"BILLING
+        INFORMATION RECEIVED","description":"","status":"pre_transit","status_detail":"status_update","datetime":"2024-12-29T02:55:45Z","source":"UPS","carrier_code":"","tracking_location":{"object":"TrackingLocation","city":null,"state":null,"country":null,"zip":null}}],"carrier_detail":{"object":"CarrierDetail","service":"2ND
+        DAY AIR","container_type":null,"est_delivery_date_local":null,"est_delivery_time_local":null,"origin_location":null,"origin_tracking_location":null,"destination_location":"SAN
+        FRANCISCO CA US, 94105","destination_tracking_location":null,"guaranteed_delivery_date":null,"alternate_identifier":null,"initial_delivery_attempt":null},"finalized":true,"is_return":false,"public_url":"https://track.easypost.com/djE6dHJrXzE1MTliMjI3ZDkxODQ3MDA5ODhhMzBhODg0MzUyMDFj"}'
+  recorded_at: Thu, 27 Feb 2025 08:24:41 GMT
+recorded_with: VCR 6.3.1

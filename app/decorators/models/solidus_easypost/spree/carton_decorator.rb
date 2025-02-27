@@ -11,9 +11,9 @@ module SolidusEasypost
         return @easypost_tracker if @easypost_tracker
 
         if easy_post_tracker_id.present?
-          @easypost_tracker = EasyPost::Tracker.retrieve(easy_post_tracker_id)
+          @easypost_tracker = SolidusEasypost.client.tracker.retrieve(easy_post_tracker_id)
         else
-          @easypost_tracker = EasyPost::Tracker.create(
+          @easypost_tracker = SolidusEasypost.client.tracker.create(
             tracking_code: tracking,
             carrier: shipping_method.carrier,
           )
