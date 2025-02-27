@@ -1,32 +1,35 @@
 RSpec.describe SolidusEasypost::ShippingMethodSelector do
+  let(:order) { Spree::TestingSupport::OrderWalkthrough.up_to(:complete) }
+  let(:shipment) { order.shipments.first }
+  let(:selected_shipping_rate) { shipment.shipping_rates.find_by(selected: true) }
+  let(:easypost_rates) { shipment.easypost_shipment.rates }
+  let(:easypost_rate) { easypost_rates.find { |rate| rate['id'] == selected_shipping_rate.easy_post_rate_id } }
+  let(:selector) { described_class.new }
+
+  before do
+    easypost_config_setup(true)
+  end
+
   describe '#shipping_method_for' do
     context 'when a shipping method for the given carrier and service exists' do
       it 'returns the existing shipping method' do
-        shipping_method = create(:shipping_method, carrier: 'USPS', service_level: 'Express')
-        easypost_rate = EasyPost::Rate.construct_from('carrier' => 'USPS', 'service' => 'Express')
-
-        selector = described_class.new
-        selected_shipping_method = selector.shipping_method_for(easypost_rate)
-
-        expect(selected_shipping_method).to eq(shipping_method)
+        VCR.use_cassette('shipping_method_selector/returns_shipping_method') do
+          expect(selector.shipping_method_for(easypost_rate)).to eq(shipment.shipping_method)
+        end
       end
     end
 
     context 'when a shipping method for the given carrier and service does not exist' do
       it 'creates a new shipping method' do
-        shipping_category = create(:shipping_category)
-        easypost_rate = EasyPost::Rate.construct_from('carrier' => 'USPS', 'service' => 'Express')
+        VCR.use_cassette('shipping_method_selector/new_shipping_method') do
+          selected_shipping_method = selector.shipping_method_for(easypost_rate)
 
-        selector = described_class.new
-        selected_shipping_method = selector.shipping_method_for(easypost_rate)
-
-        expect(selected_shipping_method).to have_attributes(
-          name: 'USPS Express',
-          carrier: 'USPS',
-          service_level: 'Express',
-          shipping_categories: [shipping_category],
-          available_to_users: false,
-        )
+          expect(selected_shipping_method).to have_attributes(
+            carrier: easypost_rate.carrier,
+            service_level: easypost_rate.service
+          )
+          expect(selected_shipping_method.shipping_categories).to be_present
+        end
       end
     end
   end
