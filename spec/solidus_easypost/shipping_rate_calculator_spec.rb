@@ -6,7 +6,7 @@ RSpec.describe SolidusEasypost::ShippingRateCalculator do
     let(:calculator) { described_class.new }
 
     before do
-      easypost_config_setup(true)
+      easypost_config_setup(purchase_labels: true)
     end
 
     it 'returns the amount on the EasyPost rate' do

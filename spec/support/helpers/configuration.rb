@@ -5,8 +5,8 @@ module SolidusEasypost
         allow(SolidusEasypost.configuration).to receive_messages(values)
       end
 
-      def easypost_config_setup(purchase_labels = false)
-        stub_easypost_config(purchase_labels:) if purchase_labels
+      def easypost_config_setup(purchase_labels: false)
+        stub_easypost_config(purchase_labels: purchase_labels) if purchase_labels
         stub_spree_preferences(require_payment_to_ship: false, track_inventory_levels: false)
         use_easypost_estimator
         create_easypost_shipping_methods

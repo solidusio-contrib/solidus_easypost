@@ -5,7 +5,7 @@ RSpec.describe Spree::Admin::PostageLabelsController do
   let(:shipment) { order.shipments.first }
 
   let!(:easypost_setup) do
-    easypost_config_setup(true)
+    easypost_config_setup(purchase_labels: true)
   end
 
   before do

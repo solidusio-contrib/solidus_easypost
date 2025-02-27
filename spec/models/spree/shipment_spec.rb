@@ -19,7 +19,7 @@ RSpec.describe Spree::Shipment do
     context 'when a shipping rate was selected' do
       it 'returns the shipment associated with the shipping rate' do
         VCR.use_cassette('shipment/return_easypost_shipment') do
-          easypost_config_setup(true)
+          easypost_config_setup(purchase_labels: true)
           expect(shipment.easypost_shipment).to be_present
         end
       end
@@ -30,7 +30,7 @@ RSpec.describe Spree::Shipment do
     context 'when purchase_labels is true' do
       it 'buys the selected rate' do
         VCR.use_cassette('shipment/with_selected_shipping_rates') do
-          easypost_config_setup(true)
+          easypost_config_setup(purchase_labels: true)
           shipment.ship!
           expect(shipment.easypost_shipment).to be_present
           expect(shipment.shipping_rates.where(selected: true).count).to eq(1)
@@ -41,7 +41,7 @@ RSpec.describe Spree::Shipment do
     context 'when purchase_labels is false' do
       it 'does not buy rates automatically' do
         VCR.use_cassette('shipment/disabled_purchase_labels') do
-          easypost_config_setup
+          easypost_config_setup(purchase_labels: false)
           shipment.ship!
           selected_rate = shipment.shipping_rates.where(selected: true).last
           expect(shipment.easypost_shipment).to be_present

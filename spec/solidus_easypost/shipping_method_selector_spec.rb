@@ -7,7 +7,7 @@ RSpec.describe SolidusEasypost::ShippingMethodSelector do
   let(:selector) { described_class.new }
 
   before do
-    easypost_config_setup(true)
+    easypost_config_setup(purchase_labels: true)
   end
 
   describe '#shipping_method_for' do

@@ -1,5 +1,6 @@
 RSpec.describe 'Order shipping' do
-  context 'with purchase_labels set to true', vcr: { cassette_name: 'integration/order_shipping/with_purchase_labels' } do
+  context 'with purchase_labels set to true',
+    vcr: { cassette_name: 'integration/order_shipping/with_purchase_labels' } do
     it 'buys the rate in EasyPost' do
       stub_easypost_config(purchase_labels: true)
       stub_spree_preferences(require_payment_to_ship: false, track_inventory_levels: false)
@@ -15,7 +16,8 @@ RSpec.describe 'Order shipping' do
     end
   end
 
-  context 'with purchase_labels set to false', vcr: { cassette_name: 'integration/order_shipping/without_purchase_labels' } do
+  context 'with purchase_labels set to false',
+    vcr: { cassette_name: 'integration/order_shipping/without_purchase_labels' } do
     it 'does not buy the rate in EasyPost' do
       stub_easypost_config(purchase_labels: false)
       stub_spree_preferences(require_payment_to_ship: false, track_inventory_levels: false)
