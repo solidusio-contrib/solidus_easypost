@@ -21,12 +21,23 @@ require 'solidus_easypost/errors/unknown_partial_resource_error'
 
 module SolidusEasypost
   class << self
-    def configuration
-      @configuration ||= Configuration.new
-    end
+    attr_accessor :configuration
+  end
 
-    def configure
-      yield configuration
-    end
+  # Returns the current configuration or creates a new one.
+  def self.configuration
+    @configuration ||= Configuration.new
+  end
+
+  # Yields the configuration to a block.
+  def self.configure
+    yield(configuration)
+  end
+
+  # Returns an EasyPost client instance using the configured API key.
+  def self.client
+    raise "API key not configured for SolidusEasypost" if configuration.api_key.nil?
+
+    @client ||= EasyPost::Client.new(api_key: SolidusEasypost.configuration.api_key)
   end
 end
