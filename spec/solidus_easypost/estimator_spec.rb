@@ -10,11 +10,12 @@ RSpec.describe SolidusEasypost::Estimator, vcr: { cassette_name: 'estimator' } d
 
         rates = described_class.new.shipping_rates(create(:shipment).to_package)
 
+        # The expected rates reflect the updated postage prices effective January 2025.
+        # For more details, see: https://c360faq.usps.com/s/article/2025-Postage-Price-Change
         hash = {
-          "USPS Express" => 22.74,
-          "USPS First" => 3.82,
-          "USPS ParcelSelect" => 6.85,
-          "USPS Priority" => 6.95,
+          "USPS Express" => 28.0,
+          "USPS GroundAdvantage" => 6.14,
+          "USPS Priority" => 7.12
         }
 
         expect(rates.sort_by(&:name).map { |r| [r.name, r.cost] }.to_h).to eq(hash)

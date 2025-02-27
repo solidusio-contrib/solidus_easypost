@@ -4,9 +4,8 @@ module SolidusEasypost
       def create_easypost_shipping_methods
         [
           %w[USPS Express],
-          %w[USPS First],
-          %w[USPS ParcelSelect],
-          %w[USPS Priority],
+          %w[USPS GroundAdvantage],
+          %w[USPS Priority]
         ].each do |(carrier, service_level)|
           create(
             :shipping_method,
