@@ -17,6 +17,7 @@ require 'solidus_dev_support/rspec/feature_helper'
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir["#{__dir__}/support/**/*.rb"].sort.each { |f| require f }
+SolidusDevSupport::TestingSupport::Factories.load_for(SolidusEasypost::Engine)
 
 # Requires factories defined in lib/solidus_easypost/testing_support/factories.rb
 require 'solidus_easypost/testing_support/factories'

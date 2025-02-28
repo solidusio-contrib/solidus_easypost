@@ -22,7 +22,7 @@ module SolidusEasypost
       def easypost_shipment
         return unless selected_easy_post_shipment_id
 
-        @easypost_shipment ||= ::EasyPost::Shipment.retrieve(selected_easy_post_shipment_id)
+        @easypost_shipment ||= SolidusEasypost.client.shipment.retrieve(selected_easy_post_shipment_id)
       end
 
       def easypost_postage_label_url
@@ -32,11 +32,19 @@ module SolidusEasypost
       private
 
       def buy_easypost_rate
+        # Skip label purchase if tracking information already exists.
+        return if tracking
+
+        easypost_shipment_id = easypost_shipment.id
         rate = easypost_shipment.rates.find do |easypost_rate|
           easypost_rate.id == selected_easy_post_rate_id
         end
 
-        easypost_shipment.buy(rate)
+        # Purchase the shipping label using the updated API syntax.
+        easypost_shipment = SolidusEasypost.client.shipment.buy(
+          easypost_shipment_id,
+          rate: { id: rate.id }
+        )
 
         self.tracking = easypost_shipment.tracking_code
       end

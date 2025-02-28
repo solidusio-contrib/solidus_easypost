@@ -22,25 +22,24 @@ if [ ! -z $SOLIDUS_BRANCH ]
 then
   BRANCH=$SOLIDUS_BRANCH
 else
-  BRANCH="master"
+  BRANCH="main"
 fi
 
 extension_name="solidus_easypost"
 
 # Stay away from the bundler env of the containing extension.
 function unbundled {
-  ruby -rbundler -e'b = proc {system *ARGV}; Bundler.respond_to?(:with_unbundled_env) ? Bundler.with_unbundled_env(&b) : Bundler.with_clean_env(&b)' -- $@
+  ruby -rbundler -e'b = proc {system *ARGV}; Bundler.respond_to?(:with_unbundled_env) ? Bundler.with_unbundled_env(&b) : Bundler.with_clean_env(&b)' -- "$@"
 }
 
 rm -rf ./sandbox
-unbundled bundle exec rails new sandbox --database="$RAILSDB" \
-  --skip-bundle \
+rails new sandbox \
+  --database="$RAILSDB" \
   --skip-git \
   --skip-keeps \
   --skip-rc \
-  --skip-spring \
-  --skip-test \
-  --skip-javascript
+  --skip-bootsnap \
+  --skip-test
 
 if [ ! -d "sandbox" ]; then
   echo 'sandbox rails application failed'
@@ -49,37 +48,20 @@ fi
 
 cd ./sandbox
 cat <<RUBY >> Gemfile
-gem 'solidus', github: 'solidusio/solidus', branch: '$BRANCH'
-gem 'solidus_auth_devise', '>= 2.1.0'
-gem 'rails-i18n'
-gem 'solidus_i18n'
-
-gem '$extension_name', path: '..'
-
 group :test, :development do
   platforms :mri do
-    gem 'pry-byebug'
+    gem 'pry'
   end
 end
 RUBY
-
-unbundled bundle install --gemfile Gemfile
-
+unbundled bundle add solidus --github solidusio/solidus --branch "${BRANCH:-main}" --version '> 0.a'
 unbundled bundle exec rake db:drop db:create
-
-unbundled bundle exec rails generate spree:install \
-  --auto-accept \
-  --user_class=Spree::User \
-  --enforce_available_locales=true \
-  --with-authentication=false \
-  --payment-method=none \
-  $@
-
-unbundled bundle exec rails generate solidus:auth:install
-unbundled bundle exec rails generate ${extension_name}:install
+unbundled bundle exec rails generate solidus:install --payment-method=none --auto-accept "$@"
+unbundled bundle add ${extension_name} --path '../'
+unbundled bundle exec rails generate $extension_name:install --auto-run-migrations
 
 echo
-echo "🚀 Sandbox app successfully created for $extension_name!"
+echo "🚀 Sandbox app successfully created for ${extension_name}!"
 echo "🚀 Using $RAILSDB and Solidus $BRANCH"
 echo "🚀 Use 'export DB=[postgres|mysql|sqlite]' to control the DB adapter"
 echo "🚀 Use 'export SOLIDUS_BRANCH=<BRANCH-NAME>' to control the Solidus version"

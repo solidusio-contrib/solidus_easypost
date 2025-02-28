@@ -10,7 +10,7 @@ module SolidusEasypost
                            .new
                            .compute(package)
 
-        ::EasyPost::Parcel.create(parcel_dimension.to_h)
+        SolidusEasypost.client.parcel.create(parcel_dimension.to_h)
       end
 
       def from_return_authorization(return_authorization)
@@ -20,7 +20,7 @@ module SolidusEasypost
                            .new
                            .compute(return_authorization)
 
-        ::EasyPost::Parcel.create(parcel_dimension.to_h)
+        SolidusEasypost.client.parcel.create(parcel_dimension.to_h)
       end
     end
   end

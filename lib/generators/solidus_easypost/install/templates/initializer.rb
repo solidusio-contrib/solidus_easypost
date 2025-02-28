@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-EasyPost.api_key = 'YOUR_API_KEY_HERE'
-
 SolidusEasypost.configure do |config|
   # Purchase labels from EasyPost when shipping shipments in Solidus?
   # config.purchase_labels = true
 
   # Create a tracker in EasyPost and receive webhooks for all cartons?
   # config.track_all_cartons = false
+
+  config.api_key = ENV.fetch('EASYPOST_API_KEY', nil)
 
   # A class that responds to `#compute`, accepting an `EasyPost::Rate`
   # instance and returning the cost for that rate.

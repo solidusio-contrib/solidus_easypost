@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable RSpec/DescribeClass
 RSpec.describe 'Postage labels' do
   stub_authorization!
 
@@ -16,3 +17,4 @@ RSpec.describe 'Postage labels' do
     expect(page).to have_content(I18n.t('spree.open_postage_label'))
   end
 end
+# rubocop:enable RSpec/DescribeClass

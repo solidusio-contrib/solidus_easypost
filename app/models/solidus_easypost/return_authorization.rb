@@ -19,9 +19,19 @@ module SolidusEasypost
     end
 
     def return_label(rate)
-      easypost_shipment.buy(rate) unless easypost_shipment.postage_label
+      # If a tracking code already exists, postage has been purchased—no need to buy another label.
+      return if @easypost_shipment.postage_label
 
-      easypost_shipment.postage_label
+      # NOTE: The API structure for purchasing labels has changed.
+      # This method has been updated to use the new syntax.
+      # For more details on the updated API endpoints and payloads, please refer to:
+      # https://docs.easypost.com/docs/shipments#buy-a-shipment
+      return_authorization_easypost_shipment = SolidusEasypost.client.shipment.buy(
+        @easypost_shipment.id,
+        rate: { id: rate.id }
+      )
+
+      return_authorization_easypost_shipment.postage_label
     end
   end
 end

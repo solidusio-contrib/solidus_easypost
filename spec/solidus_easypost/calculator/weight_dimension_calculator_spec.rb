@@ -13,14 +13,19 @@ RSpec.describe SolidusEasypost::Calculator::WeightDimensionCalculator do
     end
 
     context 'when a Spree::Stock::Package is passed' do
-      let(:resource) { create(:shipment).to_package }
+      let(:shipment) { create(:shipment) }
+      let(:resource) { shipment.to_package }
 
       before { allow(SolidusEasypost::ParcelDimension).to receive(:new) }
 
       it 'build a parcel dimension' do
         compute
 
-        expect(SolidusEasypost::ParcelDimension).to have_received(:new).with({ weight: 10.to_f })
+        total_weight = resource.contents.sum do |item|
+          item.quantity * item.variant.weight
+        end
+
+        expect(SolidusEasypost::ParcelDimension).to have_received(:new).with({ weight: total_weight.to_f })
       end
     end
 
